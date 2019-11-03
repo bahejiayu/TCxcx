@@ -1,0 +1,60 @@
+<form bindsubmit='subF'>
+  <input hidden='{{true}}'  name='img' value='{{img_list1}}'></input>
+  <input hidden='{{true}}'  name='info_img' value='{{img_list2}}'></input>
+<view class='FromTop'>
+  <view class='inpItem'>
+    <view class='inpTitle'>商品名称</view>
+    <input type='text' placeholder-class='inpclass'  value='{{goods_name}}' placeholder='请输入商品名称' name='title' ></input>
+  </view>
+  <view class='inpItem'>
+    <view class='inpTitle'>价格</view>
+    <input type='text' placeholder-class='inpclass' value='{{goods_price}}' placeholder='请输入商品价格' name='price' ></input>
+  </view>
+</view>
+
+<view class='upImageBox'>
+  <view class='linet'>
+    <view class='upTxt'>
+      商品图片
+    </view>
+    <view class='upBtn fr' bindtap='upImage1'>
+      <image src='/images/upimg.png'></image>
+    </view>
+  </view>
+
+  <view class='img_list' wx:if='{{img_list1.length>0}}'>
+    <!-- wx:for='{{img_list1}}' -->
+    <view class='img_item' wx:for='{{img_list1}}'>
+      <image src='{{http+item}}'></image>
+      <view class='del_img' bindtap='delList1' data-index='{{index}}'>删除</view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='goodsDes'>
+  <view class='goodsTit'>商品详情</view>
+  <view class='areaContainer'>
+    <textarea placeholder='描述一下你的商品吧....' value='{{goods_info}}' placeholder-class='inpclass'  name='info' ></textarea>
+  </view>
+  <view class='up_line'>
+    <view class='upBtn ' bindtap='upImage2'>
+      <image src='/images/upimg.png'></image>
+    </view>
+  </view>
+
+<view class='img_list' wx:if='{{img_list2.length>0}}'>
+    <!-- wx:for='{{img_list1}}' -->
+    <view class='img_item' wx:for='{{img_list2}}'>
+      <image src='{{http+item}}'></image>
+      <view class='del_img' bindtap='delList2' data-index='{{index}}'>删除</view>
+    </view>
+  </view>
+</view>
+
+  <view class='btn_box addSub'>
+      <button form-type='submit' class='btnF' >提交</button>
+  </view>
+
+</form>

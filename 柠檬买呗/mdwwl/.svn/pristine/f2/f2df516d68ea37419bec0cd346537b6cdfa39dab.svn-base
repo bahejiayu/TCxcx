@@ -1,0 +1,54 @@
+<view class='payTopBox'>
+
+  <view class='shopInfo'>
+    <image src='http://192.168.0.253/Upload/shop/2019-04-11/5caed62928d91.jpg' class='shopLogo'></image>
+    <view>广州麦当劳敦和店</view>
+  </view>
+
+  <view class='payContainer'>
+    <view class='title_txt'>消费金额(元)</view>
+    <view class='inpBox'>
+      <view>
+        ¥
+      </view>
+      <view>
+        <input type='text' placeholder='询问服务员后输入' maxlength='8'></input>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='weChatPay '>
+  <view class='payLeft'>
+    红包抵扣
+  </view>
+  <view class='payRight'>
+    <radio checked='{{true}}' color='#ff6700'></radio>
+  </view>
+</view>
+<view class='hbTip'>红包抵扣
+  <text>¥ 5</text>, 还需支付
+  <text>¥ 65</text>
+</view>
+
+
+<view class='title_txt'>支付方式</view>
+<view class='weChatPay'>
+  <view class='payLeft'>
+    <image src='/images/wxpay_03.png'></image>微信支付
+  </view>
+  <view class='payRight'>
+    <radio checked='{{true}}' color='#ff6700'></radio>
+  </view>
+
+</view>
+
+
+<view class='aggren_'>
+  <radio checked='{{ag}}' color='#ff513f' bindtap='togRad' name='rad'></radio>
+  <label>我已阅读并同意</label>
+  <text>《付款前协议》</text>
+</view>
+<view class='btnCon'>
+  <view class='getBtn' bindtap='payBtn'>确认购买并支付</view>
+</view>

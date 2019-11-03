@@ -1,0 +1,185 @@
+const request = require('../../utils/request');
+const commen = require('../../utils/commen')
+const API = require('../../utils/api')
+const app = getApp();
+var interval;
+Page({
+	data: {
+		alterColor: false,
+		onOff: false,
+		codeName: '获取验证码',
+		alterLoginBtn: false,
+		numValue: '',
+		codeValue: ''
+	},
+	onShareAppMessage() {
+		return app.globalData.shareMessage
+	},
+	onLoad: function() {
+		wx.setNavigationBarTitle({
+			title: '创客空间'
+		})
+	},
+	numberVerify: function(e) {
+		let value = e.detail.value;
+		let regExp = /^1[1|2|3|4|5|6|7|8|9]\d{9}$/;
+		let res = regExp.test(value);
+
+		//高亮‘获取验证码’颜色，否则不高亮
+		if (res === true && this.data.onOff === false && this.data.alterLoginBtn === false) {
+			this.setData({
+				alterColor: true,
+				alterLoginBtn: true,
+				numValue: value
+			})
+		} else {
+			this.setData({
+
+        
+				alterColor: false,
+				alterLoginBtn: false
+			})
+		}
+	},
+	codeVerify: function(e) {
+		let value = e.detail.value;
+		this.setData({
+			codeValue: value
+		})
+		if (value !== '' && this.data.alterColor === true) {
+			this.setData({
+				alterLoginBtn: true
+			})
+		} else {
+			this.setData({
+				alterLoginBtn: false
+			})
+		}
+	},
+
+	//点击“获取验证码”发送请求，获取验证码
+	getCode: function() {
+		let self = this;
+		if (this.data.alterColor === true) {
+			new Promise((resolve, reject) => {
+				//点击发送验证码后倒计时开始
+				let num = 61;
+				clearInterval(interval)
+				interval = setInterval(function() {
+					num--;
+					if (num <= 0) {
+						clearInterval(interval);
+						self.setData({
+							codeName: '重新发送',
+							alterColor: true,
+							onOff: false,
+							alterLoginBtn: true
+						})
+					} else {
+						self.setData({
+							codeName: num + '秒',
+							alterColor: false,
+							onOff: true,
+							alterLoginBtn: true
+						})
+					}
+				}, 1000);
+				wx.getStorage({
+					key: 'userInfo',
+					success: function(res) {
+						resolve(res.data.userId)
+					}
+				})
+			}).then((userId) => {
+				request({
+					url: API.getSendSms(),
+					method: "GET",
+					data: {
+						userId: userId,
+						phone: self.data.numValue
+					},
+					success: function(res) {
+						//console.log(res)
+					}
+				})
+			})
+		}
+	},
+
+	//点击登录按钮，注册用户
+	login: function() {
+		let self = this;
+    var _sessionCode = commen.sessionCode;
+		if (!self.data.codeValue) {
+			commen.showMessage("请填写验证码")
+			return
+		}
+		new Promise((resolve, reject) => {
+			wx.getStorage({
+				key: 'userInfo',
+				success: function(res) {
+					let {
+						userId,
+						userShopId
+					} = res.data;
+					resolve({
+						userId,
+						userShopId
+					})
+				}
+			})
+		}).then((obj) => {
+			//获取ip地址及端口号
+			var pId =wx.getStorageSync("userPid");
+			if (!pId) {
+				pId = null;
+			}
+      // wx.showToast({
+      //   title: 'pid=' + pId,
+      // })
+			request({
+				url: API.postUserRegister(),
+				method: "POST",
+				data: {
+					smsCode: self.data.codeValue,
+					userId: obj.userId,
+					userShopId: obj.userShopId,
+					userMobile: self.data.numValue,
+					pId: pId
+				},
+				success: function(res) {
+					console.log(res)
+					let {
+						errMsg,
+						errno
+					} = res.data
+
+					//注册成功，弹出提示窗口
+					if (errno === 0) {
+						wx.showToast({
+							title: '注册成功',
+							icon: 'succes',
+							duration: 1000,
+							mask: false
+						})
+						setTimeout(() => {
+							wx.reLaunch({
+								url: '/pages/home/home'
+							})
+						}, 1000)
+
+						//注册失败，弹出提示窗口
+					} else {
+						// wx.showToast({
+						//   title: errmsg,
+						// 	icon: 'succes',
+						// 	duration: 1000,
+						// 	mask: false
+						// })
+						commen.showMessage(res.data.errMsg)
+					}
+				}
+			})
+		})
+	}
+})

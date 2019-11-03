@@ -1,0 +1,45 @@
+<view class='audBox'>
+  <view class='audLine'>
+    <view class='audTitle'>商家类型：</view>
+    <view>美食餐饮</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>全称：</view>
+    <view>九毛九山西手工面</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>简称：</view>
+    <view>九毛九</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>联系人姓名：</view>
+    <view>张先生</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>联系人电话：</view>
+    <view>13533065318</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>邮箱：</view>
+    <view>703250087@qq.com</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>经营地址：</view>
+    <view>广东省-广州市-海珠区</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>详细地址：</view>
+    <view>广东省广州市海珠区江海街道 up+智谷A7栋
+    </view>
+  </view>
+  <view class='audLine pd0'>
+    <view class='audTitle pst'>营业执照：</view>
+    <view>
+    </view>
+  </view>
+  <view class='yyzz'></view>
+  <view class='btns'>
+    <view>驳回</view>
+    <view>审核通过</view>
+  </view>
+</view>

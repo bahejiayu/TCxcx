@@ -1,0 +1,27 @@
+<view class='headTop'>
+  <avatar class="xl round" style="background-image:url({{userHeadIcon}})"></avatar>
+  <view class="flex-sub padding-lr padding-tb-lg" bindtap="showModal" data-target="QrModal">
+    <view class="text-lg">{{userName}}
+      <tag class="round sm margin-left-sm" style="background-color: #f4d57a;" wx:if="{{userYearType===1}}">
+        <text class="text-brown">年卡会员</text>
+      </tag>
+    </view>
+    <view class="margin-top-sm">ID:{{userId}}</view>
+  </view>
+</view>
+<view class='padding'>
+  <view class='qrBox'>
+    <image src='{{src}}' mode='widthFix'></image>
+  </view>
+</view>
+<view class='padding text-center'>
+  <view class='text-red'>分享二维码，邀请好友一起加入U乐空间</view>
+  <view class="padding text-content text-sm">将二维码发送给好友，邀请好友进入小程序，成为U乐空间会员，可领取佣金</view>
+</view>
+<!-- <view class='padding-lr-xl margin-lr-xl'>
+  <button class='bg-brown round lg block shadow' open-type='share'>分享好友</button>
+</view> -->
+<view class='flex text-center margin-tb-xs padding-xl'>
+  <button class='flex-sub bg-brown round lg block shadow margin-right' open-type='share'>分享好友</button>
+  <!--<button class='flex-sub bg-orange round lg block shadow'>分享朋友圈</button>-->
+</view>

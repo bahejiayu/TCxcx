@@ -1,0 +1,30 @@
+<view class='enterTitle'>
+  您的基本信息
+</view>
+
+<view class='from_box'>
+  <form bindsubmit="formSubmit4">
+
+    <view class='fromItem'>
+      <view class='fromTitle'>您的称呼</view>
+      <input type='text' name='Username' placeholder-class='inpclass' placeholder='请输入您的称呼'></input>
+    </view>
+    <view class='fromItem'>
+      <view class='fromTitle'>联系电话</view>
+      <input type='text' name='Username1' placeholder-class='inpclass' placeholder='请输入您的联系方式'></input>
+    </view>
+    <view class='fromItem'>
+      <view class='fromTitle'>店铺名称</view>
+      <input type='text' name='Username2' placeholder-class='inpclass' placeholder='请输入店铺名称'></input>
+    </view>
+    <view class='fromItem'>
+      <view class='fromTitle'>店铺地址</view>
+      <input type='text' name='Username3' placeholder-class='inpclass' placeholder='请输入店铺详细地址'></input>
+    </view>
+
+    <view class='btn_box enterBtn'>
+      <button formType="submit" class='btnF'>提交</button>
+    </view>
+  </form>
+
+</view>

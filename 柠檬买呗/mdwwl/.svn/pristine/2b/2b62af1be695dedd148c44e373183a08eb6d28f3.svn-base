@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "免单",
+  "navigationBarBackgroundColor": "#ffda43",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true
+}

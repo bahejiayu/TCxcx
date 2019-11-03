@@ -1,0 +1,13 @@
+.vipCard{
+	padding: 30rpx;
+	background-color: #fff;
+	border: 1px solid #aaa;
+	border-radius: 10rpx;
+}
+.vipCard.cur{
+	border: 1px solid #e7ab21;
+	background-color: #fff9ef;
+}
+.vipCard + .vipCard{
+	margin-top: 30rpx;
+}

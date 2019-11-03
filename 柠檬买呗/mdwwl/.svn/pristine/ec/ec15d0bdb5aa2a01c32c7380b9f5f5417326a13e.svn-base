@@ -1,0 +1,50 @@
+<view class='top_chk'>
+  <view class='top_chk_left'>
+    <view>昨天</view>
+    <view>近七天</view>
+    <view class='cur'>全部</view>
+  </view>
+  <view class='top_chk_right'>
+    自定义时间
+    <view class='icon-right'></view>
+  </view>
+</view>
+<view class='record_txt'>
+  共 2 笔订单，获得商品佣金 39.90 元
+</view>
+<view class='record_list'>
+  <view class='record_item'>
+    <view class='record_item_title'>
+      <view>订单编号：E2019042322006069</view>
+      <view>(待结算)</view>
+    </view>
+    <view class='record_item_content'>
+      <view class='user_image'>
+        <image src='https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTK5ib6KASW0oGORwzcHbVZoEsJpb8Vib7zHWCEibp55WS8c6JDYZd0gZdhJibsR2KqSg6JEf2ic1GFOvYA/132'></image>
+      </view>
+      <view class='record_item_info'>
+        <view>
+          <text>[直属  会员]</text> Sandy</view>
+        <view>下单人ID: 798050</view>
+        <view>订单金额(会员礼包)：
+          <text class='b'>¥399.00</text>
+        </view>
+        <view>佣金收益：
+          <text class='b'>¥39.90</text>
+        </view>
+        <view>订单时间：2019-04-23 22:09:15</view>
+        <view>推荐人：无</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='begin_end'>
+<picker mode="date" start="2019-01-01" end="{{toDay}}" value='2019-01-01' bindchange="bindDateChange">
+    <view class='cur' >  开始时间 ({{startDate}})</view>
+      </picker>
+      <picker mode="date" start="{{startDate=='请选择'?'2019-01-01':startDate}}" end="{{toDay}}"  bindchange="bindDateChange2">
+    <view>结束时间 ({{endDate}})</view>
+      </picker>
+</view>
+<view class='zz'></view> -->

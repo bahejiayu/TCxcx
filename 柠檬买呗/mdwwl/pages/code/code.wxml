@@ -1,0 +1,15 @@
+<view class='CodeTop'>
+    <view class='Logo_'>
+      <image src='/images/tclogo.jpg'></image>
+    </view>
+      <view class='shop_name'>免单玩玩乐</view>
+</view>
+<view class='CodeContent'>
+    <view>付款码扫描</view>
+    <view>请确保扫的付款码包含免单玩玩乐图标</view>
+</view>
+
+
+<view class='btn_box code_btn'>
+  <button class='btnF' bindtap='saoma' >开始扫描</button>
+</view>

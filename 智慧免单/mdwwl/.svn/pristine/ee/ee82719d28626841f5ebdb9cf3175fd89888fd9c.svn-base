@@ -1,0 +1,27 @@
+
+<import src="../footer/footer" />
+<view class='orderNav'>
+  <view class='orderNavItem {{nav_index==0?"cur":""}}' bindtap='tog_nav' data-type='2' data-o='0'>待退款</view>
+  <view class='orderNavItem {{nav_index==50?"cur":""}}' bindtap='tog_nav' data-type='1' data-o='50'>已退款</view>
+  <view class='NavLine' style='left:{{nav_index}}%;'></view>
+</view>
+
+<view class='classifyContainer' >
+  <view class='classifItem' wx:for='{{order_list}}'>
+    <view class='headIcon'>
+      <image src='{{item.avater}}'></image>
+    </view>
+    <view class='classOrderInfo'>
+      <view class='classInfoone'>
+        <view>{{item.user_name}}</view>
+        <view>¥ {{item.money}}</view>
+      </view>
+      <view class='classInfotwo'>
+        <view>{{item.pay_time}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<template is="foot"  data='{{Findex:1}}' />

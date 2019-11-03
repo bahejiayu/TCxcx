@@ -1,0 +1,53 @@
+.tiBox{
+  padding-top:20rpx; 
+  margin-bottom: 50rpx;
+}
+.formBox{
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+.boxItem{
+  position: relative;
+  padding-left: 175rpx;
+  height:98rpx ;
+  line-height:98rpx ;
+  border-bottom: 2rpx solid #eeeeee;
+  font-size:30rpx ;
+  color: #737373;
+}
+.boxItemLeft{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.blk{
+  color: #000;
+}
+.boxItem .icon-right{
+    color: #999999;
+    right: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(90deg);
+}
+.redjy{
+  color: #ff0000;
+}
+.bb0{
+  border-bottom: none!important;
+}
+.formBox textarea{
+  font-size: 30rpx;
+  height: 250rpx;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+

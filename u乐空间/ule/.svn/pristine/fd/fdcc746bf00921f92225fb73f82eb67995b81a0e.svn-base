@@ -1,0 +1,4 @@
+.MoneyInput {
+	height: 1.4em;
+	line-height: 1.4em;
+}

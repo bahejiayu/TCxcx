@@ -1,0 +1,44 @@
+<!-- 产品信息 -->
+<view class='bg-white margin-top padding-sm flex align-center solid-bottom'>
+	<image src='{{SERVER_URI+orderGoodsPicUrl}}' mode='aspectFill' style="width: 80rpx;height: 80rpx;border: 2px solid #ddd;"></image>
+	<view class='text-lg flex-sub margin-left'>{{orderGoodsName}}</view>
+</view>
+<!-- 评分表单 -->
+<form>
+	<form-group class="margin-top" wx:hide="{{modalName==null}}">
+		<textarea placeholder='亲，您对这个商品满意吗？您的评价会帮助我们做出更好的服务哦~' maxlength="140" disabled="{{modalName!=null}}"
+		 placeholder-class='placeholder' bindinput='bindInputValue'></textarea>
+	</form-group>
+	<form-group>
+		<view class="grid col-4 grid-square flex-sub">
+			<!-- <view class="padding-xs bg-img" style="background-image:url(https://image.weilanwl.com/img/square-1.jpg);">
+			</view> -->
+			<view class="padding-xs bg-img" style="background-image:url({{item}});" wx:for="{{files}}" bindtap='previewImage' data-id="{{item}}">
+				<tag class="bg-red" wx:if="{{index==files.length-1}}">
+					<text class='icon-close'></text>
+				</tag>
+			</view>
+
+			<view class="padding-xs solids" bindtap="chooseImage">
+				<text class='icon-cameraadd'></text>
+			</view>
+		</view>
+	</form-group>
+
+	<bar class="solid-bottom margin-top-sm">
+		<view class='action text-lg'>
+			<text class='icon-evaluate text-grey'> </text> 评分
+		</view>
+	</bar>
+	<view class='bg-white padding-xl flex align-center justify-between'>
+		<view class='flex'>
+			<view class='flex-sub rating-star' wx:for="{{stars}}" wx:key="*this" wx:for-item="item">
+				<text class='icon-favor{{item < star?"fill":""}} text-orange text-xxl margin-right' bindtap="selectRater" data-star="{{item}}"></text>
+			</view>
+		</view>
+		<text class="rater-desc">{{starText}}</text>
+	</view>
+	<view class='padding'>
+		<button class='bg-brown block lg' bindtap='onPost'>提交评价</button>
+	</view>
+</form>

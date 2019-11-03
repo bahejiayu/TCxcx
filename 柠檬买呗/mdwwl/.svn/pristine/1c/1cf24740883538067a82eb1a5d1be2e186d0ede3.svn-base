@@ -1,0 +1,86 @@
+page{
+  background-color: #f4f4f4;
+}
+.orderNav{
+  border-top: 1px solid #dcdcdc;
+  height: 100rpx;
+  font-size: 32rpx;
+  background-color: #fff;
+  line-height: 100rpx;
+  position: relative;
+}
+.orderNavItem{
+  float: left;
+  color: #333333;
+  width: 50%;
+  text-align: center;
+}
+.orderNavItem.cur{
+  color: #f5a623;
+}
+.NavLine{
+  position: absolute;
+  width:50%;
+  height: 5rpx;
+  background-color: #f5a623;
+  bottom: 0;
+  transition: all 0.3s;
+}
+.classifItem{
+  padding: 20rpx 25rpx;
+  background-color: #fff;
+  margin-bottom: 15rpx;
+  position: relative;
+  padding-left: 145rpx;
+  height: 100rpx;
+}
+.headIcon {
+  position: absolute;
+  width:100rpx ;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  left: 25rpx;
+}
+.headIcon image{
+    width: 100%;
+    height: 100%;
+}
+.classOrderInfo>view{
+  overflow: hidden;
+}
+.classInfoone view:first-child{
+      float: left;
+      font-size: 32rpx;
+      color: #000000;
+} 
+.classInfoone view:last-child{
+      float: right;
+      font-size: 30rpx;
+      color: #ff191a;
+} 
+.classInfotwo{
+  margin-top: 15rpx;
+}
+.classInfotwo view:first-child{
+      float: left;
+      font-size: 24rpx;
+      color: #a6a6a6;
+} 
+.classInfotwo view:last-child{
+      float: right;
+      font-size: 30rpx;
+      color: #000000;
+} 
+.mb0 {
+  margin-bottom: 0rpx!important;
+}
+
+.title_code{
+  line-height: 75rpx;
+  font-size:28rpx ;
+  color: #8b8b8b;
+  padding: 0 25rpx;
+}
+
+

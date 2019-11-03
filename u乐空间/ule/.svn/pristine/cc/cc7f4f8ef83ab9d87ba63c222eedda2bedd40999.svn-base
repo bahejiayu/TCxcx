@@ -1,0 +1,14 @@
+<list class=" menu no-padding">
+	<item class="" wx:for="{{detailsData}}">
+		<view class='content'>
+			<view class="text-lg">提现 {{item.putMoney}}</view>
+			<view class='text-gray margin-top-xs text-sm'>{{item.createTime}}</view>
+		</view>
+		<view class='action'>
+			<!-- <text class="text-green">已完成</text> -->
+			<!-- <text class="text-orange">审核中</text> -->
+			<!-- <text class="text-blue">打款中</text> -->      
+      <text class="{{item.examineType=='待审核'?'text-orange':item.examineType=='已驳回'?'text-red':item.examineType=='待打款'?'text-blue':'text-green'}}">{{item.examineType}}</text>
+		</view>
+	</item>
+</list>

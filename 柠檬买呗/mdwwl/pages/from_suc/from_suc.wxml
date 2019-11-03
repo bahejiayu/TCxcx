@@ -1,0 +1,4 @@
+<view class='ti_y'   >
+  <image src='/images/ysjy.png'></image>
+  <view>您已提交开店申请，请等待审核...</view>
+</view>

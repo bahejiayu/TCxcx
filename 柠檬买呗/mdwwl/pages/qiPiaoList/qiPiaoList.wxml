@@ -1,0 +1,31 @@
+<view class='order_list'>
+
+  <view class='shopInfo' wx:for='{{order_list}}'>
+    <navigator hover-class='none' url='../qiPiao/qiPiao?id={{item.id}}'>
+      <view class='shopContainer'>
+        <view class='shopLogo'>
+          <image src='{{http+item.logo}}'></image>
+        </view>
+        <view class='shopContent'>
+          <view class='shopName dan'>
+            {{item.shop_name}}
+          </view>
+          <view class='shopViewNumber'>
+            {{item.sum_order}}张
+          </view>
+
+        </view>
+        <view class='orderPrice'>
+          <view class='icon-right'></view>
+        </view>
+      </view>
+
+    </navigator>
+  </view>
+
+</view>
+
+<view class='kong' wx:if='{{order_list.length<=0}}'>
+    <image src='/images/kong.png'></image>
+    <view>还没有相关数据 !</view>
+  </view> 

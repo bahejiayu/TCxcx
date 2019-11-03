@@ -1,0 +1,63 @@
+const API = require('../../../utils/api')
+const request = require('../../../utils/request')
+const wxReq = require('../../../utils/wxRequest')
+const commen = require('../../../utils/commen')
+const app = getApp();
+
+Page({
+  data: {
+    HOST_URL: API.getHOSTURI(),
+    userCode: '',
+    list: [],
+    userInfo:null
+  },
+	onShareAppMessage() {
+		return app.globalData.shareMessage
+	},
+  onLoad: function (options) {
+    if (this.data.userInfo ==undefined || this.data.userInfo==null){
+      this.getUserInfo();
+    }
+    this.setData({
+      userCode: options.userCode
+    })
+    let self = this;
+    this.getList();
+  },
+  //获取用户信息
+  getUserInfo: function () {
+    var that = this;
+    wx.getUserInfo({
+      success(res) {
+        //判断用户是否存在系统，如果没有则新增
+        commen.loginByWeixin(res.userInfo, that.options.redPId).then(res => {
+          commen.updateAndGetUserInfo((userInfo) => {
+            app.globalData.shareMessage.path = app.globalData.shareMessage.path + userInfo.userId
+            that.setData({
+              userInfo: userInfo,
+              userCode:userInfo.userCode
+            })
+            console.log("订单页userCode="+userInfo.userCode)
+          })
+        })
+      }
+    })
+  },
+  getList: function () {
+    var self = this
+    var url = API.getTimeOrderList();
+    var getReq = wxReq.get(url, {
+      code: this.data.userCode
+    })
+    getReq.then(res => {
+      self.setData({
+        list: res.data.data
+      })
+    })
+  },
+  toTiming: (e) => {
+    wx.navigateTo({
+      url: 'info?id=' + e.currentTarget.dataset.id
+    })
+  }
+})

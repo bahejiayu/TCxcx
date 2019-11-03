@@ -1,0 +1,31 @@
+<bar class="fixed search">
+  <view class='search-form radius'>
+    <text class="icon-search"></text>
+    <input value="{{searchParam}}" bindfocus="focusShow" bindinput="searchUser" placeholder="可搜索关键字/用户ID" confirm-type="search"></input>
+    <view class='padding-lr' wx:if="{{searchState}}" bindtap="focusHide">取消</view>
+  </view>
+</bar>
+<list class="menu menu-avatar">
+  <item wx:for="{{showList}}" wx:key="index" class="{{move==index?'move':''}}}" bindtouchmove="touchMove" bindtouchstart="touchStart" bindtouchend="touchEnd" data-move="{{index}}">
+    <avatar class="round lg" style="background-image:url({{item.userHeadIcon}});"></avatar>
+    <view class='content'>
+      <view class='text-grey'>{{item.userName}}
+        <tag class="round sm margin-left-sm" style="background-color: #f4d57a;" wx:if="{{item.userYearType==1}}">
+          <text class="text-brown">年卡会员</text>
+        </tag>
+      </view>
+      <view class='text-gray text-sm'>
+        ID:{{item.userId}}
+      </view>
+    </view>
+    <view class='action'>
+      <view class='text-grey'>{{item.sUserSize}}</view>
+    </view>
+    <view class="moveBtn {{showDel?'cur':''}} bg-brown" catchtap='unYearUser' data-index="{{index}}" wx:if="{{item.userYearType==1}}">
+      <text>解绑会员</text>
+    </view>
+    <view class="moveBtn {{showDel?'cur':''}} bg-red" catchtap='untieMenber' data-id="{{item.userId}}" wx:if="{{item.userYearType==0}}">
+      <text>添加会员</text>
+    </view>
+  </item>
+</list>

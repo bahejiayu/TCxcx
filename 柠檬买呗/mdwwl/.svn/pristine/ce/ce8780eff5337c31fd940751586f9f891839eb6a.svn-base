@@ -1,0 +1,29 @@
+<view class='moey_icon' >
+        <image src='{{http}}/Public/home/money.png'></image>
+</view>
+<view class='money_box'>
+      <view>可提现金额</view>
+      <view>¥{{data_.yj_money}}</view>
+</view>
+
+<view class='btnBox'>
+    <button class='btnF' bindtap='go_getnow'>提现</button>
+</view>
+
+
+<view class='nav_list' >
+    <view class='nav_item'>
+      <navigator  url='../shou_detail/shou_detail' hover-class='none'>
+          <view>收支明细</view>
+          <view class='icon-right'></view>
+      </navigator>
+    </view>
+    <view class='nav_item'>
+      <navigator hover-class='none' url='../tc_detail/tc_detail'>
+          <view>提现明细</view>
+          <view class='icon-right'></view>
+      </navigator>
+    </view>
+
+
+</view>

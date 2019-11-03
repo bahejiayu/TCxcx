@@ -1,0 +1,118 @@
+page{  
+  padding-bottom: 120rpx;
+}
+.swiper-screen {
+	height: 750rpx;
+	position: relative;
+}
+
+.swiper-screen image {
+	width: 100%;
+	display: block;
+	height: 750rpx;
+	margin: 0;
+}
+.swiper-screen video {
+	width: 100%;
+	display: block;
+	height: 750rpx;
+	margin: 0;
+}
+
+.swiper-tag {
+	position: relative;
+	height: 0;
+}
+
+.swiper-tag tag {
+	position: absolute;
+	z-index: 100;
+	bottom: 15px;
+	right: 15px;
+}
+
+bar.shop .action [class*="icon"] {
+	font-size: 22px;
+}
+
+.typeBox dialog {
+	padding-top: 40px;
+	background-color: transparent;
+	text-align: left;
+}
+
+.typeBox .modal-bd {
+	padding: 10px;
+	background: #fff;
+}
+
+.goods-info {
+	display: flex;
+	padding-bottom: 15px;
+}
+
+.goods-info .flex-sub {
+	padding-left: 10px;
+	line-height: 1.6;
+}
+
+.goods-info image {
+	width: 120px;
+	height: 120px;
+	margin-top: -40px;
+	border-radius: 3px;
+	border: 2px solid #fff;
+}
+
+.type-group button {
+	margin: 5px;
+}
+
+.margin-0 {
+	margin: 0 !important;
+}
+
+.typeBox .modal-close {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #333;
+	position: absolute;
+	right: 20rpx;
+	top: 0;
+	width: 60rpx;
+	height: 60rpx;
+	color: #fc5d75;
+}
+
+.action tag.badge,
+tag:empty {
+	transition: all 0.3s ease-in-out;
+	transform: scale(1, 1);
+	top: -5px;
+}
+
+.action.noTouch tag.badge {
+	top: -20px;
+	transform: scale(1.5, 1.5);
+}
+
+rich-text .p {
+	margin: 0 !important;
+	font-size: 15px;
+}
+
+rich-text .img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 !important;
+}
+
+bar.shop [class*="icon"] {
+	width: 60rpx !important;
+}
+
+bar.shop .action {
+	padding: 0 10rpx;
+}

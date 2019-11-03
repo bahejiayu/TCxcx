@@ -1,0 +1,10 @@
+<!-- <view class='padding'></view> -->
+<timeline>
+  <item class='' wx:for="{{express.Traces}}">
+    <view class="content shadow-blur">
+      <tag class="cyan radius"> {{item.AcceptTime}}</tag>
+      <view class='margin-top-sm'>{{item.AcceptStation}}</view>
+    </view>
+  </item>  
+  <time>{{express.State==2?'在途中':''}}{{express.State==3?'已签收':''}}</time>
+</timeline>

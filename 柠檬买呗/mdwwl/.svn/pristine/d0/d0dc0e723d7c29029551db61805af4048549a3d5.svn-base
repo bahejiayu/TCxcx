@@ -1,0 +1,14 @@
+<view class='order_list' >
+    <view class='order_item'>
+        <view class='order_image'>
+            <image src='http://192.168.0.253/dotiings/Upload/shop/2019-04-11/5caed62928d91.jpg'></image>
+        </view>
+        <view class='order_content'>
+            <view class='dan'>法国 Dior 迪奥香水礼盒！4款小样</view>
+            <view>×1</view>
+        </view>
+        <view class='yongjing_'>
+        佣金：¥1400.80
+        </view>
+    </view>
+</view>

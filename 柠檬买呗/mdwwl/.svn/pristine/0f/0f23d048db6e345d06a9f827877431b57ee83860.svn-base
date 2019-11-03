@@ -1,0 +1,36 @@
+<view class='applyBox'>
+  <view class='apply_item'>
+    <view class='apply_title'>
+      <view class='shopLogo'>
+        <image src='https://school.ljq360.com/Upload/shop/2019-04-11/5caed62928d91.jpg'></image>
+      </view>
+      九毛九山西手工面
+    </view>
+    <view class='apply_contetn'>
+      <view>
+        <text>申请时间：</text> 2019-04-18
+      </view>
+      <view>
+        <text>折扣方式：</text> 8.5折
+      </view>
+      <view>
+        <text>商家让利：</text> 15%
+      </view>
+      <view>
+        <text>红包抵扣：</text> 8%
+      </view>
+      <view>
+        <text>联系人：</text> 张先生
+      </view>
+      <view>
+        <text>联系电话：</text> 13533085316
+      </view>
+      <view>
+        <text>修改原因：</text> 生意变好加大折扣让利比例生意变好加大折扣让利比例生意变好加大折扣让利比例生意变好加大折扣让利比例生意变好加大折扣让利比例生意变好加大折扣让利比例
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

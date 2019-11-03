@@ -1,0 +1,11 @@
+page {
+  padding-bottom: 50px;
+}
+.box{
+  padding: 30px;
+  text-align: center;  
+}
+.box [class*="icon"]{
+  font-size: 60px;
+  margin: 30px;
+}

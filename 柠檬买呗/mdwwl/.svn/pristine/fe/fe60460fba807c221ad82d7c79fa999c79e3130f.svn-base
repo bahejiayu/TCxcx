@@ -1,0 +1,52 @@
+page{
+  background-color: #fef1b3;
+}
+.bg_container image{
+  width: 100%;
+}
+.invite_box{
+  /* position: fixed; */
+  padding: 0 35rpx;
+  margin-top: 15rpx;
+}
+.invite_container{
+  background-color: #ffd653;
+  height: 315rpx;
+  box-sizing: border-box;
+  border-radius: 15rpx;
+  box-shadow: 0 0 10px 2px #f5c737 inset;
+text-align: center;
+padding: 50rpx 0;
+}
+.invite_title{
+  text-align: center;
+  font-size: 32rpx;
+  color: #666666;
+}
+.invite_code{
+  width: 350rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  text-align: center;
+  font-size: 42rpx;
+  color: #1e1e1e;
+  margin: 30rpx auto;
+  border-radius: 15rpx;
+
+}
+.invite_container text{
+  font-size:26rpx ;
+  color: #f7674a;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+

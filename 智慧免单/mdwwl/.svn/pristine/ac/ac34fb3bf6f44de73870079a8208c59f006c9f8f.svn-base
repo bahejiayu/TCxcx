@@ -1,0 +1,15 @@
+<view class='orderBox' >
+    <view class='orderItem'>
+        <view class='orderTitle'>
+            <view>订单编号：{{order_obj.number}}</view>
+            <view class='{{order_obj.refund_status==2?"":"hui"}}' >{{order_obj.refund}}</view>
+        </view>
+        <view class='orderContent'>
+            <view>{{order_obj.title}}</view>
+            <view>{{order_obj.pay_time}}</view>
+        </view>
+        <view class='orderBottom' >
+            <navigator url='{{order_obj.refund_status==2?"../codeOrderDetail/codeOrderDetail":""}}'>查看详情</navigator>
+        </view>
+    </view>
+</view>

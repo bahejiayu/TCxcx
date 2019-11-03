@@ -1,0 +1,2 @@
+<!-- <web-view class="details-btn" src="http://m.kuaidi100.com/index_all.html?type=&postid={{code}}&callbackurl=#result"></web-view> -->
+<web-view class="details-btn" src="{{HOST_URL}}app/toKuaiDi?code={{code}}"></web-view>

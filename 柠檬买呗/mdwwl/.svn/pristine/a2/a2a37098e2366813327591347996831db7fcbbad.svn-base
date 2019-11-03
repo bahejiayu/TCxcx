@@ -1,0 +1,65 @@
+<view class='accFrom'>
+  <form bindsubmit='subFrom'>
+    <view class='fromBox'>
+      <view class='from_item'>
+        <view class='from_title'>
+          卡号
+        </view>
+        <input type='text' placeholder='银行卡号' value='{{infoValue.back_id}}' name='back_id'></input>
+      </view>
+      <view class='from_item'>
+        <view class='from_title'>
+          开户人
+        </view>
+        <input type='text' placeholder='银行卡开户人' name='back_name' value='{{infoValue.back_name}}'></input>
+      </view>
+        <view class='from_item'>
+          <view class='from_title'>
+            所属银行
+          </view>
+          <input type='text' placeholder='如：中国银行、工商银行' name='back_ad' value='{{infoValue.back_ad}}'></input>
+        </view>
+      <view class='from_item'>
+        <view class='from_title'>
+          开户支行
+        </view>
+        <input type='text' placeholder='如：××××支行' name='back_branch' value='{{infoValue.back_branch}}'></input>
+      </view>
+      <picker mode="region" bindchange="getCity">
+
+      <view class='from_item'>
+        <view class='from_title'>
+          选择城市
+        </view>
+        <input type='text' value='{{city}}' placeholder='-- 请选择 --' disabled='{{true}}' name='back_address'></input>
+        <view class='icon-right'></view>
+
+      </view>
+      </picker>
+
+    </view>
+
+    <view class='fromBox'>
+      <view class='from_item'>
+        <view class='from_title'>
+          手机号
+        </view>
+        <input type='number' value='{{infoValue.back_phone}}' placeholder='请输入银行预留手机号' name='back_phone' bindinput='getPhone'></input>
+      </view>
+
+      <view class='from_item'>
+        <view class='from_title'>
+          验证码
+        </view>
+        <input type='text' placeholder='请输入短信验证码' maxlength='8' name='code'></input>
+        <view class='codeBtn' bindtap='codeBtn'>
+          {{codeTxt}}
+        </view>
+      </view>
+    </view>
+    <view class='fromTip'>卡信息用于账户实名认证，有效防止他人盗用</view>
+    <view class='btnBox'>
+      <button class='btnF' form-type='submit'>提交</button>
+    </view>
+  </form>
+</view>

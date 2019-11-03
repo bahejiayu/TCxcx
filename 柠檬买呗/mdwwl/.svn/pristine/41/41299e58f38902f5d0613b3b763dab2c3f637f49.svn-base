@@ -1,0 +1,20 @@
+<view class='CodeContainer'>
+  <view class='topImgInfo'>
+    <image src='/images/codebc_02.png'></image>
+  </view>
+  <view wx:if='{{!code_info.pay_code}}'>
+    <view class='fy_title'>费用</view>
+    <view class='pay_price'>￥{{code_info.qr_code_money}}</view>
+    <view class='codeBtn' bindtap='pay_'>
+      立即购买
+    </view>
+  </view>
+  <view class='codeContainer' wx:if='{{code_info.pay_code}}'>
+      <image src='{{http+code_info.pay_code}}' mode='widthFix' bindlongtap='saveImg' class='sj_code'></image>
+      <view  bindlongtap='saveImg'>
+        <image src='/images/cabc_03.png' class='cabc'></image>
+      </view>
+  </view>
+
+
+</view>

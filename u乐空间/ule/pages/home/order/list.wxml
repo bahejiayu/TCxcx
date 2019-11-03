@@ -1,0 +1,40 @@
+<view class='padding-xl' wx:if="{{list.length==0}}">
+  <view class='padding-xl bg-white radius shadow-lg text-center'>
+    您 还 没 有 任 何 订 单 ~ - ~
+  </view>
+</view>
+<block wx:else>
+  <view class="margin-top" wx:for="{{list}}" wx:key="index">
+    <bar class="solid-bottom">
+      <view class="action">订单编号：{{item.uoId}}</view>
+      <view class="action">使用中</view>
+    </bar>
+    <view class="padding bg-white">
+      <view class="text-lg">{{item.uoCommodityName}}</view>
+      <view class="margin-top-sm text-sm text-gray">{{item.uoCreateTime}}</view>
+    </view>
+    <bar class="solid-top justify-end">
+      <view class="action">
+        <button class="line-black" bindtap="toTiming" data-id="{{item.uoId}}">查看详情</button>
+      </view>
+    </bar>
+  </view>
+</block>
+
+
+<modal-box class="{{auth?'show':''}}">
+  <dialog>
+    <bar class="justify-end">
+      <view class='content'>用户信息授权</view>
+    </bar>
+    <view class='padding-lg'>
+      <view class='text-left text-content'>
+        <view class="auth_tips">1.同意当前小程序获取我的微信头像</view>
+        <view class="auth_tips">2.同意当前小程序获取我的微信昵称等其他信息</view>
+      </view>
+    </view>
+    <bar class="justify-center">
+      <button class='bg-green round shadow' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    </bar>
+  </dialog>
+</modal-box>

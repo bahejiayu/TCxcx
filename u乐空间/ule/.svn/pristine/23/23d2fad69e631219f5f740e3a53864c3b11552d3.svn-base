@@ -1,0 +1,38 @@
+const API = require('../../utils/api')
+const request = require('../../utils/request')
+const wxReq = require('../../utils/wxRequest')
+const commen = require('../../utils/commen')
+const app = getApp();
+Page({
+  data: {
+    HOST_URI: API.getHOSTURI(),
+    SERVER_URI: API.getSERVERURI(),
+    pageSize: 10,
+    pageNum: 0,
+    comboData: []
+  },
+  onShareAppMessage() { 
+    return  app.globalData.shareMessage
+  },
+  onLoad: function (options) {
+    //去掉了不进入店不能购买问题
+    // var shopId = commen.getShopId();
+    // console.log(shopId)
+    // if (shopId == null || shopId == '' || shopId == undefined){
+    //   return false
+    // }
+    var getReq = wxReq.get(API.getGetByGroupId(), { groupId: options.groupId })
+    getReq.then(resp => {
+      this.setData({
+        comboData: resp.data.data
+      })
+    })
+  },
+  toBuy: function (e) {
+    var param = JSON.stringify(this.data.comboData[e.currentTarget.dataset.index])
+    console.log(param)
+    wx.navigateTo({
+      url: '/pages/home/goods/pay?param=' + param + '&type=' + 3,
+    })
+  }
+})

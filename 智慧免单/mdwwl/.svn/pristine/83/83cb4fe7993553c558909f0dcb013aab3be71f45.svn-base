@@ -1,0 +1,9 @@
+<view class='CodeContainer'>
+    <view class='codeTip' >二维码全国统一售价：¥{{code_info.qr_code_money}}</view>
+    <button class='btnF'  bindtap='pay_'>支付</button>
+</view>
+
+  <view class='codeContainer' wx:if='{{code_info.pay_code}}'>
+      <image src='{{http+code_info.pay_code}}' mode='widthFix'></image>
+      <view>扫描上方二维码向商家付款</view>
+  </view>

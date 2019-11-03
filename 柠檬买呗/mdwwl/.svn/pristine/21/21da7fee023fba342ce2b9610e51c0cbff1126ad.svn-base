@@ -1,0 +1,11 @@
+<view class='CodeContainer'>
+      <view class='topImgInfo'>
+          <image src='/images/codebc_02.jpg'></image>
+      </view>
+    <view class='fy_title'>费用</view>
+    <view class='pay_price'>599.00</view>
+    <view class='codeBtn' >
+    立即购买
+    </view>
+
+</view>

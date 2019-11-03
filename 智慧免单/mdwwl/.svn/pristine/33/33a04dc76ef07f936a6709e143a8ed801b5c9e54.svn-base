@@ -1,0 +1,25 @@
+<view class='getNowTop'>
+    <view class='topItemOne'>账户剩余金额：5.00元</view>
+    <view class='topItemTwo'>
+        <view class=''>¥</view>
+        <input type='text'></input>
+    </view>
+</view>
+<view class='getTip'>
+提现金额不能小于1.00元
+</view>
+<view class='getStyleBox'>
+    <view class='BoxsTitle'>提现方式</view>
+    <view class='styleList'>
+      <view class='styleItem cur'>
+        <image src='/images/weix_03.png' class='png styleicon'></image>
+        <image src='/images/guo_03.png' class='png jiao'></image>
+      </view>
+    </view>
+</view>
+
+
+<view class='btnCon'>
+    <view class='getBtn'>提交申请</view>
+</view>
+

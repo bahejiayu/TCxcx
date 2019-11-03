@@ -1,0 +1,84 @@
+<import src="../footer/footer" />
+<view class='centerTop'>
+
+  <view class='cenHeadICon'>
+    <image src='{{user_info.avatarUrl}}'></image>
+  </view>
+  <view class='TopContetn'>
+    <view>{{user_info.nickName}}</view>
+    <view>
+      <navigator url='../personalInfo/personalInfo' hover-class='none'>编辑个人资料</navigator>
+    </view>
+  </view>
+</view>
+
+
+<view class='UserNavContainer'>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='{{shopInfo.is_perfect==2?"../ModifiShop/ModifiShop":"../setUpShop/setUpShop"}}'>
+      <image src='/images/un1.png'></image>店铺管理
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../goodsList/goodsList'>
+      <image src='/images/un2.png'></image>商品管理
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../AccountModification/AccountModification'>
+      <image src='/images/un3.png'></image>提现账户修改
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../ModifiPay/ModifiPay'>
+      <image src='/images/un4.png'></image>支付限额修改
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../ManagementInfo/ManagementInfo'>
+      <image src='/images/un5.png'></image>经营信息
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../../write/write?title=关于我们&type=1'>
+      <image src='/images/un6.png'></image>关于我们
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../withdrawalCenter/withdrawalCenter'>
+      <image src='/images/un7.png'></image>提现中心
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../Discount/Discount'>
+      <image src='/images/un8.png'></image>商家折扣
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../code/code'>
+      <image src='/images/un7.png'></image>店铺二维码信息
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../../write/write?title=合同条款&type=6'>
+      <image src='/images/un8.png'></image>合同条款
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+   <view class='UserNavItem'>
+    <navigator hover-class='none' url='../codeOrder/codeOrder'>
+      <image src='/images/un8.png'></image>二维码订单
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+</view>
+<template is="foot" data='{{Findex:3}}' />

@@ -1,0 +1,22 @@
+<bar class="fixed search">
+  <view class='search-form radius'>
+    <text class="icon-search"></text>
+    <input type="text" placeholder="可搜索关键字/用户ID" confirm-type="search" value="{{searchParam}}" bindfocus="focusShow" bindinput="searchUser"></input>
+    <view class='action' wx:if="{{searchState}}" bindtap="focusHide">取消</view>
+  </view>
+</bar>
+<list class="menu menu-avatar">
+  <item bindtap="staffDetails" wx:for="{{showList}}" data-type="{{item.userType}}" data-id="{{item.userId}}" wx:key>
+    <avatar class="round lg" style="background-image:url({{item.userHeadIcon}});"></avatar>
+    <view class='content'>
+      <view class='text-grey'>{{item.userName}}</view>
+      <view class='text-gray text-sm'>
+        <block wx:if="{{item.userType==0||item.userType==4}}">ID:</block>
+        <block wx:if="{{item.userType==1}}">员工:</block>
+        <block wx:if="{{item.userType==2}}">店长:</block>
+        <block wx:if="{{item.userType==3}}">管理员:</block> {{item.userId}}
+      </view>
+    </view>
+    <view class='action padding-lr text-orange' catchtap='addStaff' data-id="{{item.userId}}">添加</view>
+  </item>
+</list>

@@ -1,0 +1,10 @@
+.CodeContainer{
+  padding: 0 25rpx;
+}
+.codeTip{
+    padding: 100rpx 0 50rpx 0;
+    font-size: 32rpx;
+    text-align: center;
+    color: #000000;
+
+}

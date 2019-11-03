@@ -1,0 +1,36 @@
+<view class='topLine'>
+
+</view>
+<view class='ModifForm'>
+  <form bindsubmit='Submit'>
+    <view class='ModItem'>
+      <view class='ModTitle'>
+        账户类型
+      </view>
+      <input type='text' placeholder-class='inpclass'  name='back_ad' placeholder='请输入开户行名' value='{{infoValue.back_ad}}'></input>
+    </view>
+    <view class='ModItem'>
+      <view class='ModTitle'>
+        开户名
+      </view>
+      <input type='text' placeholder-class='inpclass' name='back_name' placeholder='请输入开户名' value='{{infoValue.back_name}}'></input>
+    </view>
+    <view class='ModItem'>
+      <view class='ModTitle'>
+        账号
+      </view>
+      <input type='text' placeholder-class='inpclass' name='back_id' placeholder='请输入账号' value='{{infoValue.back_id}}'></input>
+    </view>
+    <!-- <view class='ModItem ModCode'>
+      <view class='ModTitle'>
+        验证码
+      </view>
+      <input type='text' placeholder-class='inpclass' placeholder='请输入验证码'></input>
+      <view class='Codeclass'>获取验证码</view>
+    </view> -->
+    <view class='btn_box ModBtn' >
+      <button  form-type='submit' class='btnF' >提交</button>
+    </view>
+
+  </form>
+</view>

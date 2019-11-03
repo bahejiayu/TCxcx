@@ -1,0 +1,45 @@
+<view class="padding bg-brown flex align-center padding">
+	<view class="flex-sub text-lg">
+		<view class="">累计佣金</view>
+		<view class="margin-top-sm"> <text class="text-xxl">{{all}}</text> 元</view>
+	</view>
+	<button class="line-white" bindtap="toCashDetails">提现明细</button>
+</view>
+
+<list class="menu">
+	<item>
+		<view class='content'>
+			<text>可提现佣金</text>
+		</view>
+		<view class='action'>
+			<text class="text-red">{{surplus}}</text> 元
+		</view>
+	</item>
+	<item>
+		<view class='content'>
+			<text>已提现佣金</text>
+		</view>
+		<view class='action'>
+			<text class="text-red">{{isApply}}</text> 元
+		</view>
+	</item>
+	<item>
+		<view class='content'>
+			<text>待打款佣金</text>
+		</view>
+		<view class='action'>
+			<text class="text-red">{{waitGetMoney}}</text> 元
+		</view>
+	</item>
+</list>
+<list class="menu">
+	<item class="arrow">
+		<navigator class='content' url="getCash" hover-class="none">			
+			<text>用户须知</text>
+		</navigator>
+	</item>
+</list>
+
+<view class="padding">
+	<button class="bg-brown block lg" bindtap="toWithdraw">我要提现</button>
+</view>

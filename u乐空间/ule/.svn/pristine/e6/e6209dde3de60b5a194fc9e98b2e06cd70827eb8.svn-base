@@ -1,0 +1,21 @@
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{ads}}" wx:key>
+    <image src="{{HOST_URI + item.url}}" mode='aspectFill'></image>
+  </swiper-item>
+</swiper>
+
+<view class="padding-sm grid col-2">
+	<navigator hover-class="none" url="info?goodsId={{item.id}}" class="goods-item padding-xs margin-bottom" wx:for="{{list}}" wx:key>
+		<image src="{{HOST_URI + item.picUrl}}" mode="aspectFill" style="height: 340rpx;" class="radius"></image>
+		<view class="padding-sm text-content">{{item.name}}</view>
+		<view class="flex justify-between align-end padding-lr-xs">
+			<view>
+				<view class="text-gray text-price text-xs text-del">{{item.counterPrice}}</view>
+				<view class="text-brown text-price text-xl">{{item.retailPrice}}</view>
+			</view>
+			<view>
+				{{item.goodRate}}% 好评
+			</view>
+		</view>
+	</navigator>
+</view>

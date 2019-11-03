@@ -1,0 +1,21 @@
+.CodeContainer{
+  padding: 0 25rpx;
+}
+.codeTip{
+    padding: 100rpx 0 50rpx 0;
+    font-size: 32rpx;
+    text-align: center;
+    color: #000000;
+
+}
+.codeContainer{
+  text-align: center;
+  font-size: 28rpx;
+  padding-top: 100rpx;
+}
+.codeContainer image{
+  width: 500rpx;
+  /* height: 500rpx; */
+  margin-bottom: 10rpx;
+  
+}

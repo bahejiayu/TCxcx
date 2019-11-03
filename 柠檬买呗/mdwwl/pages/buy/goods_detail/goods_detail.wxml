@@ -1,0 +1,103 @@
+<view class='goods_swiper'>
+  <swiper bindchange='get_swiperIndex' autoplay='{{true}}'>
+    <swiper-item>
+      <image src='/images/goods_banner_02.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/goods_banner_02.jpg'></image>
+    </swiper-item>
+  </swiper>
+  <view class='swiper_nub'>{{cur_swiper}}/2</view>
+</view>
+
+<view class='goods_ifno'>
+  <view>
+    <view class='goods_price'>
+      <view>¥</view>
+      <view>180.00</view>
+    </view>
+    <view class='people_buy'>
+      <image src='{{http}}/Public/home/4.png'></image>
+      985人已抢
+    </view>
+  </view>
+  <view class='goods_name'>【严选x颐和园】 智能随行杯（火红款）红色限量款， 保温随行</view>
+</view>
+
+<view class='line_box'>
+  <view class='line_item' bindtap='show_gg'>
+    <view>数量规格选择</view>
+    <view class='icon-right'></view>
+  </view>
+  <view class='line_item'>
+    <view>
+      <text>运费</text> 免邮费 为您而省</view>
+  </view>
+</view>
+
+
+<view class='images_des'>
+  <view class='des_title'>
+    <view></view>
+    <view>图文介绍</view>
+    <view></view>
+  </view>
+  <view class='image_list'>
+    <image mode='widthFix'></image>
+  </view>
+</view>
+
+<view class='fixed_bottom'>
+  <view class='kefu_'>
+    <button>
+      <image src='{{http}}/Public/home/5.png'></image>
+      <view>客服</view>
+    </button>
+  </view>
+  <view class='buy_btn' >
+    立即购买
+  </view>
+</view>
+<view class='zz {{show_module==true?"op6":""}} ' wx:if='{{show_module}}' bindtap='sure_btn'></view>
+<view class='range_box {{show_module==true?"tr0":""}} '>
+  <view class='range_top'>
+    <view class='range_top_one'>
+      <view class='range_goods_img'>
+        <image src='/images/goods_banner_02.jpg'></image>
+      </view>
+      <view class='range_top_oneContent'>
+        <view class='range_price'>
+          <text>¥</text> 69.00
+        </view>
+        <view class='alear_chk'>已选:“180g”</view>
+      </view>
+    </view>
+    <view class='range_list'>
+      <view class='range_title'>
+        规格
+      </view>
+      <view class='range_container'>
+        <view class='range_item cur'>
+          180g
+        </view>
+        <view class='range_item '>
+          260g
+        </view>
+      </view>
+    </view>
+    <view class='range_nubBox'>
+      <view class='range_nubBoxTitle'>数量</view>
+      <view class='nub_container'>
+        <view class='down_nub  {{number==1?"op":""}} ' bindtap='down'></view>
+        <view class='nub_value'>
+          <input type='number' value='{{number}}' bindinput='get_nub'></input>
+        </view>
+        <view class='add_nub' bindtap='add_'></view>
+      </view>
+    </view>
+  </view>
+  <view class='sure_btn' bindtap='sure_btn'>
+    确认
+  </view>
+
+</view>

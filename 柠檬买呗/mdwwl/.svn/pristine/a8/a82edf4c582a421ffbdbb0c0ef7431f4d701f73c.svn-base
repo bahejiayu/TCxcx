@@ -1,0 +1,65 @@
+<view class='income_box'>
+  <view class='income_title'>
+    今日收益
+  </view>
+  <view class='big_box'>
+    <view class='fx_money'>
+      <view>¥0</view>
+      <view>消费佣金
+        <text class='icon-right'></text> </view>
+    </view>
+    <view class='yq_money'>
+      <view>¥0</view>
+      <view>邀请奖励
+        <text class='icon-right'></text> </view>
+
+    </view>
+
+  </view>
+  <view class='income_title' wx:if='{{all}}'>
+    日期查询收益
+  </view>
+  <view class='chaxun_line'  wx:if='{{all}}'>
+    <view>
+     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    
+    {{yao_txt}}
+      <text class='icon-triangledownfill'></text>
+
+        </picker>
+    </view>
+
+
+
+    <view>
+ <picker
+    mode="date"
+    value="{{date}}"
+    start="2019-01-01"
+  
+    fields='{{fields}}'
+    bindchange="bindDateChange"
+  >
+     {{chk_date}}
+      <text class='icon-triangledownfill'></text>
+        </picker>
+
+    </view>
+
+
+  </view>
+
+  <view class='chaxunData_box'  wx:if='{{all}}'>
+    <view>
+      <view>¥0</view>
+      <view>消费佣金</view>
+    </view>
+    <view>
+      <view>¥0</view>
+      <view>邀请奖励</view>
+    </view>
+
+  </view>
+
+
+</view>

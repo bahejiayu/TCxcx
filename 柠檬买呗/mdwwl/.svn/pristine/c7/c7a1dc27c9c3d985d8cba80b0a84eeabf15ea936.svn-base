@@ -1,0 +1,144 @@
+<view class='top_info'>
+  <view class='info_container'>
+    <view class='headImage'>
+      <image src='{{data_.headpath}}'></image>
+    </view>
+    <view class='user_data'>
+      <view class='name_lv'>
+        <view>{{data_.nickname}}</view>
+        <view>{{data_.vip}}</view>
+      </view>
+      <view class='other_info'>
+        <view>我的身份：会员　</view>
+        <view>我的推荐人：{{data_.p_nickname}}</view>
+        <view>邀请码：{{data_.share_code}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class='my_gaojia'>
+  <view class='gao_title' wx:if='{{data_.p_user}}'>
+    <view class='gao_titContaienr'>
+      <view>
+        我的高级咨询顾问
+      </view>
+      <view class='gaojia_info'>
+        <image src='{{data_.p_user.headpath}}'></image>
+        <text>{{data_.p_user.nickname}}</text>{{data_.p_user.phone}}
+      </view>
+    </view>
+  </view>
+  <view class='gao_list'>
+    <view>
+      <navigator url='../invite_code/invite_code'>
+        <image src='/images/yqfirend.png'></image>
+      </navigator>
+    </view>
+    <!-- <view>2</view>
+    <view>3</view> -->
+  </view>
+</view>
+
+<view class='all_data'>
+  <view class='data_item'>
+    <view class='data_itemContent'>
+      <view class='data_title'>
+        预估总收益
+      </view>
+      <view class='data_line'>
+        <view class='data_line_item'>
+          <navigator hover-class='none' url='../income/income'>
+            <view class='data_line_item_title'>今日收益(元)
+              <text class='icon-right'></text> </view>
+            <view class='data_line_item_nub dh'>¥{{data_.day_Profit}}</view>
+          </navigator>
+        </view>
+      </view>
+      <view class='data_line'>
+        <view class='data_line_item'>
+          <view class='data_line_item_title'>本月累计收益(元)
+          </view>
+          <view class='data_line_item_nub ptz'>¥{{data_.month_Profit}}</view>
+        </view>
+        <view class='data_line_item'>
+          <navigator hover-class='none' url='../income/income?type=all'>
+          <view class='data_line_item_title'>累计收益(元)
+            <text class='icon-right'></text> </view>
+          <view class='data_line_item_nub ptz'>¥{{data_.Profit}}</view>
+          </navigator>
+
+        </view>
+      </view>
+    </view>
+    <view class='data_itemfooter'>
+      <navigator hover-class='none' url='../settlement/settlement'>
+       <view>可提现佣金 {{data_.yj_money}} 元</view>
+      <view>立即提现
+        <text class='icon-right'></text> </view>
+      
+      </navigator>
+    </view>
+  </view>
+
+  <view class='data_item'>
+    <view class='data_itemContent'>
+      <view class='data_title'>
+        成交订单
+      </view>
+      <view class='data_line'>
+        <view class='data_line_item'>
+          <view class='data_line_item_title'>今日订单量
+          </view>
+          <view class='data_line_item_nub dh'>{{data_.day_order_number}}</view>
+        </view>
+      </view>
+      <view class='data_line'>
+        <view class='data_line_item'>
+          <view class='data_line_item_title'>本月累订单量
+          </view>
+          <view class='data_line_item_nub ptzh'>{{data_.month_order_number}}</view>
+        </view>
+        <view class='data_line_item'>
+          <view class='data_line_item_title'>累计订单量
+          </view>
+          <view class='data_line_item_nub ptzh'>{{data_.order_number}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+  <view class='data_item'>
+    <view class='data_itemContent'>
+      <view class='data_title'>
+        团队数据
+      </view>
+      <view class='data_line'>
+        <view class='data_line_item'>
+          <view class='data_line_item_title'>粉丝
+          </view>
+          <view class='data_line_item_nub ptzh'>
+            <view class='nub_a'>{{data_.fans}}
+              <view class='add_nub'>+{{data_.fans_new}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='data_line_item'>
+          <view class='data_line_item_title'>会员
+          </view>
+          <view class='data_line_item_nub ptzh'>
+            <view class='nub_a'>{{data_.vip_fans}}
+              <view class='add_nub'>+{{data_.vip_fans_new}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

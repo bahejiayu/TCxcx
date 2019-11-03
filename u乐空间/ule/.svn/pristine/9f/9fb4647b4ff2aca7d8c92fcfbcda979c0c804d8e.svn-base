@@ -1,0 +1,7 @@
+page{
+	background-color: #fff;
+	text-align: center;
+}
+.box{
+	margin-top: 300rpx;
+}

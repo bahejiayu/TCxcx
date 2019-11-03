@@ -1,0 +1,117 @@
+<!-- 商品大图轮播 -->
+<swiper class='swiper-screen' circular="true" duration="500" bindchange="swiperChange">
+  <swiper-item>
+    <video src='{{SERVER_URI + goods.videoUrl}}' objectFit="contain" autoplay muted></video>
+  </swiper-item>
+  <swiper-item wx:for="{{goods.gallery}}" wx:key>
+    <image src="{{SERVER_URI + item}}" mode='aspectFill' />
+  </swiper-item>
+</swiper>
+<view class='swiper-tag'>
+  <tag class="radius bg-white">{{swiperCur+1}}/{{goods.gallery.length}}</tag>
+</view>
+<!-- 商品信息 -->
+<view class="padding bg-white">
+  <view class="text-lg text-bold">{{goods.name}}</view>
+  <view class="margin-top-xs text-gray">{{goods.brief}}</view>
+  <view class="margin-top-sm">
+    <text class="text-red text-price text-xxl text-bold">{{goods.retailPrice}}</text>
+    <text class="text-gray text-price text-del margin-left-sm">{{goods.counterPrice}}</text>
+  </view>
+</view>
+<list class="menu margin-top-sm" bindtap='showModal' data-modal="bottomModal">
+  <item class="arrow">
+    <view class='content text-df'>数量规格选择</view>
+  </item>
+</list>
+
+<!-- 商品评论 -->
+<list class="menu solid-bottom" bindtap='toCommentList'>
+  <item class="arrow">
+    <view class='content text-df'>用户好评({{commentSize}})</view>
+    <view class='action text-df text-gray'>更多</view>
+  </item>
+</list>
+<view class="solid-top bg-white padding" wx:if="{{comment}}">
+  <view class='flex align-center'>
+    <avatar class="round" style="background-image:url({{comment.userAvater}});"></avatar>
+    <text class='text-lg margin-lr-sm'>{{comment.userName}}</text>
+    <view class='rating-star'>
+      <text wx:for="{{5}}" class="{{index<comment.star?'icon-favorfill text-orange':'icon-favor text-gray'}}" wx:key></text>
+    </view>
+  </view>
+  <view class='text-gray margin-top-sm'>{{comment.addTime}} {{comment.spec}}</view>
+  <view class='text-lg margin-tb-sm text-content'>{{comment.content}}</view>
+  <view class="grid col-3 grid-square">
+    <view class='bg-img' wx:for="{{comment.picUrls}}" wx:key="img" wx:for-item="img" bindtap="viewImgs" data-urls="{{comment.picUrls}}" data-index="{{index}}" style='background-image:url({{SERVER_URI+img}})'>
+    </view>
+  </view>
+</view>
+<!-- 商品详情 -->
+<view class='goods-content margin-top-sm'>
+  <rich-text nodes="{{dataInfo}}" bindtap="tap" class='rich-text'></rich-text>
+</view>
+<!-- 底部操作条 -->
+
+<bar class="foot shop">
+  <view class="action" bindtap='toMallHome'>
+    <text class='icon-home'></text>
+  </view>
+  <button class="action" open-type='contact'>
+    <text class='icon-service'></text>
+  </button>
+  <view class="action" bindtap='toMallCart'>
+    <view class='icon-cart'>
+      <!-- <tag class='badge'>99</tag> -->
+    </view>
+  </view>
+  <view class='submit bg-orange' bindtap='showModal' data-modal="bottomModal">
+    加入购物车
+  </view>
+  <view class='submit bg-red' bindtap='showModal' data-modal="bottomModal">
+    立即订购
+  </view>
+</bar>
+<!-- 规格选择 -->
+<modal-box class="{{modalName=='bottomModal'?'show':''}} bottom-modal typeBox">
+  <dialog class='modal-dialog'>
+    <view class='modal-close' bindtap='closeModal'>
+      <text class='icon-close'></text>
+    </view>
+    <view class='modal-bd'>
+      <view class='goods-info solid-bottom'>
+        <image src="{{SERVER_URI + goods.picUrl}}" mode='aspectFill' />
+        <view class='flex-sub'>
+          <view class='text-red text-price text-xxl'>{{goods.retailPrice}}</view>
+          <!-- <view>库存1231件</view> -->
+          <view wx:if="{{selectIndex!=null}}">已选“{{goods.spec[selectIndex]}}”</view>
+        </view>
+      </view>
+      <view class='padding-tb solid-bottom' wx:key>
+        <view class='margin-bottom-sm'>规格</view>
+        <view class='type-group'>
+          <button class="{{index==selectIndex?'bg-orange':'bg-grey'}}" wx:for="{{goods.spec}}" wx:key bindtap='selectSpec' data-id="" data-name="" data-index="{{index}}">
+            {{item}}
+          </button>
+        </view>
+      </view>
+      <view class='padding-tb flex align-center justify-between'>
+        <view>数量</view>
+        <view class='count'>
+          <button bindtap='cutNumber'>
+            <text class='icon-move'></text>
+          </button>
+          <input value='{{number}}' type='number' disabled></input>
+          <button bindtap='addNumber'>
+            <text class='icon-add'></text>
+          </button>
+        </view>
+      </view>
+    </view>
+    <bar class='btn-group'>
+      <button class="bg-orange lg  {{noTouch?'noTouch':''}}" bindtap='addCart'>加入购物车</button>
+      <!-- <button class="bg-grey lg  noTouch" bindtap='toSubmit' wx:if="{{soldout}}">商品已售空</button> -->
+      <button class="bg-red lg  {{noTouch?'noTouch':''}}" bindtap='toSubmit'>立即订购</button>
+    </bar>
+  </dialog>
+</modal-box>

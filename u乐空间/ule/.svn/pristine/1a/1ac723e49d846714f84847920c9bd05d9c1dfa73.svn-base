@@ -1,0 +1,83 @@
+<view class="bg-img padding DhCard" style="background-image:url(../../images/ucBg.jpg)">
+  <avatar class="round" style="background-image:url({{user.userHeadIcon}});width:150rpx;height:150rpx;">
+    <tag class="round margin-left-sm" wx:if="{{user.userType}}">
+      <block wx:if="{{user.userType==1}}">员工</block>
+      <block wx:if="{{user.userType==2}}">店长</block>
+      <block wx:if="{{user.userType==3}}">管理员</block>
+    </tag>
+  </avatar>
+  <view class="padding-lr-sm text-white padding-tb-lg text-center">
+    <view class="text-lg">{{user.userName}}</view>
+    <view class="margin-top-sm">ID:{{user.userId}}</view>
+    <view class="margin-top-xs" wx:if="{{user.userType!=3}}">门店：{{shop.siName}}</view>
+  </view>
+  <view class='animation-wave'>
+    <view class='wave'></view>
+  </view>
+</view>
+<view class="bg-white padding grid col-2" wx:if="{{user.userType==2||user.userType==3}}">
+  <view class="padding-xs">
+    今日订单：
+    <text class="text-red text-xl">{{tSize}}</text>
+  </view>
+  <view class="padding-xs">
+    今日营业额：
+    <text class="text-red text-xl text-price">{{tMoney}}</text>
+  </view>
+  <view class="padding-xs">
+    昨日订单：
+    <text class="text-red text-xl">{{ySize}}</text>
+  </view>
+  <view class="padding-xs">
+    昨日营业额：
+    <text class="text-red text-xl text-price">{{yMoney}}</text>
+  </view>
+</view>
+<view class="bg-white padding flex text-center {{status=='manage'?'margin-top':''}}">
+  <view class="flex-sub " bindtap="showModal" data-target="QrModal">
+    <text class="text-sl icon-qrcode"></text>
+    <view class="margin-top-sm text-gray">二维码</view>
+  </view>
+  <view class="flex-sub solid-left" bindtap="saoma">
+    <text class="text-sl icon-scan"></text>
+    <view class="margin-top-sm text-gray">扫码核销</view>
+  </view>
+  <view class="flex-sub solid-left" wx:if="{{user.userType==2||user.userType==3}}" bindtap="toMember">
+    <text class="text-sl icon-crown"></text>
+    <view class="margin-top-sm text-gray">年卡会员
+      <text class="text-grey">{{yearSize}}</text>
+    </view>
+  </view>
+</view>
+
+<list class="menu margin-top">
+  <item class="arrow">
+    <navigator class='content' hover-class='none' url='done?userId={{user.userId}}'>
+      <text class='icon-form text-brown'></text>
+      <text>核销订单</text>
+    </navigator>
+  </item>
+  <item class="arrow" wx:if="{{user.userType==2||user.userType==3}}">
+    <navigator class='content' hover-class='none' url='staff/list'>
+      <text class='icon-group text-brown'></text>
+      <text>员工管理</text>
+    </navigator>
+  </item>
+  <item class="arrow" wx:if="{{user.userType==2||user.userType==3}}">
+    <navigator class='content' hover-class='none' url='turnover'>
+      <text class='icon-rank text-brown'></text>
+      <text>营业额</text>
+    </navigator>
+  </item>
+</list>
+
+<modal-box class="{{modalName=='QrModal'?'show':''}}">
+  <dialog style="width:500rpx;" class="none-bg">
+    <view class="bg-white radius padding">
+      <image src='{{maSrc}}' mode='widthFix'></image>
+    </view>
+    <view class="text-center padding" bindtap='hideModal'>
+      <text class='icon-roundclose text-sl text-white'></text>
+    </view>
+  </dialog>
+</modal-box>

@@ -1,0 +1,106 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/switchcity/switchcity",
+    "pages/shopDetail/shopDetail",
+    "pages/goodsDetail/goodsDetail",
+    "pages/myOrder/myOrder",
+    "pages/search/search",
+    "pages/classify/classify",
+    "pages/userCenter/userCenter",
+    "pages/keFu/keFu",
+    "pages/verification/verification",
+    "pages/enter/enter",
+    "pages/login/login",
+    "pages/feedback/feedback",
+    "pages/getCenter/getCenter",
+    "pages/write/write",
+    "pages/code/code",
+    "pages/hongbao/hongbao",
+    "pages/orderInfo/orderInfo",
+    "pages/qiPiaoList/qiPiaoList",
+    "pages/qiPiao/qiPiao",
+    "pages/qiInfo/qiInfo",
+    "pages/message/message",
+    "pages/seller/FreeSheet/FreeSheet",
+    "pages/seller/order/order",
+    "pages/seller/personalInfo/personalInfo",
+    "pages/seller/sellerMessage/sellerMessage",
+    "pages/getMoney/getMoney",
+    "pages/seller/sqzk/sqzk",
+    "pages/seller/getMoney/getMoney",
+    "pages/seller/personaCenter/personaCenter",
+    "pages/seller/aboutUs/aboutUs",
+    "pages/seller/goodsList/goodsList",
+    "pages/seller/addGoods/addGoods",
+    "pages/seller/editorGoods/editorGoods",
+    "pages/seller/ManagementInfo/ManagementInfo",
+    "pages/seller/setUpShop/setUpShop",
+    "pages/seller/ModifiShop/ModifiShop",
+    "pages/seller/ModifiPay/ModifiPay",
+    "pages/seller/Discount/Discount",
+    "pages/seller/code/code",
+    "pages/seller/codeOrder/codeOrder",
+    "pages/seller/codeOrderDetail/codeOrderDetail",
+    "pages/seller/AccountModification/AccountModification",
+    "pages/seller/withdrawalCenter/withdrawalCenter",
+    "pages/seller/footer/footer",
+    "pages/pay/pay",
+    "pages/city/city_index/city_index",
+    "pages/city/shop_income/shop_income",
+    "pages/city/auditing/auditing",
+    "pages/city/auditingDetail/auditingDetail",
+    "pages/city/shopManager/shopManager",
+    "pages/city/modifyZk/modifyZk",
+    "pages/city/applyZk/applyZk",
+    "pages/city/getDetail/getDetail",
+    "pages/city/getMoney/getMoney"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarTitleText": "免单玩玩乐",
+    "navigationBarBackgroundColor": "#0097ff",
+    "navigationBarTextStyle": "white"
+  },
+
+"tabBar": {
+  "color":"#777777",
+  "selectedColor":"#0097ff",
+  "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/images/tab1.png",
+      "selectedIconPath": "/images/tab1c.png"
+    },
+      
+      {
+        "pagePath": "pages/code/code",
+        "text": "扫码",
+        "iconPath": "/images/tab3.png",
+        "selectedIconPath": "/images/tab3c.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "/images/tab4.png",
+        "selectedIconPath": "/images/tab4c.png"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的",
+        "iconPath": "/images/tab5.png",
+        "selectedIconPath": "/images/tab5c.png"
+      }
+
+  ]
+},
+
+"permission": {
+  "scope.userLocation": {
+    "desc": "免单玩玩乐将获取你的位置信息"
+  }
+}
+
+}

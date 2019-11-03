@@ -1,0 +1,96 @@
+const API = require('../../../utils/api')
+const request = require('../../../utils/request')
+const wxReq = require('../../../utils/wxRequest')
+const commen = require('../../../utils/commen')
+const app = getApp();
+Page({
+  data: {
+    HOST_URI: API.getHOSTURI(),
+    SERVER_URI: API.getSERVERURI(),
+    isShowCode: false,
+    obj: {},
+    codeSrc: "",
+    discountRate: 100
+  },
+  onShareAppMessage() { 
+    return  app.globalData.shareMessage
+  },
+  onLoad: function (options) {
+    var self = this
+    var getReq = wxReq.get(API.getSetInfo(), {})
+    getReq.then(resp => {
+      self.setData({
+        discountRate: resp.data.data.discountRate
+      })
+    })
+    wx.setNavigationBarTitle({
+      title: '订单详情'
+    })
+    var getReq = wxReq.get(API.getOrderById(), {
+      id: options.id
+    })
+    getReq.then(resp => {
+      var obj = resp.data.data
+      obj.uoMoney = commen.formatMoney(obj.uoMoney)
+      obj.uoActualMoney = commen.formatMoney(obj.uoActualMoney)
+      obj.uoCreateTime = commen.time2YYYYMMDDhhmmss(obj.uoCreateTime)
+      if (obj.uoType == 1 || obj.uoType == 0) {
+        obj.uoFinishDate = commen.time2YYYYMMDDhhmmss(obj.uoFinishDate)
+      }
+      self.setData({
+        obj: obj
+      })
+      commen.updateAndGetUserInfo((userInfo) => {
+        self.setData({
+          userInfo: userInfo
+        })
+        //&& obj.uoOverType == 3
+        if (obj.qrImgBase == null && obj.uoType == 3 && obj.uoPayStatus == 1) {
+          wx.showLoading({
+            title: '正在生成',
+          });
+          //生成二维码
+          var data = {}
+          request({
+            url: API.getCreateTwoIndex(),
+            method: 'POST',
+            data: {
+              page: 'pages/manage/home',
+              sc: "id=" + userInfo.userId + ",orderId=" + obj.uoId,
+              tag:"Q"
+            },
+            success: function (res) {
+              //let src = 'data:image/jpeg;base64,' + res.data.data;
+
+              let src = res.data.data;
+              if(src==null){
+                commen.showError("核销码生成失败");
+              }else{
+                self.setData({
+                  codeSrc: API.getSERVERURI() + res.data.data
+                })
+                wx.hideLoading();
+              }
+              
+            }
+          });
+        }else{
+          self.setData({
+            codeSrc: API.getSERVERURI() +obj.qrImgBase
+          });
+        }
+      });
+
+    });
+  },
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
+  },
+})

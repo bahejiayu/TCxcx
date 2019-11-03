@@ -1,0 +1,72 @@
+<view class='incomeTop'>
+  <view class='cityTop'>
+    <view>{{detail_info.agent_money}}</view>
+    <view>分润金额(元)</view>
+  </view>
+  <view class='topBottom '>
+    <view class='hhr_get'>
+      <view class='hhr_item'>
+        <view>{{detail_info.discount}}折</view>
+        <view>优惠折扣</view>
+      </view>
+      <view class='hhr_item'>
+        <view>{{detail_info.discount_rl}}%</view>
+        <view>让利比例</view>
+      </view>
+      <view class='hhr_item'>
+        <view>{{detail_info.max_deduction}}%</view>
+        <view>红包抵扣(%)</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='incomeAhb'>
+  <view class='incomeAhb_item'>
+    <view>商家总收益(元)</view>
+    <view>{{detail_info.shop_money}}</view>
+  </view>
+  <view class='incomeAhb_item'>
+    <view>红包抵扣(元)</view>
+    <view>{{detail_info.beat_money}}</view>
+  </view>
+</view>
+
+<view class='nav_line'>
+  <view class='cur'>
+    账单明细
+  </view>
+</view>
+<view class='shopIncomeBox'>
+  <view class='shopIncomeItem' wx:for="{{list_}}">
+    <view class='shopIncomeTitle'>
+      <view>{{item.pay_time}}</view>
+      <view>¥{{item.agent_money}}</view>
+    </view>
+    <view class='shopIncomeContetn'>
+      <view class='shopIncomeContetnLIne'>
+        <view>商家名称</view>
+        <view class='dan'>{{item.shop_name}}</view>
+      </view>
+      <view class='shopIncomeContetnLIne'>
+        <view>订单金额</view>
+        <view class='dan'>¥{{item.born_monry}}</view>
+      </view>
+       <view class='shopIncomeContetnLIne'>
+        <view>红包抵扣10%</view>
+        <view class='dan'>¥{{item.beat_money}}</view>
+      </view>
+       <view class='shopIncomeContetnLIne'>
+        <view>让利实收金额</view>
+        <view class='dan'>¥{{item.agent_money}}</view>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+<view class='kong' wx:if='{{list_.length<=0}}'>
+  <image src='/images/kong.png'></image>
+  <view>还没有相关明细 !</view>
+</view>

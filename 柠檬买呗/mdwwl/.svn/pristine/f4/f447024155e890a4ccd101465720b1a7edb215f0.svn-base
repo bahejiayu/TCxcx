@@ -1,0 +1,130 @@
+<import src="../footer/footer" />
+
+<view class='sheetTop'>
+  <image src='/images/sectbg_02.png' class='sheetTopBg'></image>
+
+  <view class='MothInfo'>
+    <view>本月营业总额(元)</view>
+    <view class='MothPrice'>{{num1}}</view>
+    <view class='getNowBtn' bindtap='go_now'>提现</view>
+  </view>
+</view>
+
+<view class='todayInfo'>
+  <view class='toDayBox'>
+    <view class='todayItem'>
+      <view>{{num2}}</view>
+      <view>今日营业额(元)</view>
+    </view>
+    <view class='todayItem'>
+      <view>{{num3}}</view>
+      <view>今日订单笔数(个)</view>
+    </view>
+  </view>
+</view>
+
+
+<view class='FreeNav'>
+  <view class='FreeNavList'>
+    <view class='FreeNavItem'>
+      <navigator hover-class='none' url='../ManagementInfo/ManagementInfo'>
+        <view class='Navimg'>
+          <image src='/images/fre1.png'></image>
+        </view>
+        <view class='NavTitle'>经营信息</view>
+      </navigator>
+    </view>
+
+    <view class='FreeNavItem'>
+      <navigator hover-class='none' url='../ModifiShop/ModifiShop'>
+        <view class='Navimg'>
+          <image src='/images/fre2.png'></image>
+        </view>
+        <view class='NavTitle'>店铺管理</view>
+      </navigator>
+    </view>
+
+    <view class='FreeNavItem'>
+      <navigator hover-class='none' url='../goodsList/goodsList'>
+        <view class='Navimg'>
+          <image src='/images/fre3.png'></image>
+        </view>
+        <view class='NavTitle'>商品管理</view>
+      </navigator>
+    </view>
+
+    <view class='FreeNavItem'>
+      <navigator hover-class='none' url='../code/code'>
+        <view class='Navimg'>
+          <image src='/images/fre4.png'></image>
+        </view>
+        <view class='NavTitle'>店铺二维码</view>
+      </navigator>
+    </view>
+  </view>
+   <view class='FreeNavList'>
+    <view class='FreeNavItem'>
+      <navigator hover-class='none' url='../AccountModification/AccountModification'>
+        <view class='Navimg'>
+          <image src='/images/fre5.png'></image>
+        </view>
+        <view class='NavTitle'>提现账户</view>
+      </navigator>
+    </view>
+
+    <view class='FreeNavItem'>
+      <navigator hover-class='none' url='../ModifiPay/ModifiPay'>
+        <view class='Navimg'>
+          <image src='/images/fre6.png'></image>
+        </view>
+        <view class='NavTitle'>支付限额</view>
+      </navigator>
+    </view>
+
+    <view class='FreeNavItem'>
+      <navigator hover-class='none' url='../withdrawalCenter/withdrawalCenter'>
+        <view class='Navimg'>
+          <image src='/images/fre7.png'></image>
+        </view>
+        <view class='NavTitle'>提现中心</view>
+      </navigator>
+    </view>
+
+    <view class='FreeNavItem'>
+      <navigator hover-class='none' url='../Discount/Discount'>
+        <view class='Navimg'>
+          <image src='/images/fre8.png'></image>
+        </view>
+        <view class='NavTitle'>商家折扣</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<template is="foot" data='{{Findex:0}}' />

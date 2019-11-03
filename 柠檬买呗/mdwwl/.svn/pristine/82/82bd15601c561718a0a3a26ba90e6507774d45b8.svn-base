@@ -1,0 +1,185 @@
+page{
+  background-color: #f7f7f7;
+}
+.cityTop{
+  height: 250rpx;
+  background-color: #0097ff;
+  box-sizing: border-box;
+  color: #fff;
+  padding-top: 70rpx;
+  text-align: center;
+}
+.cityTop view:first-child{
+  font-size: 76rpx;
+}
+.cityTop view:last-child{
+  font-size: 26rpx;
+}
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(1);
+  }
+
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+.waveWrapper {
+overflow:hidden;
+position:absolute;
+/* height:50rpx; */
+height: 100%;
+width:100%;
+left:0;
+top:0;
+/* transform:scale(1.2, 1.2); */
+
+
+}
+.topBottom{
+  height: 160rpx;
+  background-color: #0097ff;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+}
+.waveWrapperInner {
+position:absolute;
+width:100%;
+overflow:hidden;
+height:100%;
+bottom:-1px;
+
+}
+
+.bgTop {
+z-index:15;
+opacity:0.5;
+/* height:24px; */
+
+}
+.waveAnimation .waveTop {
+animation:move_wave 30s linear infinite;
+
+}
+.waveTop {
+background-size:540px 25px;
+
+}
+.wave {
+position:absolute;
+left:0;
+width:2160px;
+height:100%;
+background-repeat:repeat no-repeat;
+background-position:0 bottom;
+transform-origin:center bottom;
+
+}
+.bgMiddle {
+z-index:10;
+opacity:0.75;
+height:19px;
+
+}
+.waveAnimation .waveMiddle {
+animation:move_wave 24s linear infinite;
+
+}
+.waveMiddle {
+background-size:1080px 20px;
+
+}
+.bgBottom {
+z-index:5;
+height:14px;
+
+}
+.waveAnimation .waveBottom {
+animation:move_wave 12s linear infinite;
+
+}
+.waveBottom {
+background-size:540px 15px;
+
+}
+.bg_topBottom{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 100%;
+  background:url('http://school.ljq360.com/public/home/kongbai.png') repeat-x;
+animation:move_wave 40s linear infinite;
+
+
+}
+.bg_topBottom image{
+  width: 100%;
+  height: 100%;
+}
+.hhr_get{
+  overflow: hidden;
+
+}
+.hhr_get .hhr_item{
+  color: #fff;
+  font-size: 32rpx;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  margin-top: 50rpx;
+
+}
+.hhr_get .hhr_item view:last-child{
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.cityNav_list{
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.cityNav_item{
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  border-bottom: 2rpx solid #f4f4f4;
+  padding: 0 25rpx;
+  font-size:30rpx ;
+  color: #191919;
+  position: relative;
+}
+.cityNav_item image{
+  width: 45rpx;
+  vertical-align: text-top;
+  margin-right: 10rpx;
+  height:45rpx ;
+}
+.cityNav_item .icon-right{
+  position: absolute;
+  right: 25rpx;
+  color: #9a9a9a;
+  font-size: 38rpx;
+  top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

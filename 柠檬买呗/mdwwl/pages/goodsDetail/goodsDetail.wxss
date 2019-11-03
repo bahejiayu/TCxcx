@@ -1,0 +1,120 @@
+page{
+  background-color: #f4f4f4;
+}
+.shopImgList{
+  height: 750rpx;
+  }
+  .shopImgList swiper{
+    height: 100%;
+  }
+  .shopImgList image{
+    width: 100%;
+    height: 100%;
+  }
+.goodsDetail{
+  padding:  25rpx;
+  background-color: #fff;
+}
+.imgInfo_list image{
+  width: 100%;
+}
+.imgInfo_list{
+  margin-top: 10rpx;
+}
+.goodsName{
+  font-size:36rpx ;
+  color: #333;
+}
+
+.goodsPrice{
+  font-size:40rpx ;
+  color: #f33737;
+  margin-top: 30rpx;
+}
+
+.goodsPrice text{
+  font-size: 26rpx;
+}
+.shopInfo{
+    padding: 25rpx;
+    background-color: #fff;
+    margin:20rpx 0 ;
+}
+.shopContainer{
+  position: relative;
+  padding: 0 200rpx 0 150rpx;
+  height: 130rpx;
+}
+
+.shopLogo{
+  position: absolute;
+  width:130rpx ;
+  height: 130rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+}
+.shopLogo image{
+  width: 100%;
+  height: 100%;
+}
+.shopName{
+  font-size:32rpx;
+  color:#333333 ;
+  margin: 5rpx 0;
+}
+.shopViewNumber{
+  font-size: 26rpx;
+  color: #999999;
+}
+.hot_list image{
+  width: 20rpx;
+  height: 22rpx;
+  margin-right: 8rpx;
+  vertical-align: middle;
+}
+.goShop{
+    position: absolute;
+    width:185rpx ;
+    height:56rpx ;
+    line-height: 56rpx;
+    text-align: center;
+    font-size:30rpx ;
+    color: #59be42;
+    border: 2rpx solid #59be42;
+    border-radius: 25rpx;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.shopTitle{
+  height: 89rpx;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  text-align: center;
+  font-size:30rpx ;
+  color: #333333;
+}
+.shopTitle text{
+  line-height: 87rpx;
+  padding: 0 10rpx;
+  display: inline-block;
+  border-bottom: 3rpx solid #fd6906;
+}
+.shopHtml{
+  padding: 30rpx 25rpx;
+  font-size: 26rpx;
+  color: #333333;
+  background-color: #fff;
+  line-height:40rpx ;
+  margin-bottom: 80rpx;
+}
+
+
+
+
+
+
+
+

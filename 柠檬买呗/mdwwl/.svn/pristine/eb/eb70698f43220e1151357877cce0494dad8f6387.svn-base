@@ -1,0 +1,59 @@
+page{
+  background-color: #f7f7f7;
+  border-top: 1px solid #dcdcdc;
+}
+.CodeTop{
+  text-align: center;
+  padding: 70rpx 0;
+  background-color: #fff;
+}
+
+.Logo_{
+    width:175rpx ;
+    height: 175rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ffda43;
+    margin: 0 auto;
+}
+.Logo_ image{
+    width: 100%;
+    height: 100%;
+}
+.shop_name{
+  font-size:38rpx ;
+  color:#333;
+  margin-top: 20rpx;
+}
+.CodeContent{
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+  padding: 30rpx 0;
+  background-color: #fff;
+}
+.CodeContent view:first-child{
+    font-size: 42rpx;
+    color: #131313;
+}
+.CodeContent view:last-child{
+  font-size:30rpx ;
+  color: #adadad;
+  margin-top: 15rpx;
+}
+
+.code_btn{
+  margin-top: 40rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

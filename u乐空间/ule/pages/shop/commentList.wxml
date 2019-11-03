@@ -1,0 +1,15 @@
+<view class="margin-top-sm bg-white padding" wx:for="{{comments}}" wx:key>
+  <view class='flex align-center'>
+    <avatar class="round" style="background-image:url({{item.userAvater}});"></avatar>
+    <text class='text-lg margin-lr-sm'>{{item.userName}}</text>
+    <view class='rating-star'>
+      <text wx:for="{{5}}" wx:for-index="indexs" wx:for-item="items" class="{{indexs<item.star?'icon-favorfill text-orange':'icon-favor text-gray'}}" wx:key></text>
+    </view>
+  </view>
+  <view class='text-gray margin-top-sm'>{{item.addTime}} {{item.spec}}</view>
+  <view class='text-lg margin-tb-sm text-content'>{{item.content}}</view>
+  <view class="grid col-3 grid-square">
+    <view class='bg-img' wx:for="{{item.picUrls}}" wx:key="img" wx:for-item="img" bindtap="viewImgs" data-urls="{{item.picUrls}}" data-index="{{index}}" style='background-image:url({{SERVER_URI+img}})'>
+    </view>
+  </view>
+</view>

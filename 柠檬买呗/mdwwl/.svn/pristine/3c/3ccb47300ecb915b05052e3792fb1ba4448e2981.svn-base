@@ -1,0 +1,120 @@
+page {
+  background-color: #f1f1f1;
+}
+
+.orderStatu {
+  background-color: #fff;
+  padding: 30rpx 25rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.orderStatu view:first-child {
+  font-size: 38rpx;
+  color: #333;
+}
+
+.kong {
+  margin-top: 100rpx;
+}
+
+.orderStatu view:last-child {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 15rpx;
+}
+
+.shopInfo {
+  overflow: hidden;
+  color: #666;
+  font-size: 28rpx;
+}
+
+.shopInfo view:first-child {
+  float: left;
+  color: #666;
+  font-size: 28rpx;
+}
+
+.shopInfo view:last-child {
+  float: right;
+  margin-top: 0;
+}
+
+.payStyle {
+  height: 99rpx;
+  line-height: 99rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+  padding: 0 25rpx;
+  border-top: 1px solid #dcdcdc;
+}
+
+.payStyle view:first-child {
+  float: left;
+  color: #878787;
+}
+
+.payStyle view:last-child {
+  float: right;
+  color: #333;
+}
+
+.orderInfo {
+  padding: 20rpx 25rpx;
+  background-color: #fff;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  font-size: 28rpx;
+}
+
+.orderItem {
+  overflow: hidden;
+  margin: 20rpx 0;
+}
+
+.orderItem view:first-child {
+  float: left;
+  color: #878787;
+}
+
+.orderItem view:last-child {
+  float: right;
+  color: #333;
+}
+
+.orderPrice {
+  font-size: 32rpx;
+  color: #333;
+  text-align: right;
+  height: 99rpx;
+  line-height: 99rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 0 25rpx;
+}
+
+.orderPrice text {
+  color: #f24242;
+}
+
+.timeList {
+  padding: 25rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+  color: #878787;
+  margin-top: 10rpx;
+  border-top: 1px solid #dcdcdc;
+}
+
+.timeList text {
+  color: #333;
+}
+
+.timeList view {
+  margin-bottom: 15rpx;
+}
+
+.timeList view:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,36 @@
+<view class='top_line'>
+  <image src='{{http}}/Public/home/7.png' class='address_border'></image>
+</view>
+<view class='address_list'>
+  <view class='address_item cur'>
+    <view class='address_content'>
+      <view class='address_content_left'>
+        <view>小仙女</view>
+        <view>默认</view>
+      </view>
+      <view class='address_content_txt'>
+        <view>135*****317</view>
+        <view>广东省 广州市 天河区 珠江新城花城大道环球都会广场43#06</view>
+      </view>
+      <view class='editor_address'>
+        <image src='{{http}}/Public/home/8.png'></image>
+
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+<view class="foot btn-group">
+  <view class='foot_item'>
+    <button class='line-orange text-orange lg' bindtap="newAddress" hover-class='none'>
+      <text class='icon-add'> </text> 新建地址
+    </button>
+  </view>
+  <view class='foot_item'>
+    <button class='line-green text-green lg' bindtap='getAddress' hover-class='none'>
+      <text class='icon-weixin'> </text> 导入微信地址
+    </button>
+  </view>
+</view>

@@ -1,0 +1,67 @@
+<!-- <view class='add_address'>
+  <view class='add_addLeft'>
+    <view class='add_icon'></view>
+    <view>添加收货地址</view>
+  </view>
+  <view class='icon-right'></view>
+</view> -->
+
+<view class='order_address'>
+  <view class='address_icon'>
+    <image src='{{http}}/Public/home/6.png'></image>
+  </view>
+  <view class='address_info'>
+    <view class='addressUserInfo'>
+      <text>小仙女</text> 135*****317
+    </view>
+    <view class='address_des'>
+      广东省 广州市 天河区 珠江新城花城大道环球都会广场43#06
+    </view>
+  </view>
+  <view class='icon-right'></view>
+  <image src='{{http}}/Public/home/7.png' class='address_border'></image>
+</view>
+
+<view class='order_goods'>
+  <view class='order_goods_info'>
+    <view class='goods_image'>
+      <image src='/images/goods_banner_02.jpg'></image>
+    </view>
+    <view class='goods_des'>
+      <view class='goods_name dan'>网易智造超静音变频直流风扇</view>
+      <view class='goods_range'>象牙白</view>
+      <view class='goods_price'>
+        <view>¥180.00</view>
+        <view>×1</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='order_info'>
+  <view class='order_info_item'>
+    <view>商品金额</view>
+    <view>¥ 180.00</view>
+  </view>
+  <view class='order_info_item'>
+    <view>运费</view>
+    <view>¥ 0.00</view>
+  </view>
+</view>
+<view class='buy_message'>
+  <view class='buy_message_title'>买家留言</view>
+  <textarea placeholder='给卖家留言...'></textarea>
+</view>
+
+
+<view class='fix_bottom'>
+  <view class='fix_left'>
+    实付:
+    <text>¥180.00</text>
+  </view>
+  <view class='fix_right'>
+    去付款
+  </view>
+
+
+</view>

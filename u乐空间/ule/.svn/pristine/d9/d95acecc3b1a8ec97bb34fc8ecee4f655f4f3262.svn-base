@@ -1,0 +1,12 @@
+<view class="flex bg-white solid-bottom padding align-center" wx:for="{{shops}}" bindtap='saveShowShopId' data-id="{{item.siId}}">
+	<view class="flex-sub margin-left-sm">
+		<view class="flex justify-between text-lg">
+			{{item.siName}}
+			<view class="text-brown text-df" data-lat="{{item.siLat}}" data-lng="{{item.siLng}}" data-shopname="{{item.siName}}" data-location="{{item.siLocation}}" bindtap='toLocation'>
+				<text class="icon-forwardfill"></text> 导航
+			</view>
+		</view>
+		<view class="margin-top-sm">位置：{{item.siLocation}}</view>
+		<view class="margin-top-xs">电话：{{item.siPhone}}</view>
+	</view>
+</view>

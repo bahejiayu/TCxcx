@@ -1,0 +1,312 @@
+// pages/seller/setUpShop/setUpShop.js
+var app = getApp();
+var http = app.config.http;
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    http,
+    multiArray: [],
+    img_list2: [],
+    yy_time: '07:00  ——  22:00',
+    star_tsection: "07:00",
+    end_tsection: "22:00",
+    logo_img: '/images/jhx_03.png',
+    logoValue: '',
+    shopInfo:{}
+  },
+  subFrom: function(e) {
+
+
+    
+
+
+    var date_ = e.detail.value;
+    console.log(date_);
+    date_.uid=wx.getStorageSync('uid');
+    wx.showLoading({
+      title: '正在修改',
+    })
+    wx.request({
+      url: `${http}/home/shop/edit_shop`, // 仅为示例，并非真实的接口地址
+      data: date_,
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success(res) {
+        wx.hideLoading();
+        console.log(res.data);
+        if (res.data.code == 1) {
+          wx.showToast({
+            title: '修改成功',
+          })
+          setTimeout(function(){
+                wx.navigateBack({
+                  detal:1
+                });
+
+          },1500)
+        } else {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'none'
+          })
+
+        }
+
+      }
+    })
+
+
+
+  },
+  checkTime: function(e) {
+    var that = this;
+    console.log(e.detail.value);
+    var get_time = e.detail.value;
+    if (get_time[0] == 0) {
+      wx.showToast({
+        title: '请选择开始时间',
+        icon: 'none'
+      });
+      return false;
+    } else if (get_time[1] == 0) {
+      wx.showToast({
+        title: '请选择结束时间',
+        icon: 'none'
+      });
+      return false;
+    } else if (get_time[0] > get_time[1]) {
+      wx.showToast({
+        title: '请选择正确的营业时间',
+        icon: 'none'
+      });
+      return false;
+
+    }
+    var time_list = that.data.multiArray[0]
+    this.setData({
+      yy_time: `${time_list[get_time[0]]}  ——  ${time_list[get_time[1]]}`,
+      star_tsection: time_list[get_time[0]],
+      end_tsection: time_list[get_time[1]],
+    })
+
+
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function(options) {
+    var list_1 = [];
+    var list_2 = [];
+    // 生成时间
+    for (var i = 0; i < 24; i++) {
+      if (i < 10) {
+        list_1.push('0' + i + ':00');
+        list_2.push('0' + i + ':00');
+        list_1.push('0' + i + ':30');
+        list_2.push('0' + i + ':30');
+      } else {
+        list_1.push(i + ':00');
+        list_2.push(i + ':00');
+        list_1.push(i + ':30');
+        list_2.push(i + ':30');
+      }
+    }
+
+    list_1.unshift('请选择开始时间')
+    list_2.unshift('请选择结束时间')
+
+    this.setData({
+      multiArray: [list_1, list_2]
+    })
+    var that=this;
+    wx.request({
+      url: `${http}/home/shop/basic_data`, // 仅为示例，并非真实的接口地址
+      data: {
+        uid:wx.getStorageSync('uid')
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        console.log(res.data);
+            if(res.data.code==1){
+                that.setData({
+                  shopInfo:res.data.date,
+                  img_list2: res.data.date.slide_img||[],
+                  yy_time: `${res.data.date.yy_tsection[0]}  ——  ${res.data.date.yy_tsection[1]}`,
+                  star_tsection: res.data.date.yy_tsection[0],
+                  end_tsection: res.data.date.yy_tsection[1],
+                  logo_img: res.data.date.logo == null ? '/images/jhx_03.png' : http + res.data.date.logo  ,
+                  logoValue: res.data.date.logo,
+                })
+            }
+      }
+    })
+
+
+
+  },
+  upLogo: function() {
+    var that = this;
+
+
+
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths[0]
+        console.log(tempFilePaths)
+
+        wx.showLoading({
+          title: '上传中',
+        })
+        wx.uploadFile({
+          url: `${http}/home/shop/dyUpload`, // 仅为示例，非真实的接口地址
+          filePath: tempFilePaths,
+          name: 'file',
+          formData: {
+            user: 'file'
+          },
+          success(res) {
+            console.log(res.data)
+            wx.hideLoading();
+            var data_ = JSON.parse(res.data)
+            if (data_.status == 1) {
+              that.setData({
+                logo_img: tempFilePaths,
+                logoValue: data_.img
+              })
+            } else {
+              wx.showToast({
+                title: '上传失败',
+                icon: 'none'
+              })
+            }
+          }
+        })
+
+
+      }
+    })
+  },
+
+
+  upImage2: function() {
+    var that = this;
+
+    if (that.data.img_list2.length >= 3) {
+      wx.showToast({
+        title: '最多上传三张',
+        icon: 'none'
+      });
+      return false;
+    }
+
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths[0]
+        console.log(tempFilePaths)
+
+        wx.showLoading({
+          title: '上传中',
+        })
+        wx.uploadFile({
+          url: `${http}/home/shop/dyUpload`, // 仅为示例，非真实的接口地址
+          filePath: tempFilePaths,
+          name: 'file',
+          formData: {
+            user: 'file'
+          },
+          success(res) {
+            console.log(res.data)
+            wx.hideLoading();
+            var data_ = JSON.parse(res.data)
+            if (data_.status == 1) {
+
+
+              that.setData({
+                img_list2: that.data.img_list2.concat(data_.img)
+              })
+            } else {
+              wx.showToast({
+                title: '上传失败',
+                icon: 'none'
+              })
+            }
+          }
+        })
+
+
+      }
+    })
+  },
+  delList2: function(e) {
+    var list_ = this.data.img_list2;
+    list_.splice(e.target.dataset.index, 1);
+    this.setData({
+      img_list2: list_
+    });
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function() {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function() {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function() {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function() {
+
+  }
+})

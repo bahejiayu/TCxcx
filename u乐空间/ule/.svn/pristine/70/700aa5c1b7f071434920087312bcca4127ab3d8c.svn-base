@@ -1,0 +1,60 @@
+<form-group class="margin-top">
+  <view class='title'>昵 称</view>
+  <input value="{{user.userName}}" disabled></input>
+</form-group>
+<form-group>
+  <view class='title'>用户ID</view>
+  <input value="{{user.userId}}" disabled></input>
+</form-group>
+<form-group bindtap="showModal" data-target="ShopModal">
+  <view class='title'>所属门店</view>
+  <view class="flex-sub">
+    {{shop.name}}
+  </view>
+  <text class='icon-right text-gray'></text>
+</form-group>
+<form-group bindtap="showModal" data-target="WorkModal">
+  <view class='title'>岗位职称</view>
+  <view class="flex-sub">
+    {{post.name}}
+  </view>
+  <text class='icon-right text-gray'></text>
+</form-group>
+<view class="padding">
+  <button class="lg block bg-brown" bindtap='save'>添加员工</button>
+</view>
+
+<modal-box class="{{modalName=='ShopModal'?'show':''}}">
+  <dialog class=" ">
+    <radio-group class="block" bindchange="changeShopName">
+      <list class="menu text-left">
+        <item wx:for="{{shopItems}}" wx:key="index">
+          <label class='flex-sub flex justify-between align-center'>
+            <view class='flex-sub'>{{item.siName}}</view>
+            <radio value="{{item.siName+':'+item.siId}}" checked="{{shop.value==item.siId}}" class='brown' />
+          </label>
+        </item>
+      </list>
+    </radio-group>
+    <view class="padding text-center solid-top" bindtap="hideModal">
+      确定
+    </view>
+  </dialog>
+</modal-box>
+<modal-box class="{{modalName=='WorkModal'?'show':''}}">
+  <dialog class=" ">
+    <radio-group class="block" bindchange="radioChange">
+      <list class="menu text-left">
+        <item wx:for="{{workItems}}" wx:key="index">
+          <label class='flex-sub flex justify-between align-center'>
+            <view class='flex-sub'> {{item.name}}</view>
+            <radio value="{{item.name+':'+item.value}}" checked="{{post.value==item.value}}" class='brown' />
+          </label>
+        </item>
+      </list>
+    </radio-group>
+    <view class="padding text-center solid-top" bindtap="hideModal">
+      确定
+    </view>
+  </dialog>
+</modal-box>

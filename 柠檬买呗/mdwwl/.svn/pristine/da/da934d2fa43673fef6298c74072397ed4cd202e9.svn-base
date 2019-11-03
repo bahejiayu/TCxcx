@@ -1,0 +1,43 @@
+<view class='formContainer'>
+
+  <form bindsubmit='subFrom'>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        每日累计支付限额(元)
+      </view>
+      <view class='inpContainer'>
+        <input type='text' placeholder='请输入金额' name='pro_accumulate' value='{{infoValue.pro_accumulate }}'></input>
+      </view>
+    </view>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        单笔最大支付限额(元)
+      </view>
+      <view class='inpContainer'>
+        <input type='text' placeholder='请输入金额' name='pro_max' value='{{infoValue.pro_max }}'></input>
+      </view>
+    </view>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        单笔最小支付限额(元)
+      </view>
+      <view class='inpContainer'>
+        <input type='text' placeholder='请输入金额' name='pro_mix' value='{{infoValue.pro_mix }}'></input>
+      </view>
+    </view>
+    <!-- <view class='ModifItem'>
+      <view class='feedTitle'>
+        支付时间间隔(分钟)
+      </view>
+      <view class='inpContainer'>
+        <input type='text' placeholder='请输入金额' name='pro_interval' value='{{infoValue.pro_interval}}'></input>
+      </view>
+    </view> -->
+
+
+    <view class='ModBtn'>
+      <button class='btnF' form-type='submit'>提交</button>
+
+    </view>
+  </form>
+</view>

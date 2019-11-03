@@ -1,0 +1,295 @@
+page {
+  background-color: #f4f4f4;
+  border-top: 1px solid #dcdcdc;
+}
+
+.shopInfo {
+  padding: 20rpx 25rpx;
+  background-color: #fff;
+  padding-left: 125rpx;
+  font-size: 32rpx;
+  color: #333;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+}
+
+.shopLogo {
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  left: 25rpx;
+}
+
+.myClassInfo {
+  padding: 0 25rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.classItem {
+  padding: 20rpx 0;
+  height: 85rpx;
+}
+
+.leftInfo {
+  float: left;
+  position: relative;
+  padding-left: 110rpx;
+}
+
+.leftimg {
+  position: absolute;
+  width: 85rpx;
+  height: 85rpx;
+  border-radius: 50%;
+  left: 0rpx;
+}
+
+.leftInfo view:first-child {
+  font-size: 30rpx;
+  color: #000;
+}
+
+.leftInfo view:last-child {
+  font-size: 24rpx;
+  color: #a6a6a6;
+}
+
+.rightInfo {
+  float: right;
+  height: 85rpx;
+  line-height: 85rpx;
+  font-size: 32rpx;
+  color: #000;
+}
+
+.priceInfo {
+  overflow: hidden;
+  border-top: 1px solid #e5e5e5;
+  padding: 20rpx 0;
+}
+
+.price_item {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+.price_item view:last-child {
+  font-size: 24rpx;
+  color: #909090;
+  margin-top: 10rpx;
+}
+
+.price_item view:first-child {
+  font-size: 32rpx;
+  color: #ec1d1d;
+}
+
+.allClassTitle {
+  font-size: 28rpx;
+  color: #8b8b8b;
+  height: 73rpx;
+  line-height: 73rpx;
+  padding: 0 25rpx;
+}
+
+.classFirst {
+  padding: 20rpx 25rpx;
+  background-color: #e9f3f9;
+  padding-left: 145rpx;
+  position: relative;
+  height: 100rpx;
+}
+
+.headImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 25rpx;
+}
+
+.headImg image {
+  width: 100%;
+  height: 100%;
+}
+
+.line1 {
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.line1 view:first-child {
+  float: left;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.line1 view:last-child {
+  float: right;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.line1 view:last-child text {
+  font-size: 26rpx;
+  color: #ff191a;
+}
+
+.line2 view:first-child {
+  float: left;
+  font-size: 24rpx;
+  color: #a6a6a6;
+}
+
+.line2 view:last-child {
+  float: right;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.line2 {
+  margin-top: 10rpx;
+}
+
+.classFirst {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.classList .classFirst {
+  background-color: #fff;
+}
+
+.classList .classFirst .line1 view:last-child {
+  font-size: 26rpx;
+  color: #fd6906;
+}
+
+.classList {
+  padding-bottom: 150rpx;
+}
+
+.fixedBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #0097ff;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.zz_ {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.getHbBox {
+  position: fixed;
+  width: 470rpx;
+  height: 600rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.HbImage {
+  padding: 35rpx 0;
+  text-align: center;
+  width: 324rpx;
+  height: 306rpx;
+  margin: 0 auto;
+  position: relative;
+}
+
+.HbImage image {
+  width: 100%;
+  height: 100%;
+}
+
+.hbTxt {
+  color: #ffe39b;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 170rpx;
+}
+
+.hbTxt view:first-child {
+  font-size: 20rpx;
+}
+
+.hbTxt view:last-child {
+  font-size: 46rpx;
+}
+
+.hbTxt view:last-child text{
+    font-size: 24rpx;
+}
+.gongxGet{
+  font-size: 34rpx;
+  color: #202020;
+  text-align: center;
+}
+.gongxGet text{
+  color: #ff383c;
+}
+.gongTip{
+  font-size: 26rpx;
+  color: #6e6e6e;
+  text-align: center;
+  margin: 20rpx 0 30rpx 0;
+}
+.sureBtn{
+    width: 350rpx;
+    height:65rpx ;
+    text-align: center;
+    line-height: 65rpx;
+    color: #fff;
+    font-size: 30rpx;
+   background: -webkit-gradient(linear, 0 0, 100% 100%, from(#ff8712),to(#ff5458));
+   margin: 0 auto;
+   border-radius: 30rpx;
+
+}
+.getHbBox .icon-close{
+  padding: 25rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

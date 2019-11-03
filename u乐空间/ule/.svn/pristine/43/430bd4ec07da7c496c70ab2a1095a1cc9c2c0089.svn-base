@@ -1,0 +1,230 @@
+import config from 'config.js';
+
+var rootPath = config.getDomain;
+var picPath = config.getDomain;
+
+var HOST_URI = 'https://' + rootPath + '/app/';
+var SERVER_URI = 'https://' + rootPath;
+
+// var HOST_URI = 'http://' + rootPath + '/app/';
+// var SERVER_URI = 'http://' + '192.168.0.253:8088';
+
+
+module.exports = {
+  getCheckOrderCanCreate: () => {
+    return HOST_URI + 'userOrder/checkOrderCanCreate';
+  },
+  getCommentStart: () => {
+    return HOST_URI + 'userOrder/commentStart';
+  },
+  getIsUserCommentTime: () => {
+    return HOST_URI + 'user/isUserCommentTime';
+  },
+  getHOSTURI: () => {
+    return HOST_URI
+  },
+  getSERVERURI: () => {
+    return SERVER_URI
+  },
+  getSearchCarousel: () => {
+    return HOST_URI + 'article/searchCarousel';
+  },
+  getSelectAnnualCardList: () => {
+    return HOST_URI + 'annual/selectAnnualCardList';
+  },
+  getGetUser: () => {
+    return HOST_URI + 'user/getUser';
+  },
+  getJoinTeam: () => {
+    return HOST_URI + 'user/joinTeam';
+  },
+  getCreateTwoIndex: () => {
+    return HOST_URI + 'app/createTwoIndex';
+  },
+  getGetByGroupId: () => {
+    return HOST_URI + 'meal/getByGroupId';
+  },
+  getCalculationMoney: () => {
+    return HOST_URI + 'userOrder/calculationMoney';
+  },
+  postPayJson: () => {
+    return HOST_URI + 'app/payJson'
+  },
+  postPaySubmit: () => {
+    return HOST_URI + 'app/paySubmit'
+  },
+  postOrderCreate: () => {
+    return HOST_URI + 'userOrder/create'
+  },
+  getSetInfo: () => {
+    return HOST_URI + 'user/getSetInfo'
+  },
+  getListByUserCode: () => {
+    return HOST_URI + 'userOrder/getListByUserCode'
+  },
+  getUserEnvelopesById: () => {
+    return HOST_URI + 'user/getUserEnvelopesById'
+  },
+  getOrderById: () => {
+    return HOST_URI + 'userOrder/getOrderById'
+  },
+  getGiftByUserId: () => {
+    return HOST_URI + 'userGiftR/getByUserId'
+  },
+  getGiftupdate: () => {
+    return HOST_URI + 'userGiftR/update'
+  },
+  getTimeOrderList: () => {
+    return HOST_URI + 'userOrder/getTimeOrderList'
+  },
+  getShop: () => {
+    return HOST_URI + 'shop/getShop'
+  },
+  getSizeBetweenTime: () => {
+    return HOST_URI + 'userOrder/getSizeBetweenTime'
+  },
+  getAllTurnoverBetweenTime: () => {
+    return HOST_URI + 'userOrder/getAllTurnoverBetweenTime'
+  },
+  getYearUserSize: () => {
+    return HOST_URI + 'user/getYearUserSize'
+  },
+  getCalculationMoney: () => {
+    return HOST_URI + 'userOrder/calculationMoney'
+  },
+  postCreateCourtOrder: () => {
+    return HOST_URI + 'userOrder/createCourtOrder'
+  },
+  getAllShop: () => {
+    return HOST_URI + 'shop/getAllShop'
+  },
+  getSelectCheckListByTime: () => {
+    return HOST_URI + 'checkMeal/selectCheckListByTime'
+  },
+  getWorkUserList: () => {
+    return HOST_URI + 'user/getWorkUserList'
+  },
+  getSearchUser: () => {
+    return HOST_URI + 'user/searchUser'
+  },
+  getUserById: () => {
+    return HOST_URI + 'user/getUserById'
+  },
+  postBindWorkUser: () => {
+    return HOST_URI + 'user/bindWorkUser'
+  },
+  getUnWorkUser: () => {
+    return HOST_URI + 'user/unWorkUser'
+  },
+  getCandGSelect: () => {
+    return HOST_URI + 'candG/select'
+  },
+  getListBetweenTime: () => {
+    return HOST_URI + 'userOrder/getListBetweenTime'
+  },
+  getYearUserList: () => {
+    return HOST_URI + 'user/getYearUserList'
+  },
+  postUnYearCard: () => {
+    return HOST_URI + 'user/unYearCard'
+  },
+  postUpYearCard: () => {
+    return HOST_URI + 'user/upYearCard'
+  },
+  getByOrderId: () => {
+    return HOST_URI + 'userGiftR/getByOrderId'
+  },
+  getCourtOrderById: () => {
+    return HOST_URI + 'userOrder/getCourtOrderById'
+  },
+  getCheckCommonOrderIsHavePay: () => {
+    return HOST_URI + 'userOrder/checkCommonOrderIsHavePay'
+  },
+  getCommenOrderId: () => {
+    return HOST_URI + 'userOrder/getCommenOrderId'
+  },
+  getPrivateStart: () => {
+    return HOST_URI + 'userOrder/privateStart'
+  },
+  getRedOrder: () => {
+    return HOST_URI + 'user/getRedOrder'
+  },
+  getMyTeam: () => {
+    return HOST_URI + 'user/myTeam'
+  },
+  getSelectArticleList: () => {
+    return HOST_URI + 'article/selectArticleList'
+  },
+  getLoginByWeiXin: () => {
+    return HOST_URI + 'app/loginByWeiXin'
+  },
+  getOverAndInsertOrder: () => {
+    return HOST_URI + 'checkMeal/overAndInsertOrder'
+  },
+  getArticleById: () => {
+    return HOST_URI + 'article/getArticleById'
+  },
+  getSendSms: () => {
+    return HOST_URI + 'app/sendSms'
+  },
+  postUserRegister: () => {
+    return HOST_URI + 'user/userRegister'
+  },
+  getUnCourtOrder: () => {
+    return HOST_URI + 'userOrder/getUnCourtOrder'
+  },
+  //-------------------------zyh-----------------------------
+  getGoodsDetail: () => {
+    return HOST_URI + 'goods/detail'
+  },
+  mallPostPaySubmit: HOST_URI + 'order/paySubmit',
+  orderGoodsMine: HOST_URI + 'order/goodsMine',
+  orderList: HOST_URI + 'order/list',
+  storageUpload: HOST_URI + 'upload/upload',
+  commentPost: HOST_URI + 'comment/post',
+  commentList: HOST_URI + 'comment/list',
+  saveForm: HOST_URI + 'formid/save',
+  mallGetListBetweenTime: HOST_URI + 'order/getListBetweenTime',//查询时间内订单列表
+  mallGetSizeBetweenTime: HOST_URI + 'order/getSizeBetweenTime',//查询时间内订单数
+  mallGetAllTurnoverBetweenTime: HOST_URI + 'order/getAllTurnoverBetweenTime',//查询时间内的营业额
+  GetExpress: HOST_URI + 'mallKuai/getKuaiDiData',
+  showTan:HOST_URI + 'user/showTan',
+  getDistriUser: HOST_URI + 'user/getDistriUser',
+  //-------------------------end-----------------------------
+  orderBeforePay: HOST_URI + 'order/beforePay', //生成订单前
+  orderCancel: HOST_URI + 'order/cancel', //取消订单
+  orderConfirm: HOST_URI + 'order/confirm', //确认收货
+  orderGoodsMine: HOST_URI + 'order/goodsMine', //订单首页右上角数字
+  orderList: HOST_URI + 'order/list', //订单列表
+  orderDetail: HOST_URI + 'order/detail', //订单列表
+  orderGoods: HOST_URI + 'order/detail', //订单列表
+  orderPayNotify: HOST_URI + 'order/pay-notify', //支付回调
+  orderPrepay: HOST_URI + 'order/prepay', //预支付会话标识
+  orderSubmit: HOST_URI + 'order/submit', //提交订单
+  orderUnComment: HOST_URI + 'order/unCommentOrderGoods', //未评论订单商品列表
+
+  cartAdd: HOST_URI + 'cart/add', //向购物车添加商品
+  cartFastAdd: HOST_URI + 'cart/fastAdd', //立即购买
+  cartList: HOST_URI + 'cart/list', //购物车列表
+  cartTotal: HOST_URI + 'cart/cartTotal', //购物车总数
+  cartDel: HOST_URI + 'cart/del', //从购物车删除商品
+  cartEdit: HOST_URI + 'cart/editCart', //修改购物车商品
+
+  commentList: HOST_URI + 'comment/list', //评论列表表
+  commentPost: HOST_URI + 'comment/post', //发表评论
+
+  goodsDetail: HOST_URI + 'goods/detail', //商品详情
+
+  mallDetailHome: HOST_URI + 'mall/detailHome', //分类内首页
+  mallHome: HOST_URI + 'mall/home', //分类首页
+
+  refundAdd: HOST_URI + 'refund/add', //添加记录
+  refundList: HOST_URI + 'refund/list', //查询列表
+  refundDetail: HOST_URI + 'refund/detail', //查询列表
+
+
+  UserPuOrder: HOST_URI + 'work/getUserPuOrder', //工作人员获取用户的公共空间订单
+  ChanelUserOrder: HOST_URI + 'work/chanelUserOrder', //取消指定用户公共空间订单
+
+ 
+}

@@ -1,0 +1,59 @@
+
+<view class='getNav'>
+  <view class='{{navIndex==0?"cur":""}}' data-index='0' bindtap='togNav'>分润明细</view>
+  <view class='{{navIndex==1?"cur":""}}' bindtap='togNav' data-index='1'>提现明细</view>
+</view>
+
+<view class='shopIncomeBox' wx:if='{{navIndex==0}}'>
+  <view class='shopIncomeItem'>
+    <view class='shopIncomeTitle'>
+      <view>2019-03-30 19:50</view>
+      <view>¥5.00</view>
+    </view>
+    <view class='shopIncomeContetn'>
+      <view class='shopIncomeContetnLIne'>
+        <view>商家名称</view>
+        <view class='dan'>九毛九山西手工面</view>
+      </view>
+      <view class='shopIncomeContetnLIne'>
+        <view>订单金额</view>
+        <view class='dan'>¥200.00</view>
+      </view>
+       <view class='shopIncomeContetnLIne'>
+        <view>红包抵扣10%</view>
+        <view class='dan'>¥200.00</view>
+      </view>
+       <view class='shopIncomeContetnLIne'>
+        <view>让利实收金额</view>
+        <view class='dan'>¥5.00</view>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+
+
+<view class='get_detailBox txList' wx:if='{{navIndex==1}}'>
+  <view class='get_detailItem'>
+    <view class='get_detailContetn'>
+      <view class='detailContent' wx:for='{{tx_list}}'>
+        <view class='detailContent_left'>
+          <view class='dan'>提现金额</view>
+          <view>{{item.time}}</view>
+        </view>
+        <view class='mx_right'>
+          <view>{{item.money}}</view>
+          <view class='wait_' wx:if='{{item.state=="提现中"}}'>提现中</view>
+          <view class='fail_' wx:if='{{item.state=="提现失败"}}'>提现失败</view>
+          <view class='success_' wx:if='{{item.state=="提现成功"}}'>提现成功</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+ <view class='kong' wx:if='{{navIndex==1&&tx_list.length<=0}}'>
+    <image src='/images/kong.png'></image>
+    <view>还没有相关提现 !</view>
+  </view>

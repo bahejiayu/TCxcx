@@ -1,0 +1,72 @@
+<view class='top_order_status'>
+  <image src='{{http}}/Public/home/10.png'></image>  
+  <!-- 12  13 -->
+  <view>待付款</view>
+</view>
+<view class='address_info'>
+
+  <view class='icon-locationfill'>
+  </view>
+  <view class='address_txt'>
+    <view>小仙女
+      <text>13533075318</text>
+    </view>
+    <view>广东省广州市番禺万达广场B2栋3001-3007</view>
+  </view>
+</view>
+
+
+<view class='order_list'>
+  <view class='order_item'>
+
+    <view class='order_goods'>
+      <view class='order_image'>
+        <image src='/images/goods_banner_02.jpg'></image>
+      </view>
+      <view class='order_goods_info'>
+        <view class='goods_des'>
+          <view class='goods_name dan'>
+            人参固体饮料人参固体饮料人参固体饮料
+          </view>
+          <view class='goods_price'>
+            ¥180.00
+          </view>
+        </view>
+        <view class='goods_range'>
+          <view class='goods_range_left'>
+            180g
+          </view>
+          <view class='goods_range_right'>
+            ×1
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class='order_footer'>
+      实付：
+      <text>¥ 78.00</text>（含运费）
+    </view>
+  </view>
+</view>
+
+<view class='order_detail'>
+  <view class='order_detail_title'>
+    <image src='{{http}}/Public/home/11.png'></image>联系客服
+  </view>
+  <view class='order_detail_list'>
+    <view>订单编号：sh2017081320159420944
+      <text>复制</text> </view>
+    <view>支付方式：微信</view>
+    <view>下单时间：2017-08-13 20:21:59</view>
+    <view>配送方式：中国邮政</view>
+    <view>物流单号：9974496355577</view>
+  </view>
+</view>
+<view class='ch_120'></view>
+<view class='orderFixBottom'>
+  <view class='order_footer'>
+    <navigator hover-class='none'>取消订单</navigator>
+    <navigator class='type_' hover-class='none'>去付款</navigator>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+.ti_y{
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.ti_y image{
+  width: 127rpx;
+  height: 144rpx;
+  margin-bottom: 20rpx;
+}
+.ti_y view{
+  font-size: 24rpx;
+  color: #8c8c8c;
+}
+.fix_buy{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 15rpx 30rpx;
+  border-top: 1px solid #e5e5e5;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.fix_buy view{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size:34rpx ;
+  color: #2a2a2a;
+  background-color: #ffda43;
+  border-radius: 35rpx;
+}
+.imag_list{
+  padding-bottom: 120rpx;
+}
+.imag_list image{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

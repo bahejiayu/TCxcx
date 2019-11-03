@@ -1,0 +1,60 @@
+<view class='top_chk'>
+  <view class='top_chk_left'>
+    <view data-txt='昨天' class='{{time_txt=="昨天"?"cur":""}}' bindtap='tog_txt'>昨天</view>
+    <view data-txt='近七天' class='{{time_txt=="近七天"?"cur":""}}' bindtap='tog_txt'>近七天</view>
+    <view data-txt='全部' class='{{time_txt=="全部"?"cur":""}}' bindtap='tog_txt'>全部</view>
+  </view>
+  <view class='top_chk_right' bindtap='cha_time' data-type='k'>
+    <picker mode="date" start="2019-01-01" end="{{toDay}}" value='2019-01-01' bindchange="bindDateChange">
+
+      {{down_time}}
+      <view class='icon-right'></view>
+    </picker>
+
+  </view>
+</view>
+<view class='record_txt'>
+  共 {{other_info.count}} 笔订单，获得商品佣金 {{other_info.money}} 元
+</view>
+<view class='record_list'>
+  <view class='record_item' wx:for='{{record_list}}'>
+    <view class='record_item_title'>
+      <view>订单编号：{{item.order.number}}</view>
+      <view></view>
+    </view>
+    <view class='record_item_content'>
+      <view class='user_image'>
+        <image src='{{item.order.user_avater}}'></image>
+      </view>
+      <view class='record_item_info'>
+         <view>
+          <text>[直属  会员]</text> {{item.order.user_name}}</view>
+        <!-- <view>下单人ID: 798050</view> -->
+        <view>订单金额：
+          <text class='b'>¥{{item.order.money}}</text>
+        </view>
+        <view>培训津贴：
+          <text class='b'>¥{{item.money}}</text>
+        </view>
+        <view>订单时间：{{item.ctime}}</view>
+        <!-- <view>推荐人：无</view> -->
+      </view>
+    </view>
+  </view>
+</view>
+
+  <view class='kong' wx:if='{{record_list.length<=0}}'>
+    <image src='/images/kong.png'></image>
+    <view>还没有相关数据 !</view>
+  </view>
+
+
+<view class='begin_end' wx:if='{{time_module}}'>
+  <picker mode="date" start="2019-01-01" end="{{toDay}}" value='2019-01-01' bindchange="bindDateChange">
+    <view class='{{zdy_=="k"?"cur":""}}  ' bindtap='tog_zdy'  data-type='k'> 开始时间 ({{startDate}})</view>
+  </picker>
+  <picker mode="date" start="{{startDate=='请选择'?'2019-01-01':startDate}}" end="{{toDay}}" bindchange="bindDateChange2">
+    <view bindtap='tog_zdy' class='{{zdy_=="j"?"cur":""}}  '  data-type='j'>结束时间 ({{endDate}})</view>
+  </picker>
+</view>
+<view class='zz' wx:if='{{time_module}}' bindtap='close_timeModule'></view>

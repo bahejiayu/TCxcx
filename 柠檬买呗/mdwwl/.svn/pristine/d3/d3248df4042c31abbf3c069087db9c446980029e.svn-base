@@ -1,0 +1,85 @@
+<view class='formContainer'>
+
+  <form bindsubmit='subFrom'>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        店铺昵称
+      </view>
+      <view class='inpContainer'>
+        <input type='text' placeholder='请输入店铺昵称' name='shop_name' value='{{shopInfo.shop_name}}'></input>
+      </view>
+    </view>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        店铺电话
+      </view>
+      <view class='inpContainer'>
+        <input type='number' placeholder='请输入店铺电话' name='phone' value='{{shopInfo.phone}}'></input>
+      </view>
+    </view>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        邮箱
+      </view>
+      <view class='inpContainer'>
+        <input type='text' placeholder='请输入邮箱' name='email' value='{{shopInfo.email}}'></input>
+      </view>
+    </view>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        营业时间
+      </view>
+      <picker mode="multiSelector" range="{{multiArray}}" bindchange='checkTime'>
+        <view class='inpContainer'>
+          <input type='text' placeholder='请输入邮箱' disabled='{{true}}' value='{{yy_time}}'></input>
+        </view>
+      </picker>
+    </view>
+    <view class='feedTitle'>
+      店铺图片
+    </view>
+    <view class='upImgBox'>
+
+      <view class='upTitle'>
+        <view class='upTxt'>上传图片({{img_list2.length}}/3)</view>
+
+      </view>
+      <view class='upContainer'>
+        <view class='img_list' wx:if='{{img_list2.length>0}}'>
+          <!-- wx:for='{{img_list1}}' -->
+          <view class='img_item' wx:for='{{img_list2}}'>
+            <image src='{{http+item}}'></image>
+            <view class='del_img' bindtap='delList2' data-index='{{index}}'>删除</view>
+          </view>
+        </view>
+        <view class='upFile' bindtap='upImage2'>
+          <image src='/images/jhx_03.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='feedTitle'>
+      店铺Logo
+    </view>
+    <view class='upImgBox mb25'>
+
+      <view class='upTitle'>
+        <view class='upTxt'>上传Logo</view>
+
+      </view>
+      <view class='upContainer'>
+        <view class='upFile' bindtap='upLogo'>
+          <image src='{{logo_img}}'></image>
+        </view>
+      </view>
+    </view>
+
+    <view class='ModBtn'>
+      <button class='btnF' form-type='submit'>提交</button>
+
+    </view>
+    <input hidden='{{true}}' name='star_tsection' value='{{star_tsection}}'></input>
+    <input hidden='{{true}}' name='end_tsection' value='{{end_tsection}}'></input>
+    <input hidden='{{true}}' name='slide_img' value='{{img_list2}}'></input>
+    <input hidden='{{true}}' name='logo' value='{{logoValue}}'></input>
+  </form>
+</view>

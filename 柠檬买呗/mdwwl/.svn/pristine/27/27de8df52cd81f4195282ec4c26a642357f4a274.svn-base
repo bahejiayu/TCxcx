@@ -1,0 +1,23 @@
+<!-- <view class='top_img'>
+  <image src='{{http}}/Public/home/12.png' class='bg'></image>
+
+  <view class='code_'>
+    <image src='{{http+code_.share_qrcode}}'></image>
+  </view>
+</view> -->
+<image src='{{http+code_.share_qrcode}}' mode='widthFix' class='bg_img'></image>
+
+
+<!-- <view class='code_txt'>
+  <view>邀请码：{{code_.share_code}}</view>
+  <view>扫一扫加入柠檬买呗</view>
+</view> -->
+<view class='btns'>
+  <button hover-class='none' bindtap='saveImg'>
+    分享邀请图片
+  </button>
+  <button hover-class='none'  bindtap='copy_code'>
+    <!-- 分享链接 -->
+    复制邀请码
+  </button>
+</view>

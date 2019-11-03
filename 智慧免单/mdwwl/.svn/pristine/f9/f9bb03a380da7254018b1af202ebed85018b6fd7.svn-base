@@ -1,0 +1,21 @@
+<view class='goodsContainer'>
+    <view class='goodsItem' wx:for='[1,2]'>
+          <view class='goodsBox'>
+              <view class='goodsImage'>
+                  <navigator hover-class='none' url=''>
+                      <image src='https://img10.360buyimg.com/n7/jfs/t28831/116/424251804/247514/1d0e9699/5bf36ac0Nf63bee6c.jpg'></image>
+                  </navigator>
+              </view>
+              <view class='goodsContent'>
+                  <navigator hover-class='none' url=''>
+                   <view class='goodsName dan'>番茄汤牛肉剪刀面</view>
+                  <view class='goodsPrice'>¥59.00</view>
+                  </navigator>
+              </view>
+              <view class='goodsBtn'>
+                  <text bindtap='del_goods'>删除</text>
+                  <text bindtap='gobj'  data-url='../addGoods/addGoods'>编辑 </text>
+              </view>
+          </view>
+    </view>
+</view>

@@ -1,0 +1,25 @@
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{ads}}" wx:key>
+    <image src="{{HOST_URI + item.url}}" mode='aspectFill'></image>
+  </swiper-item>
+</swiper>
+
+<view class="padding-lr margin-top-xl">
+  Product area U乐产品区
+</view>
+<view class="padding-sm grid col-2 classBox">
+  <navigator url="list?type=1" hover-class="none" class="padding-xs block ">
+    <image src="/images/shopClass0.png" mode="widthFix" class="response"></image>
+    <form bindsubmit="submitInfo" report-submit='true'>
+      <button form-type="submit" class='formIdBtn'></button>
+    </form>
+  </navigator>
+  <navigator url="list?type=2" hover-class="none" class="padding-xs block">
+    <image src="/images/shopClass1.png" mode="widthFix" class="response"></image>
+    <form bindsubmit="submitInfo" report-submit='true'>
+      <button form-type="submit" class='formIdBtn'></button>
+    </form>
+  </navigator>
+</view>
+<view class="text-center margin-top text-xl">关于U乐空间</view>
+<view class="text-content padding">关于U关于U乐空间简介，关于U乐空间简介，关于U乐空间简介，关于U乐空间简介，关于U乐空间简介，关于U乐空间简介关于U乐空间简介，关于U乐空间简介，关于U乐空间简介。</view>

@@ -1,0 +1,92 @@
+<view class='shopInfo'>
+  <image src='{{http+all_data.shop.logo}}' class='shopLogo'></image>
+  {{all_data.shop.shop_name}}
+</view>
+
+<view class='myClassInfo'>
+  <view class='classItem'>
+    <view class='leftInfo'>
+      <image src='{{all_data.one_bonus_info.avater}}' class='leftimg'></image>
+      <view>{{all_data.one_bonus_info.name}}</view>
+      <view>{{all_data.one_bonus_info.pay_time}}</view>
+    </view>
+    <view class='rightInfo'>NO.{{all_data.one_bonus_info.ranking}}</view>
+  </view>
+  <view class='priceInfo'>
+    <view class='price_item'>
+      <view>¥{{all_data.one_bonus_info.fenrun.dai_money}}</view>
+      <view>待分润</view>
+    </view>
+    <view class='price_item'>
+      <view>¥{{all_data.one_bonus_info.fenrun.day_money}}</view>
+      <view>今日分润</view>
+    </view>
+    <view class='price_item'>
+      <view>¥{{all_data.one_bonus_info.fenrun.yi_money}}</view>
+      <view>累计分润</view>
+    </view>
+  </view>
+
+</view>
+<view class='allClassTitle'>所有排队情况</view>
+<view class='classFirst'>
+  <view class='headImg'>
+    <image src='{{all_data.my_bonus_info.avater}}'></image>
+  </view>
+  <view class='line1'>
+    <view class='dan'>{{all_data.my_bonus_info.name}}</view>
+    <view>已:
+      <text>￥ {{all_data.my_bonus_info.fenrun.yi_money}}</text> / 待:
+      <text>¥ {{all_data.my_bonus_info.fenrun.dai_money}}</text>
+    </view>
+  </view>
+  <view class='line2'>
+    <view>{{all_data.my_bonus_info.pay_time}}</view>
+    <view>NO.{{all_data.my_bonus_info.ranking}}</view>
+  </view>
+</view>
+
+<view class='classList'>
+  <view class='classFirst'  wx:for='{{list}}' wx:if='{{index!=0}}'>
+    <view class='headImg'>
+      <image src='{{item.avater}}'></image>
+    </view>
+    <view class='line1'>
+      <view class='dan'>{{item.name}}</view>
+      <view>
+        正在排队...
+        <!-- 等待排队... -->
+      </view>
+    </view>
+    <view class='line2'>
+      <view>{{item.pay_time}}</view>
+      <view>NO.{{item.ranking}}</view>
+    </view>
+  </view>
+
+
+</view>
+
+<view class='zz_' wx:if='{{showHb}}'></view>
+<view class='getHbBox' wx:if='{{showHb}}'>
+  <view class='icon-close'></view>
+  <view class='HbImage'>
+    <image src='/images/hbbox_03.png'></image>
+    <view class='hbTxt'>
+      <view>现金红包</view>
+      <view>300<text>元</text>
+      </view>
+    </view>
+  </view>
+  <view class='gongxGet'>恭喜你获得
+    <text>300元</text>现金红包</view>
+  <view class='gongTip'>店铺付款可抵扣</view>
+  <view class='sureBtn'>确定</view>
+</view>
+
+
+
+
+<view class='fixedBottom' bindtap='tui_'>
+  退出队列 领取双倍现金红包
+</view>

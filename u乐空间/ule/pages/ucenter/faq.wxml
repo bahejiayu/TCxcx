@@ -1,0 +1,27 @@
+<list class="menu {{showId==100?'show':'hide'}}" bindtap='toggle' data-id="100" wx:key>
+  <item class="arrow ">
+    <view class='content'>
+      <text class='text-grey'>如有个人物品遗落店内，货有事需要入店片刻该怎么办？</text>
+    </view>
+  </item>
+  <view class='padding-tb text-content'>
+    扫码入店，出店时联系店内工作人员，并出示下方二维码给工作人员，由工作人员取消订单
+    <view class='padding-bottom padding-lr-xl text-content'>
+    <view class='margin-lr-xl padding-lr-xl'>
+      <image src='{{src}}' class="response" mode='widthFix'></image>
+    </view>
+  </view>
+  </view>
+  
+</list>
+
+<list class="menu {{showId==index?'show':'hide'}}" bindtap='toggle' wx:for="{{list}}" data-id="{{index}}" wx:key>
+  <item class="arrow ">
+    <view class='content'>
+      <text class='text-grey'>{{item.title}}</text>
+    </view>
+  </item>
+  <view class='padding-tb text-content'>
+    {{item.desc}}
+  </view>
+</list>

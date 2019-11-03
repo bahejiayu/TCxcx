@@ -1,0 +1,29 @@
+view{
+  box-sizing: border-box;
+}
+.qrcode-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-color: #ff753f;
+  background-position: center;
+  
+}
+.qrcode-img {
+  width: 380rpx;
+  height: 380rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  background-color: #fff;  
+  border:1px solid #ff753f;
+  margin-top: 20rpx;
+}
+
+.qrcode-img image {  
+  width: 340rpx;
+  height: 340rpx;
+}

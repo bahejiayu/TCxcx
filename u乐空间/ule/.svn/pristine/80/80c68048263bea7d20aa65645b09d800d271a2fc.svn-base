@@ -1,0 +1,20 @@
+<view class="padding-xl text-center bg-white">
+	<view class="padding-xl text-sl text-price">{{showAllMoney}}</view>
+</view>
+<view class="padding solid-bottom bg-white margin-top text-bold">商品明细</view>
+<view class="padding bg-white flex">
+	<view class="flex-sub">{{name}}</view>
+	<view class="padding-lr">x{{num}}</view>
+	<view class="text-price text-orange">{{showMoney}}</view>
+</view>
+<view class="padding solid-bottom bg-white margin-top text-bold">支付方式</view>
+<radio-group class="block bg-white">
+	<label class="flex padding align-center">
+		<avatar class="radius bg-green"><text class="icon-weixin"></text></avatar>
+		<view class="flex-sub padding-lr">微信支付</view>
+		<radio checked></radio>
+	</label>
+</radio-group>
+<view class="foot padding">
+	<button class="bg-green block lg" bindtap="toIndentDetails">立即支付</button>
+</view>

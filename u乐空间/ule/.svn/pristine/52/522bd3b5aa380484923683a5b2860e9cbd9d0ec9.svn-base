@@ -1,0 +1,74 @@
+<view class="bg-img padding flex align-center" style="background-image:url(../../images/ucBg.jpg)">
+  <avatar class="round" style="background-image:url({{userInfo.userHeadIcon}});width:150rpx;height:150rpx;"></avatar>
+  <view class="flex-sub padding-lr-sm text-white padding-tb-lg" bindtap="showModal" data-target="QrModal">
+    <view class="text-lg">{{userInfo.userName}}
+      <tag class="round sm margin-left-sm" style="background-color: #f4d57a;">
+        <text class="text-brown">{{userInfo.userYearType===0?'普通用户':'年卡会员'}}</text>
+      </tag>
+    </view>
+    <view class="margin-top-sm">ID:{{userInfo.userId}} </view>
+    <view class="margin-top-xs" wx:if="{{userInfo.userYearType===1}}">有效期：{{userInfo.userYearEnd}}</view>
+  </view>
+</view>
+<view class="bg-white padding flex align-end">
+  <view class="text-xl">
+    优享会员
+  </view>
+  <view class="margin-left-sm">享受免单服务</view>
+</view>
+<view class="bg-white padding-lr">
+
+  <view class="vipCard flex justify-between align-center {{idx==index?'cur':''}}" wx:for="{{memberData}}" wx:key="index" bindtap="seasonMember" data-idx="{{[index,item.acMoney,item.acId,item.acName]}}">
+    <view class="flex-sub">
+      <view class='flex align-center'>
+        <text class="text-lg">{{item.acName}}</text>
+        <tag class="bg-red sm radius margin-left-sm" wx:if="{{index===0}}">推荐</tag>
+      </view>
+      <view class='margin-top-sm'>{{item.acIntroduce}}</view>
+    </view>
+    <view class="text-red">
+      <text class="text-xxl text-price">{{item.acMoney}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="bg-white padding text-right" bindtap="showModal" data-target="Modal">
+  优享会员说明
+  <text class="icon-info"></text>
+</view>
+
+<bar class="solid-bottom margin-top">
+  <view class="action">需支付：{{num}}元</view>
+</bar>
+<radio-group class="block">
+  <view class="padding bg-white flex align-center">
+    <avatar class="round lg bg-green">
+      <text class='icon-weixin'></text>
+    </avatar>
+    <view class='text-grey padding text-lg flex-sub'>微信</view>
+    <view class='action'>
+      <radio checked class="round green"></radio>
+    </view>
+  </view>
+</radio-group>
+<view class="padding">
+  <button class="block lg bg-brown" bindtap="toPay">续费会员卡</button>
+</view>
+
+<modal-box class="{{modalName=='Modal'?'show':''}}">
+  <dialog>
+    <bar class="justify-end">
+      <view class='content'>U乐会员说明</view>
+      <view class='action' bindtap='hideModal'>
+        <text class='icon-close text-red'></text>
+      </view>
+    </bar>
+    <view class='padding text-left text-content'>
+      <text>1.会员专享价可与优惠券、红包叠加使用；
+			2.没张会员卡有效期最长可达1年；
+			3.续费说明：再原会员卡（季度卡、年卡）有效期内续费，则会员卡在原会员卡到期后自动生效；
+			4.余额不可提现，可用于下次消费；
+			5.会员卡在购买后不可退；</text>
+    </view>
+  </dialog>
+</modal-box>

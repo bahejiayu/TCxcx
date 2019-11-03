@@ -1,0 +1,159 @@
+const API = require('../../utils/api')
+const request = require('../../utils/request')
+const wxReq = require('../../utils/wxRequest')
+const commen = require('../../utils/commen')
+
+const app = getApp();
+Page({
+  data: {
+    HOST_URL: API.getHOSTURI(),
+    isManage: true,
+    isShowCode: true,
+    isShowCode: false,
+    tSize: 0,
+    ySize: 0,
+    tMoney: 0,
+    yMoney: 0,
+    yearSize: 0,
+    user: {},
+    shop: {},
+    maSrc: ''
+  },
+
+  onShareAppMessage() {
+    return app.globalData.shareMessage
+  },
+  onShow: function(options) {
+    let self = this;
+    //从本地获取用户信息
+    //var userInfo = commen.getValueInStorage('userInfo');
+    commen.updateAndGetUserInfo((user) => {
+      self.setData({
+        user: user
+      })
+      var tparam = {};
+      var yparam = {};
+      if (user.userType != 3) {
+        tparam.shopId = user.userShopId
+        yparam.shopId = user.userShopId
+        var getReq = wxReq.get(API.getShop(), {
+          id: user.userShopId
+        })
+        getReq.then(resp => {
+          self.setData({
+            shop: resp.data.data
+          })
+        })
+      }
+      var yearSizeReq = wxReq.get(API.getYearUserSize(), tparam)
+      yearSizeReq.then(resp => {
+        self.setData({
+          yearSize: resp.data.data
+        })
+      })
+      var yDates = commen.getDayTime(-1)
+      var tDates = commen.getDayTime(0)
+      tparam.start = tDates[0]
+      tparam.end = tDates[1]
+      yparam.start = yDates[0]
+      yparam.end = yDates[1]
+      var tSizeReq = wxReq.get(API.getSizeBetweenTime(), tparam)
+      tSizeReq.then(resp => {
+        self.setData({
+          tSzie: resp.data.data
+        })
+      })
+      var ySizeReq = wxReq.get(API.getSizeBetweenTime(), yparam)
+      ySizeReq.then(resp => {
+        self.setData({
+          ySzie: resp.data.data
+        })
+      })
+      var tMoneyReq = wxReq.get(API.getAllTurnoverBetweenTime(), tparam)
+      tMoneyReq.then(resp => {
+        self.setData({
+          tMoney: commen.formatMoney(resp.data.data)
+        })
+      })
+      var yMoneyReq = wxReq.get(API.getAllTurnoverBetweenTime(), yparam)
+      yMoneyReq.then(resp => {
+        self.setData({
+          yMoney: commen.formatMoney(resp.data.data)
+        })
+      })
+      var maSrc = commen.createQRCode("WORK" + user.userId, 500)
+      self.setData({
+        maSrc: maSrc
+      })
+    })
+  },
+  saoma: function() {
+    var self = this;
+    wx.scanCode({
+      onlyFromCamera: false,
+      success: function(res) {
+        var flag = true;
+        console.log(res.path)
+        res.path = res.path.replace("%2C", ",")
+        res.path = res.path.replace("%3D", "=")
+        res.path = res.path.replace("%3D", "=")
+        var arr = res.path.split("?scene=")
+        if (arr[1]) {
+          var arr1 = arr[1].split(",")
+          if (arr1.length == 2) {
+            var arr3 = arr1[0].split("=")
+            var arr4 = arr1[1].split("=")
+            if (arr3.length == 2 && arr4.length == 2) {
+              var id = arr3[1]
+              var orderId = arr4[1]
+              var req = wxReq.get(API.getOverAndInsertOrder(), {
+                id: id,
+                orderId: orderId
+              })
+              req.then(resp => {
+                console.log(resp)
+                if (resp.data.errno == 0) {
+                  commen.showMessage("核销成功")
+                  setTimeout(() => {
+                    wx.navigateTo({
+                      url: 'done?userId=' + self.data.user.userId,
+                    })
+                  }, 1500)
+                } else {
+                  commen.showMessage(resp.data.msg)
+                }
+              })
+            } else {
+              flag = false
+            }
+          } else {
+            flag = false
+          }
+        } else {
+          flag = false
+        }
+        if (!flag) {
+          commen.showMessage("核销码错误")
+        }
+      }
+    })
+  },
+  showModal(e) {
+    this.setData({
+      maSrc: commen.createQRCode("WORK" + this.data.user.userId)
+    })
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
+  },
+  toMember(e) {
+    wx.navigateTo({
+      url: '/pages/manage/member',
+    })
+  }
+})

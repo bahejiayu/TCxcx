@@ -1,0 +1,232 @@
+page{
+  background-color: #f7f7f7;
+}
+.cityTop{
+  height: 250rpx;
+  box-sizing: border-box;
+  color: #fff;
+  padding-top: 70rpx;
+  text-align: center;
+}
+.cityTop view:first-child{
+  font-size: 76rpx;
+}
+.cityTop view:last-child{
+  font-size: 26rpx;
+}
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(1);
+  }
+
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+.waveWrapper {
+overflow:hidden;
+position:absolute;
+/* height:50rpx; */
+height: 100%;
+width:100%;
+left:0;
+top:0;
+/* transform:scale(1.2, 1.2); */
+
+
+}
+.topBottom{
+  height: 160rpx;
+  position: relative;
+
+}
+.waveWrapperInner {
+position:absolute;
+width:100%;
+overflow:hidden;
+height:100%;
+bottom:-1px;
+
+}
+
+.bgTop {
+z-index:15;
+opacity:0.5;
+/* height:24px; */
+
+}
+.waveAnimation .waveTop {
+animation:move_wave 30s linear infinite;
+
+}
+.waveTop {
+background-size:540px 25px;
+
+}
+.wave {
+position:absolute;
+left:0;
+width:2160px;
+height:100%;
+background-repeat:repeat no-repeat;
+background-position:0 bottom;
+transform-origin:center bottom;
+
+}
+.bgMiddle {
+z-index:10;
+opacity:0.75;
+height:19px;
+
+}
+.waveAnimation .waveMiddle {
+animation:move_wave 24s linear infinite;
+
+}
+.waveMiddle {
+background-size:1080px 20px;
+
+}
+.bgBottom {
+z-index:5;
+height:14px;
+
+}
+.waveAnimation .waveBottom {
+animation:move_wave 12s linear infinite;
+
+}
+.waveBottom {
+background-size:540px 15px;
+
+}
+.bg_topBottom{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.bg_topBottom image{
+  width: 100%;
+  height: 100%;
+}
+.hhr_get{
+  overflow: hidden;
+
+}
+.hhr_get .hhr_item{
+  color: #fff;
+  font-size: 32rpx;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  margin-top: 50rpx;
+  box-sizing: border-box
+
+}
+.hhr_get .hhr_item view:last-child{
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+
+.incomeTop{
+  background: -webkit-gradient(linear,center top,center bottom,from(#0595fa), to(#4385f8));
+  border-bottom: 4rpx solid #fad239;
+}
+.hhr_get .hhr_item:nth-of-type(2){
+  border-left: 2rpx solid #72a9fa;
+  border-right: 2rpx solid #72a9fa;
+}
+.incomeAhb{
+  padding: 0 25rpx;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.incomeAhb_item{
+  float: left;
+  width: 50%;
+  padding:  25rpx 0;
+}
+
+.incomeAhb_item view:first-child{
+  font-size:24rpx ;
+  color:#757575 ;
+}
+.incomeAhb_item view:last-child{
+  font-size:50rpx ;
+  color:#f84c43 ;
+  margin-top: 10rpx;
+}
+.nav_line{
+  padding: 0 25rpx;
+  background-color: #fff;
+  border-bottom: 2rpx solid #f4f4f4;
+  height: 80rpx;
+  overflow: hidden;
+}
+.nav_line view{
+  float: left;
+  padding: 0 7rpx;
+  font-size: 30rpx;
+  height: 77rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+}
+.nav_line .cur{
+  color: #1890f9;
+  border-bottom: 3rpx solid #1890f9;
+}
+
+.shopIncomeItem{
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+.shopIncomeTitle{
+  height: 80rpx;
+  line-height:80rpx ;
+  padding: 0 25rpx;
+  border-bottom: 1px solid #f4f4f4;
+}
+.shopIncomeTitle view:first-child{
+  float: left;
+  font-size: 28rpx;
+  color: #818181;
+}
+.shopIncomeTitle view:last-child{
+  float: right;
+  font-size: 30rpx;
+  color: #f24242;
+}
+.shopIncomeContetnLIne{
+  padding: 0 25rpx;
+  overflow: hidden;
+  line-height: 53rpx;
+
+}
+.shopIncomeContetn{
+  padding: 25rpx 0;
+}
+.shopIncomeContetnLIne view:first-child{
+  font-size:28rpx ;
+  color: #818181;
+  float: left;
+  width: 40%;
+}
+.shopIncomeContetnLIne view:last-child{
+  font-size:28rpx ;
+  color: #333333;
+  float: right;
+  width: 60%;
+  text-align: right;
+}
+
+
+
+

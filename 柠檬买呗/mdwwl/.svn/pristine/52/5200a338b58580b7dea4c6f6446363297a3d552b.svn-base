@@ -1,0 +1,26 @@
+<view class='orderContainer'>
+  <view class='orderItem' wx:for='[1]'>
+    <navigator hover-class='none' url='../orderInfo/orderInfo'>
+      <view class='orderTop'>
+        订单编号：10059426462030
+      </view>
+      <view class='orderContetn'>
+        <view class='shop_info'>
+          <view>九毛九广西手工面</view>
+          <view>¥199.00</view>
+        </view>
+        <view class='orderTime'>2018-07-30 12:53:32</view>
+      </view>
+
+    </navigator>
+
+  </view>
+
+
+
+
+
+
+
+
+</view>

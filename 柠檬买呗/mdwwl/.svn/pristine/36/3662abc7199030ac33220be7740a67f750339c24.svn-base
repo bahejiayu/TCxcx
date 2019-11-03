@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "提现中心",
+  "navigationBarBackgroundColor": "#099aff",
+  "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "white"
+}

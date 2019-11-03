@@ -1,0 +1,29 @@
+list.menu +list.menu {
+  margin-top: 1px;
+}
+
+list.menu item {
+  padding: 15px 0;
+}
+
+list.menu.hide item {
+  border: 0;
+}
+
+list.menu.hide .padding-tb {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+list.menu.show .padding-tb {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.6s ease-in-out 0s;
+}
+
+list.menu.show item::after {
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out 0s;
+}

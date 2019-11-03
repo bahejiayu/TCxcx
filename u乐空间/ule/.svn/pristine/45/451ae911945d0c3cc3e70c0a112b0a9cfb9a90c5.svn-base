@@ -1,0 +1,49 @@
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{ads}}" wx:key>
+    <image src="{{HOST_URI + item.url}}" mode='aspectFill'></image>
+  </swiper-item>
+</swiper>
+
+<view class="padding-lr margin-top-xl">
+  Product area U乐产品区
+</view>
+<view class="padding-sm grid col-2 classBox">
+  <navigator url="list?type=1" hover-class="none" class="padding-xs block ">
+    <image src="/images/shopClass0.png" mode="widthFix" class="response"></image>
+    <form bindsubmit="submitInfo" report-submit='true'>
+      <button form-type="submit" class='formIdBtn'></button>
+    </form>
+  </navigator>
+  <navigator url="list?type=2" hover-class="none" class="padding-xs block">
+    <image src="/images/shopClass1.png" mode="widthFix" class="response"></image>
+    <form bindsubmit="submitInfo" report-submit='true'>
+      <button form-type="submit" class='formIdBtn'></button>
+    </form>
+  </navigator>
+</view>
+<view class="text-center margin-top text-xl">关于U乐空间</view>
+<view class="text-content padding">
+<view class='mb20'>U乐智能空间开业在即，我们将为广大消费者带来前所未“想”，也是前所未“享”的创新体验。</view>
+
+<view class='mb20'>这里环境闲逸舒适，氛围优雅，并且融合了互联网+人工智能+电子商城+实体店于一体，是充满未来想象的创新智能共享空间。您只需要拥有一台移动智能设备，通过我们预设的沉浸式智能空间系统，便能畅通无阻，享受我们为您构建的全方位多维度的空间体验， 在不同的区域里您都能体验到立体互通的智能服务，每个区域既是独立有趣又是相互关联无缝连接，仿佛一位智能管家随时为您效劳服务。</view>
+
+<view class='mb20'>六大智能区域：</view>
+
+<view >1. 智能咖啡厅</view>
+<view class='mb20'>进店无需等位排队，只需手机扫码下单，即可尽情享受您的私人咖啡时光。</view>
+
+<view>2. 智能KTV</view>
+<view class='mb20'>这不再是一个传统普通的KTV，它更像是让现实与网络互联和的一个通道，连接了线上和线下的用户，让更多的人都可以感受到您的歌唱魅力。</view>
+
+<view>3. 智能会议室</view>
+<view class='mb20'>拥有便捷高效的共享系统，所有繁复多样的会议资料，都能轻松共享，实现高效率的无纸化智能会议。</view>
+
+<view>4. 品茶区</view>
+<view class='mb20'>这里为用户珍藏了各种上好茶品，体验高科技的同时，不忘静心享受下美好的品茶时光。</view>
+
+<view>5. 3D全息影像</view>
+<view class='mb20'>充满未来科幻感的3D全息影像系统，让您置身在如幻却真实的虚拟世界之中，感受前所未有的观影体验。</view>
+
+<view>6. 智能电子商城</view>
+<view class='mb20'>高效互通的智能系统，带来的是更加便捷的购物体验，所有精选商品皆可随时随地通过移动设备轻松选购。</view>
+</view>

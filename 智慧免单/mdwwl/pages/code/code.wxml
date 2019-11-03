@@ -1,0 +1,15 @@
+<view class='CodeTop'>
+    <view class='Logo_'>
+      <image src='https://cl.gzna.com/Public/home/basicprofile.png'></image>
+    </view>
+      <view class='shop_name'>智慧免单</view>
+</view>
+<view class='CodeContent'>
+    <view>付款码扫描</view>
+    <view>请确保扫的付款码包含智慧免单图标</view>
+</view>
+
+
+<view class='btn_box code_btn'>
+  <button class='btnF' bindtap='saoma' >开始扫描</button>
+</view>

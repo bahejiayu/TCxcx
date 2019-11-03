@@ -1,0 +1,121 @@
+page{
+  background-color: #f4f4f4;
+}
+.top_chk{
+  padding: 20rpx 25rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+.top_chk_left view{
+  float: left;
+  border-radius: 20rpx;
+  padding: 0 22rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #f3f3f3;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+  color: #999999;
+  box-sizing: border-box;
+}
+.top_chk_left view.cur{
+  background-color: #ffecec;
+  color: #ff4444;
+  border: 2rpx solid #ff4444;
+}
+
+.top_chk_right{
+  float: right;
+  font-size: 24rpx;
+  color: #333333;
+  line-height: 50rpx;
+
+}
+.top_chk_right view{
+    transform: rotate(90deg);
+    display: inline-block;
+}
+.record_txt{
+  padding: 0 25rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+.record_item{
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.record_item_title{
+  height: 65rpx;
+  line-height: 65rpx;
+  padding: 0 25rpx;
+  font-size: 26rpx;
+  color: #575757;
+  border-bottom: 2rpx solid #f4f4f4;
+}
+.record_item_title view:first-child{
+  float: left;
+}
+.record_item_title view:last-child{
+  float: right;
+}
+.record_item_content{
+  padding:  25rpx;
+  padding-left: 140rpx;
+  position: relative;
+}
+
+.user_image{
+    width:90rpx ;
+    height: 90rpx;
+    overflow: hidden;
+    border-radius: 50%;
+  position: absolute;
+  left: 30rpx;
+}
+.user_image image{
+  width: 100%;
+  height: 100%;
+
+}
+.record_item_info view{
+  font-size: 26rpx;
+  color: #575757;
+  line-height: 45rpx;
+
+}
+.record_item_info view text{
+  color: #f25353;
+}
+.b{
+  font-weight: bold;
+}
+.begin_end{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20rpx;
+  background-color: #fff;
+  z-index: 100;
+}
+.begin_end view{
+  width:50%;
+  float: left;
+  font-size: 26rpx;
+  text-align: center;
+}
+.zz{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: #000;
+}
+.begin_end view.cur{
+  color: #f25353;
+
+}

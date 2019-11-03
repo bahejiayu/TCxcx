@@ -1,0 +1,10 @@
+<view  class='DisTop' >
+    <view class='topTxt' >
+      <view>当前折扣方式</view>
+        <view>8折 | 让利20%</view>
+    </view>
+    <navigator hover-class='none'>折扣申请</navigator>
+</view>
+<view class='DisTip'>
+暂不支持修改折扣，如有需要请提交申请
+</view>

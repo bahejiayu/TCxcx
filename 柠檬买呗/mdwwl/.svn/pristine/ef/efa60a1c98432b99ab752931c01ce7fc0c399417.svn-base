@@ -1,0 +1,97 @@
+.getNowTop{
+   margin-top: 10rpx;
+   background-color: #ffffff;
+}
+.topItemOne{
+  padding: 0 25rpx;
+  border-bottom: 1px solid #e5e5e5;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #333333;
+}
+.topItemTwo{
+  height: 130rpx;
+  line-height: 130rpx;
+  border-bottom: 1px solid #e5e5e5;
+  padding-left:105rpx ;
+  padding-right: 25rpx;
+  position: relative;
+}
+.topItemTwo view{
+   font-size:52rpx ;
+   color: #ed3535;
+   position: absolute;
+   left: 40rpx;
+}
+.topItemTwo input{
+  width: 100%;
+  height: 100%;
+   font-size:52rpx ;
+
+}
+.getTip{
+  padding: 0 25rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  font-size:24rpx ;
+  color: #8e8e8e;
+}
+.getStyleBox{
+  background-color: #fff;
+  padding: 30rpx 25rpx;
+  border-bottom: 1px solid #e5e5e5;
+
+}
+.BoxsTitle{
+  font-size: 30rpx;
+  color: #333333;
+
+}
+.styleItem{
+  margin-top: 30rpx;
+  border: 2rpx solid #e5e5e5;
+  display: inline-block;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+  height: 76rpx;
+  position: relative;
+}
+.styleItem .styleicon{
+  width: 220rpx;
+  height: 80rpx;
+}
+.styleItem.cur{
+  border: 2rpx solid #00c000;
+
+}
+.styleItem .jiao{
+  width:38rpx ;
+  height: 34rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+.styleItem.cur .jiao{
+  display: block;
+}
+.btnCon{
+  padding: 100rpx 25rpx;
+}
+.topItemTwo input{
+  font-size: 34rpx;
+}
+.getBtn{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size:34rpx ;
+  background-color: #0097ff;
+  border-radius: 10rpx;
+}
+
+page{
+  background-color: #f4f4f4;
+}

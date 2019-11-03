@@ -1,0 +1,113 @@
+.FreeTop{
+ height: 490rpx;
+ background-color: #f5a623;
+ position: relative;
+}
+page{
+  background-color: #f7f7f7;
+}
+.FreeTop .ubg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+.shopMoneyInfo{
+  position: relative;
+  z-index: 100;
+  color: #fff;
+}
+.getMoney{
+  text-align: center;
+  padding: 90rpx 0 50rpx 0;
+}
+
+.getMoney view:first-child{
+    font-size: 98rpx;
+}
+.getMoney view:last-child{
+    font-size: 26rpx;
+}
+.toDay{
+  overflow: hidden;
+}
+.toDayItem{
+  float: left;
+  width: 50%;
+text-align: center;
+}
+.toDayItem view:first-child{
+    font-size: 48rpx;
+}
+.toDayItem view:last-child{
+  font-size: 26rpx;
+}
+.freeContainer{
+  padding: 0 25rpx;
+  transform: translateY(-40rpx);
+  position: relative;
+  z-index: 100000;
+}
+.freeNavBox{
+  background-color: #fff;
+  padding: 60rpx 0 30rpx 0;
+  border-radius: 10rpx;
+  overflow: hidden;
+   box-shadow: 0 0 10px #dcdcdc ;
+
+}
+.feeItem{
+  float: left;
+  width: 33.33%;
+  font-size: 24rpx;
+  color: #333333;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+.feeItem image{
+  width: 110rpx;
+  height:110rpx ;
+}
+
+.feeItem view{
+  margin-top: 20rpx;
+}
+.FixBottomNav{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 12rpx 0;
+  text-align: center;
+  font-size: 20rpx;
+  color: #838383;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+.Fix_item{
+  float: left;
+  width: 25%;
+}
+.Fix_item image{
+  width: 44rpx;
+  height: 48rpx;
+}
+.curImg{
+  display: none;
+}
+.cur image{
+  display: none;
+}
+.cur .curImg{
+  display: inline-block;
+}
+.cur view{
+  color: #ff970f;
+}
+
+
+
+
+

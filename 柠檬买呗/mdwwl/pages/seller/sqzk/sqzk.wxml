@@ -1,0 +1,59 @@
+<view class='formContainer'>
+
+  <form bindsubmit='subFrom'>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        折扣方式
+      </view>
+       <picker range='{{array3}}' bindchange='bindPickerChange3' mode="multiSelector">
+      <view class='inpContainer'>
+      
+        <input type='text' placeholder='请输入需要修改的折扣让利比例' name='discount' value='{{sjzk_}}' disabled='{{true}}'></input>
+      </view>
+        </picker>
+
+    </view>
+
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        红包抵扣
+      </view>
+       <picker range='{{array4}}' bindchange='bindPickerChange4' mode="selector">
+      <view class='inpContainer'>
+        <input type='text' disabled='{{true}}' placeholder='请输入需要修改的红包抵扣比例 %' name='coupon_dk' value='{{hbdk_}}'></input>
+      </view>
+        </picker>
+
+    </view>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        联系人
+      </view>
+      <view class='inpContainer'>
+        <input type='text' placeholder='请输入联系人姓名' name='name' value='{{trimeValue}}'></input>
+      </view>
+    </view>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        联系电话
+      </view>
+      <view class='inpContainer'>
+        <input type='number' placeholder='请输入联系人电话' name='phone' value='{{trimeValue}}'></input>
+      </view>
+    </view>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        修改原因
+      </view>
+      <view class='inpContainer areaInp'>
+        <textarea placeholder='请输入修改原因' name='info' value='{{trimeValue}}'></textarea>
+      </view>
+    </view>
+
+
+    <view class='ModBtn'>
+      <button class='btnF' form-type='submit'>提交</button>
+
+    </view>
+  </form>
+</view>

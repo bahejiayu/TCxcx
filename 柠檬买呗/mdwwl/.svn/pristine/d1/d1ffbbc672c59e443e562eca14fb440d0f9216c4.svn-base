@@ -1,0 +1,15 @@
+<view class='orderBox' >
+    <view class='orderItem' >
+        <view class='orderTitle'>
+            <view>订单编号：10059426462030</view>
+            <view>排队退款中</view>
+        </view>
+        <view class='orderContent'>
+            <view>店铺二维码购买</view>
+            <view>2018-07-30  12:53:32</view>
+        </view>
+        <view class='orderBottom' >
+            <navigator>查看详情</navigator>
+        </view>
+    </view>
+</view>

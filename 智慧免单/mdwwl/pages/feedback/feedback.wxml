@@ -1,0 +1,54 @@
+<form bindsubmit='subFrom'>
+  <view class='feedAreaA'>
+    <view class='feedAreaA_top'>
+      <view class='area_title'>您的反馈是：</view>
+      <view class='radioList'>
+        <view class='radioItem' bindtap='togStyle'>
+          <view class='quan  {{Cindex==0?"cur":""}}' data-index='0'>
+            <view class='dian_' data-index='0'></view>
+          </view>
+          <label for='r1' data-index='0'>咨询</label>
+        </view>
+        <view class='radioItem' bindtap='togStyle'>
+          <view class='quan  {{Cindex==1?"cur":""}}' data-index='1'>
+            <view class='dian_' data-index='1'></view>
+          </view>
+          <label for='r1' data-index='1'>建议</label>
+        </view>
+        <view class='radioItem' bindtap='togStyle'>
+          <view class='quan  {{Cindex==2?"cur":""}}' data-index='2'>
+            <view class='dian_' data-index='2'></view>
+          </view>
+          <label for='r1' data-index='2'>其它</label>
+        </view>
+      </view>
+    </view>
+    <view class='feedAreaA_bottom'>
+      <view class='area_title'>您的反馈是：</view>
+      <textarea placeholder='我们将为您不断改进' name='msg' value='{{trimValue}}' placeholder-class='inpclass'></textarea>
+
+    </view>
+
+
+  </view>
+
+  <view class='back_list'>
+      <view class='back_item'>
+          <view class='back_title'>
+          邮箱(选填)：
+          </view>
+          <input type='text' placeholder-class='inpclass' name='emil' value='{{trimValue}}' placeholder='以便我们给您回复'></input>
+      </view>
+        <view class='back_item'>
+          <view class='back_title'>
+          其他(选填)：
+          </view>
+          <input type='text' placeholder-class='inpclass' name='contact_way 'value='{{trimValue}}' placeholder='其他联系方式(微信或手机号)'></input>
+      </view>
+  
+  </view>
+    <view class='btn_box back_top'>
+        <button formType='submit' class='btnF'>提交</button>
+    </view>
+
+</form>

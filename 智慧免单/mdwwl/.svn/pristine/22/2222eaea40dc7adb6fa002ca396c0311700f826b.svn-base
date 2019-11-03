@@ -1,0 +1,39 @@
+<view class='orderNav'>
+  <view class='orderNavItem {{nav_index==0?"cur":""}}' bindtap='tog_nav' data-type='2' data-o='0'>待退款</view>
+  <view class='orderNavItem {{nav_index==50?"cur":""}}' bindtap='tog_nav' data-type='1' data-o='50'>已退款</view>
+  <view class='NavLine' style='left:{{nav_index}}%;'></view>
+</view>
+<view class='orderTip'  wx:if='{{order_list.length>0}}'>
+  温馨提示：奖励退款将会“原路返回”，账户变动将会导致退款失败。详见“奖励退款管理说明”
+
+</view>
+
+<view class='order_list'>
+
+  <view class='shopInfo' wx:for='{{order_list}}' wx:key='{{index}}'>
+    <navigator  hover-class='none' url='../classify/classify?id={{item.id}}'>
+      <view class='shopContainer'>
+        <view class='shopLogo'>
+          <image src='{{http+item.logo}}'></image>
+        </view>
+        <view class='shopContent'>
+          <view class='shopName dan'>
+            {{item.shop_name}}
+          </view>
+          <view class='shopViewNumber'>
+            {{item.sum_order}}单
+          </view>
+
+        </view>
+        <view class='orderPrice'>¥ {{item.sum_money}}</view>
+      </view>
+
+    </navigator>
+  </view>
+
+</view>
+
+ <view class='kong' wx:if='{{order_list.length<=0}}'>
+    <image src='/images/kong.png'></image>
+    <view>还没有相关数据 !</view>
+  </view>

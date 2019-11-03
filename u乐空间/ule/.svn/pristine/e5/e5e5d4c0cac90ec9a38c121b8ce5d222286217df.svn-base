@@ -1,0 +1,55 @@
+<view class='goosc'>
+<view class='goosc_title'>标题1</view>
+  <view class="flex align-center bg-white padding margin-bottom" wx:for="{{comboData}}" wx:key>
+    <view class='radio_ {{item.chk==true?"cur":""}}' data-index='{{index}}' bindtap='tog_rad'>
+      <image src='/images/guo_03.png'>
+      </image>
+    </view>
+    <image src="{{SERVER_URI+item.mealPic}}" mode="aspectFill" style="width: 160rpx;height: 160rpx;"></image>
+    <view class="flex-sub margin-left-sm" bindtap='toBuy' data-index='{{index}}'>
+      <view class="text-lg">
+        {{item.mealName}}
+      </view>
+
+      <view class="text-gray margin-top-xs">
+        {{item.mealIntroduce}}
+      </view>
+
+      <view class="flex justify-between align-end margin-top-xs">
+        <view>
+          <text class="text-price text-red text-xl">{{item.mealMoney}}</text>
+          <!-- <text class="text-price text-gray text-del">430.00</text> -->
+        </view>
+        <!-- <button class="bg-brown">立即购买</button> -->
+      </view>
+      <view class='count'>
+        <button catchtap='countNumber' data-index="{{index}}" data-type="move" data-number='{{item.number}}'>
+          <text class='icon-move' data-index="{{index}}" data-type="move"></text>
+        </button>
+        <input value="{{item.nub}}" type='number' disabled></input>
+        <button catchtap='countNumber' data-index="{{index}}" data-type="add">
+          <text class='icon-add' data-index="{{index}}" data-type="add"></text>
+        </button>
+      </view>
+    </view>
+  </view>
+
+</view>
+<view class='fixedBottom'>
+  <view class='fixLeftContent'>
+    <view>
+      <view class='radio_ cur' data-index='{{index}}' >
+        <image src='/images/guo_03.png'>
+        </image>
+      </view>
+      已选(1)
+    </view>
+    <view>
+    ¥180.00
+    </view>
+
+  </view>
+  <view class='right_btn'>
+    立即购买
+  </view>
+</view>

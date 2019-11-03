@@ -1,0 +1,74 @@
+<view class='setContainer'>
+  <view class='setTitle'>
+    基本信息
+  </view>
+  <view class='fromTable'>
+    <form bindsubmit='submiFrom'>
+      <view class='inpItem'>
+        <view class='inpItemTitle'>店铺昵称</view>
+        <view class='itemBox'>
+          <input type='text' placeholder='请输入店铺昵称' name='shop_name' placeholder-class='inpclass' value='{{shopInfo.shop_name}}'></input>
+        </view>
+      </view>
+
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>客服电话</view>
+        <view class='itemBox'>
+          <input type='number' placeholder='请输入客服电话' name='phone' placeholder-class='inpclass' value='{{shopInfo.phone}}'></input>
+        </view>
+      </view>
+
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>邮箱</view>
+        <view class='itemBox'>
+          <input type='text' placeholder='请输入邮箱' placeholder-class='inpclass' name='email' value='{{shopInfo.email}}'></input>
+        </view>
+      </view>
+
+
+
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>店铺介绍</view>
+        <view class='areaTxt'>
+          <textarea placeholder='请输入客服店铺介绍' placeholder-class='inpclass' name='info' value='{{shopInfo.info}}'></textarea>
+        </view>
+      </view>
+
+
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>店铺轮播图<text> (推荐比例4:3)</text></view>
+        <view class='up_box   {{up1img=="/images/upimg.png"?"noUp":"hasUp"}}' bindtap='upImage1'>
+          <image src='{{up1img}}'></image>
+        </view>
+      </view>
+
+      <view class='img_list' wx:if='{{img_list1.length>0}}'>
+        <!-- wx:for='{{img_list1}}' -->
+        <view class='img_item' wx:for='{{img_list1}}'>
+          <image src='{{http+item}}'></image>
+          <view class='del_img' bindtap='delList1' data-index='{{index}}'>删除</view>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>店铺Logo</view>
+        <view class='up_box   {{up2img=="/images/upimg.png"?"noUp":"hasUp"}}' bindtap='bindUp2'>
+          <image src='{{up2img=="/images/upimg.png"?"/images/upimg.png":http+up2img}}'></image>
+        </view>
+      </view>
+
+      <input hidden='{{true}}'  name='slide_img' value='{{img_list1}}' ></input>
+      <input hidden='{{true}}'  name='logo' value='{{up2img}}' ></input>
+
+      <view class='TableBtn '>
+        <button class='btnF' form-type='submit'>确定</button>
+      </view>
+
+
+    </form>
+  </view>
+</view>

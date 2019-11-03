@@ -1,0 +1,57 @@
+<view class="bg-white padding-xl text-center">
+	<text   wx:if="{{obj.uoOverType!=2}}" class="icon-{{obj.uoOverType==0?'creativefill text-orange':'roundcheckfill text-green'}} text-xsl " ></text>
+  <view class='tui_view' wx:if="{{obj.uoOverType==2}}">
+    <image src='/images/tui_03.png'></image>
+  </view>
+
+	<view class="text-xl margin" wx:if="{{obj.uoOverType==0}}">消费中</view>
+  <view class="text-xl margin" wx:if="{{obj.uoOverType==1}}">已完成</view>
+  <view class="text-xl margin" wx:if="{{obj.uoOverType==2}}">已退款</view>
+	<view class="">{{obj.uoOverType==0?'您的订单未完成，请联系工作人员核销':'您的订单已完成，欢迎下次惠顾'}}</view>
+</view>
+<view class="padding solid-bottom bg-white margin-top text-bold">商品明细</view>
+
+<view class="padding bg-white flex" wx:if="{{obj.uoType==3}}" wx:for="{{obj.names}}" wx:for-item="item" wx:key>
+	<view class="flex-sub">{{item.name}}</view>
+	<view class="padding-lr">{{item.num}}</view>
+	<view class="text-price text-orange">{{item.price}}</view>
+</view>
+<view class="padding bg-white flex" wx:if="{{obj.uoType!=3}}">
+	<view class="flex-sub">{{obj.uoCommodityName}}</view>
+	<view class="padding-lr">x{{obj.uoNumber}}{{(obj.uoType==1||obj.uoType==0)?"小时":""}}</view>
+	<view class="text-price text-orange">{{obj.uoMoney}}</view>
+</view>
+<view class="padding solid-top bg-white margin-top flex justify-between">
+	<view class="text-bold">支付方式</view>
+	<view class="text-grey">微信支付</view>
+</view>
+
+<view class="padding solid-top bg-white flex justify-between">
+	<view class="text-bold">合计</view>
+	<view class="text-price text-orange text-xl">{{obj.uoActualMoney}}</view>
+</view>
+
+<view class="padding solid-top bg-white flex justify-between">
+	<view class="text-bold">订单编号</view>
+	<view class="text-gray">{{obj.uoId}}</view>
+</view>
+<view class="padding solid-top bg-white flex justify-between">
+	<view class="text-bold">下单时间</view>
+	<view class="text-gray">{{obj.uoCreateTime}}</view>
+</view>
+<view class="padding solid-top bg-white flex justify-between" wx:if="{{obj.uoType==1||obj.uoType==0}}">
+	<view class="text-bold">结束时间</view>
+	<view class="text-gray">{{obj.uoFinishDate}}</view>
+</view>
+<view class="padding" wx:if="{{obj.uoOverType==0}}">
+	<button class="bg-brown block lg"  bindtap="showModal" data-target="QrModal"> <text class="icon-qrcode margin-right-sm"></text> 核销码</button>
+</view>
+
+<modal-box class="{{modalName=='QrModal'?'show':''}}">
+  <dialog style="width:500rpx;" class="none-bg">
+    <view class="bg-img radius" style="background-image: url({{codeSrc}});height:500rpx;"></view>
+    <view class="text-center padding" bindtap='hideModal'>
+      <text class='icon-roundclose text-sl text-white'></text>
+    </view>
+  </dialog>
+</modal-box>

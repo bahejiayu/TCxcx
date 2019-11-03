@@ -1,0 +1,79 @@
+<view class='geCInfo' >
+      <view>您的当前收益</view>
+      <view>200.56</view>
+      <view class='btnOnce' bindtap='btnOnce'>立即提现</view>
+</view>
+
+
+<view class='moneyBox'>
+    <view class='moneyItem'>
+        <view>总收益(元)</view>
+        <view>3240</view>
+    </view>
+      <view class='moneyItem'>
+        <view>待分红(元)</view>
+        <view>120</view>
+    </view>
+      <view class='moneyItem'>
+        <view>已提现(元)</view>
+        <view>1260</view>
+    </view>
+</view>
+
+<view class='getNav'>
+    <view class='{{navIndex==0?"cur":""}}'   data-index='0' bindtap='togNav'>分润明细</view>
+    <view class='{{navIndex==1?"cur":""}}'  bindtap='togNav' data-index='1' >提现明细</view>
+</view>
+
+ <view class='get_detailBox'  wx:if='{{navIndex==0}}'>
+  <view class='get_detailItem'>
+    <view class='get_detailContetn'>
+      <view class='detailContent' wx:for='[1]'>
+        <view class='detailContent_left'>
+          <view>九毛九山西手工面</view>
+          <view>2018-10-24  04:48:16</view>
+        </view>
+        <view class='detailContent_right'>+ 5.00元</view>
+      </view>
+    </view>
+  </view>
+</view> 
+
+
+
+
+<view class='get_detailBox' wx:if='{{navIndex==1}}'>
+  <view class='get_detailItem'>
+    <view class='get_detailContetn'>
+      <view class='detailContent' wx:for='[1]'>
+        <view class='detailContent_left'>
+          <view class='dan' >九毛九山西手工面</view>
+          <view>2018-10-24  04:48:16</view>
+        </view>
+        <view class='mx_right'>
+            <view>120.00</view>
+            <view class='wait_'>提现中</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

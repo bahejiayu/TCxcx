@@ -1,0 +1,55 @@
+<image src="/images/uleBg.jpg" class="response" mode="widthFix"></image>
+<navigator class='mfzc' bindtap='saoma'>
+免费注册会员
+</navigator>
+<view class="homeFoot">
+  <view class="flex justify-center align-center">
+    <navigator class="flex-sub flex align-center" url="address" hover-class="none">
+      <text class="icon-location"></text>{{showShopName}}</navigator>
+    <image src="/images/scan.gif" bindtap="saoma" mode="widthFix" style="width: 280rpx;height: 280rpx;"></image>
+    <view class="flex align-center flex-sub">
+      <view class="text-right  flex-sub">
+        <view>{{userInfo.userSupTime}}小时</view>
+        <view>免费时间</view>
+        <view wx:if="{{userInfo.shareSize==0}}">{{userInfo.shareSize}} / 3</view>
+        <view wx:else>
+          <text class='text-green'>{{userInfo.shareSize}}</text> / 3</view>
+      </view>
+      <view class="icon-time"></view>
+    </view>
+  </view>
+  <view class="padding text-center" bindtap='toSpace'>
+    <view class="text-sl">
+      {{commenSpaceUse}}
+    </view>
+    <view class="margin-bottom-sm">{{commenSpaceMessage}}</view>
+  </view>
+</view>
+<modal-box class="{{auth?'show':''}}">
+  <dialog>
+    <bar class="justify-end">
+      <view class='content'>用户信息授权</view>
+    </bar>
+    <view class='padding-lg'>
+      <view class='text-left text-content'>
+        <view class="auth_tips">1.同意当前小程序获取我的微信头像</view>
+        <view class="auth_tips">2.同意当前小程序获取我的微信昵称等其他信息</view>
+      </view>
+    </view>
+    <bar class="justify-center">
+      <button class='bg-green round shadow' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    </bar>
+  </dialog>
+</modal-box>
+
+<modal-box class="{{modalName=='adModal'?'show':''}}">
+  <dialog>
+    <view class="bg-img" style="background-image: url('{{SERVER_URL}}/imgFile/homeZS/zs.jpg');height:200px;">
+      <bar class="justify-end none-bg text-white">
+        <view class='action' bindtap='hideModal'>
+          <icon class='icon-close text-xl'></icon>
+        </view>
+      </bar>
+    </view>
+  </dialog>
+</modal-box>

@@ -1,0 +1,116 @@
+<view class='orderNav'>
+  <view class='orderNavItem {{nav_index==0?"cur":""}}' bindtap='tog_nav' data-o='0'>待分润</view>
+  <view class='orderNavItem {{nav_index==50?"cur":""}}' bindtap='tog_nav' data-o='50'>已分润</view>
+  <view class='NavLine' style='left:{{nav_index}}%;'></view>
+</view>
+
+
+<view class='qiContainer' wx:if='{{success_index==0}}'>
+  <!-- complete -->
+  <view class='qiItem   ' wx:for='{{orderList}}'  data-url='../qiInfo/qiInfo?id={{item.id}}&shopid={{item.shop_id}}&index={{index}}' bindtap='goDetail'>
+    <view class='qiLeft'>
+      <view class='qiTxt'>
+        <view>可</view>
+        <view>用</view>
+      </view>
+      <view class='leftTopY byj'></view>
+      <view class='leftBottomY byj'></view>
+      <view class='rightTopY byj'></view>
+      <view class='rightBottomY byj'></view>
+      <view class='small_by'>
+        <view wx:for='{{listY}}'></view>
+      </view>
+    </view>
+    <view class='qiRight'>
+      <view class='leftTopY byj'></view>
+      <view class='leftBottomY byj'></view>
+      <view class='rightTopY byj'></view>
+      <view class='rightBottomY byj'></view>
+      <view class='qi_content'>
+        <view class='qContetnTop'>
+          <view class='qiPrice'>
+            <text>¥</text>{{item.money}}
+          </view>
+          <view class='qiLv'>
+            <view class='lvGu'>
+              <view class='lvjin' style='width:{{item.order_bonus.jindu*100}}%;'></view>
+            </view>
+            <view class='qiInfo'>
+              已分润：
+              <text>¥{{item.order_bonus.yi_money}}</text> / 待分润：
+              <text>¥{{item.order_bonus.dai_money}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='qContetnBottom'>
+        <view>日期: {{item.order_bonus.ctime}}</view>
+        <view class='dan'>
+          {{item.shop_name}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+</view>
+
+<view class='qiContainer ' wx:if='{{success_index==50}}'>
+  <!-- complete -->
+  <view class='qiItem  complete' wx:for='{{orderList}}'>
+    <view class='qiLeft'>
+      <view class='qiTxt yjs'>
+        <view>已</view>
+        <view>结</view>
+        <view>束</view>
+      </view>
+      <view class='leftTopY byj'></view>
+      <view class='leftBottomY byj'></view>
+      <view class='rightTopY byj'></view>
+      <view class='rightBottomY byj'></view>
+      <view class='small_by'>
+        <view wx:for='{{listY}}'></view>
+      </view>
+    </view>
+    <view class='qiRight'>
+      <view class='leftTopY byj'></view>
+      <view class='leftBottomY byj'></view>
+      <view class='rightTopY byj'></view>
+      <view class='rightBottomY byj'></view>
+      <view class='qi_content'>
+        <view class='qContetnTop'>
+          <view class='qiPrice'>
+            <text>¥</text>{{item.money}}
+          </view>
+          <view class='qiLv'>
+            <view class='lvGu'>
+              <view class='lvjin' style='width:{{item.order_bonus.jindu*100}}%;'></view>
+            </view>
+            <view class='qiInfo'>
+              已分润：
+              <text>¥{{item.order_bonus.yi_money}}</text> / 待分润：
+              <text>¥{{item.order_bonus.dai_money}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='qContetnBottom'>
+        <view>日期: {{item.order_bonus.ctime}}</view>
+        <view class='dan'>
+          {{item.shop_name}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+</view>
+
+
+
+<view class='kong' wx:if='{{orderList.length<=0}}'>
+  <image src='/images/kong.png'></image>
+  <view>还没有相关的期票 !</view>
+</view>

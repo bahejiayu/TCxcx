@@ -1,0 +1,30 @@
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{ads}}" wx:key>
+    <image src="{{HOST_URI + item.url}}" mode='aspectFill'></image>
+  </swiper-item>
+</swiper>
+
+<view class="padding-lr margin-top-xl">
+  Product area U乐产品区
+</view>
+<view class="padding-sm grid col-2 classBox">
+  <navigator url="list?type=1" hover-class="none" class="padding-xs block ">
+    <image src="/images/shopClass0.png" mode="widthFix" class="response"></image>
+    <form bindsubmit="submitInfo" report-submit='true'>
+      <button form-type="submit" class='formIdBtn'></button>
+    </form>
+  </navigator>
+  <navigator url="list?type=2" hover-class="none" class="padding-xs block">
+    <image src="/images/shopClass1.png" mode="widthFix" class="response"></image>
+    <form bindsubmit="submitInfo" report-submit='true'>
+      <button form-type="submit" class='formIdBtn'></button>
+    </form>
+  </navigator>
+</view>
+<view class="text-center margin-top text-xl">关于U乐空间</view>
+<view class="text-content padding" bindtap='abouts'>
+<view class='mb20'>U乐智能空间开业在即，我们将为广大消费者带来前所未“想”，也是前所未“享”的创新体验。</view>
+
+<view class='mb20'>这里环境闲逸舒适，氛围优雅，并且融合了互联网+人工智能+电子商城+实体店于一体，是充满未来想象的创新智能共享空间。您只需要拥有一台移动智能设备，通过我们预设的沉浸式智能空间系统，便能畅通无阻，享受我们为您构建的全方位多维度的空间体验， 在不同的区域里您都能体验到立体互通的智能服务，每个区域既是独立有趣又是相互关联无缝连接，仿佛一位智能管家随时为您效劳服务。</view>
+
+</view>

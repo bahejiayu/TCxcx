@@ -1,0 +1,129 @@
+page{
+  background-color: #f4f4f4;
+}
+.orderNav{
+  border-top: 1px solid #dcdcdc;
+  height: 100rpx;
+  font-size: 32rpx;
+  background-color: #fff;
+  line-height: 100rpx;
+  position: relative;
+}
+.orderNavItem{
+  float: left;
+  color: #333333;
+  width: 50%;
+  text-align: center;
+}
+.orderNavItem.cur{
+  color: #f5a623;
+}
+.NavLine{
+  position: absolute;
+  width:50%;
+  height: 5rpx;
+  background-color: #f5a623;
+  bottom: 0;
+  transition: all 0.3s;
+}
+.orderTip{
+  padding: 20rpx 25rpx;
+  background-color: #f4f4f4;
+  font-size:20rpx ;
+  color: #f26c00;
+  line-height: 30rpx;
+}
+.shopInfo{
+    padding: 25rpx;
+    background-color: #fff;
+    border-bottom: 2rpx solid #f4f4f4;
+}
+.shopContainer{
+  position: relative;
+  padding: 0 170rpx 0 115rpx;
+  height: 90rpx;
+}
+
+.shopLogo{
+  position: absolute;
+  width:90rpx ;
+  height: 90rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+}
+.shopLogo image{
+  width: 100%;
+  height: 100%;
+}
+.shopName{
+  font-size:32rpx;
+  color:#333333 ;
+  margin: 5rpx 0;
+}
+.shopViewNumber{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 12rpx;
+}
+.hot_list image{
+  width: 20rpx;
+  height: 22rpx;
+  margin-right: 8rpx;
+  vertical-align: middle;
+}
+.orderPrice{
+    position: absolute;
+    font-size: 32rpx;
+    color: #ff191a;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.shopTitle{
+  height: 89rpx;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  text-align: center;
+  font-size:30rpx ;
+  color: #333333;
+}
+.shopTitle text{
+  line-height: 87rpx;
+  padding: 0 10rpx;
+  display: inline-block;
+  border-bottom: 3rpx solid #fd6906;
+}
+.shopHtml{
+  padding: 30rpx 25rpx;
+  font-size: 26rpx;
+  color: #333333;
+  background-color: #fff;
+  line-height:40rpx ;
+  margin-bottom: 80rpx;
+}
+.order_list{
+  padding-bottom: 100rpx;
+  margin-top: 20rpx;
+}
+page{
+  border-top: 1px solid #dcdcdc;
+}
+.orderPrice view{
+  color: #999999;
+  font-size: 38rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

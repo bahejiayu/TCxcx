@@ -1,0 +1,38 @@
+.topLine{
+  height: 20rpx;
+  background-color: #f4f4f4;
+}
+.ModItem{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #f4f4f4;
+  padding: 0 25rpx;
+  position: relative;
+  padding-left: 180rpx;
+}
+view,input,button{
+  font-size: 30rpx;
+}
+.ModTitle{
+  position: absolute;
+  left: 25rpx;
+}
+.ModItem input{
+  width: 100%;
+  height: 100%;
+}
+.ModCode{
+  padding-right: 250rpx;
+}
+.Codeclass{
+  font-size: 30rpx;
+  color: #35bd3c;
+  position: absolute;
+  right: 50rpx;
+  top: 0;
+}
+.ModBtn{
+  margin-top: 55rpx;
+}
+
+

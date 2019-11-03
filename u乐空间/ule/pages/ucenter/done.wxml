@@ -1,0 +1,19 @@
+<view class="padding-xl DhCard">
+  <avatar class="round" style="background-image:url({{user.userHeadIcon}});width:150rpx;height:150rpx;"></avatar>
+  <view class="padding-lr-sm padding-tb-lg text-center">
+    <view class="text-lg">{{user.userName}}</view>
+    <view class="margin-top-sm">ID:{{user.userId}}</view>
+    <view class="margin-top-sm">创建时间:{{order.uoCreateTime}}</view>
+  </view>
+</view>
+
+<view class='padding flex'>
+  <view class='flex-sub padding'>
+    <button class='bg-black round lg block' bindtap='ChanelUserOrder'>确定</button>
+  </view>
+  <view class='flex-sub padding'>
+    <navigator hover-class='none' open-type='navigateBack' delta='1'>
+      <button class='bg-brown round lg block'>取消</button>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,84 @@
+const API = require('../../utils/api')
+const request = require('../../utils/request')
+const wxReq = require('../../utils/wxRequest')
+const commen = require('../../utils/commen')
+const app = getApp();
+Page({
+  data: {
+    HOST_URL: API.getHOSTURI(),
+    isShowDetails: false,
+    pageSize: 10,
+    pageNum: 0,
+    userId: null,
+    list: [],
+    showParam: {},
+    show_top:false,
+    navIndex:0
+  },
+  tog_nav:function(e){
+        this.setData({
+          navIndex:e.currentTarget.dataset.index
+        });
+  },
+  showTip: function () {
+    this.setData({
+      show_top: true
+    })
+  },
+  close_show_tip:function(){
+        this.setData({
+          show_top:false
+        })
+  },
+	onShareAppMessage() { 
+	  return  app.globalData.shareMessage
+	},
+  onLoad: function (options) {
+    console.log(options)
+    wx.setNavigationBarTitle({
+      title: '订单核销'
+    })
+    this.setData({
+      userId: options.userId
+    })
+    this.getList()
+  },
+  onReachBottom: function () {
+    this.getList()
+  },
+  getList: function () {
+    wx.showLoading({
+      title: '加载中',
+    })
+    var self = this
+    var getReq = wxReq.get(API.getSelectCheckListByTime(), {
+      userId: this.data.userId,
+      pageSize: this.data.pageSize,
+      pageNum: this.data.pageNum + 1
+    })
+    console.log(this.data.userId)
+    getReq.then(resp => {
+      console.log(resp)
+      if (resp.data.data.length > 0) {
+        var list = self.data.list.concat(resp.data.data)
+        self.setData({
+          list: list,
+          pageNum: self.data.pageNum + 1
+        })
+      }
+      wx.hideLoading()
+    })
+  },
+  showDetails: function (e) {
+    this.setData({
+      isShowDetails: true,
+      showParam: this.data.list[e.currentTarget.dataset.index]
+    })
+
+  },
+  hideDetails: function () {
+    this.setData({
+      isShowDetails: false
+    })
+  }
+})

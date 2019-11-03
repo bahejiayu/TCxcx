@@ -1,0 +1,9 @@
+page{
+	background-color: #332b23;
+}
+bar + list{
+	margin-top: 1rpx;
+}
+list.menu>item{
+	border-color: #332b23;
+}

@@ -1,0 +1,62 @@
+const API = require('../../utils/api')
+const request = require('../../utils/request')
+const wxReq = require('../../utils/wxRequest')
+const commen = require('../../utils/commen')
+const app = getApp();
+Page({
+  data: {
+    HOST_URI: API.getHOSTURI(),
+    SERVER_URI: API.getSERVERURI(),
+    pageSize: 10,
+    pageNum: 0,
+    comboData: []
+  },
+  countNumber:function(e){
+    var list = this.data.comboData
+    if (e.target.dataset.type =='add'){
+      list[e.target.dataset.index].nub++;
+    }else{
+      if (list[e.target.dataset.index].nub==1){
+            wx.showToast({
+              title: '不能小于1',
+              icon:'none'
+            });
+            return false;
+      }
+      list[e.target.dataset.index].nub--;
+    }
+    this.setData({
+      comboData: list
+    })
+
+
+  },
+  onShareAppMessage() { 
+    return  app.globalData.shareMessage
+  },
+  onLoad: function (options) {
+    //去掉了不进入店不能购买问题
+    // var shopId = commen.getShopId();
+    // console.log(shopId)
+    // if (shopId == null || shopId == '' || shopId == undefined){
+    //   return false
+    // }
+    var getReq = wxReq.get(API.getGetByGroupId(), { groupId: options.groupId })
+    getReq.then(resp => {
+      for (var i = 0; i < resp.data.data.length;i++ ){
+        resp.data.data[i].nub=1
+        }
+      this.setData({
+        comboData: resp.data.data
+      })
+    })
+  },
+  toBuy: function (e) {
+    var param = JSON.stringify(this.data.comboData[e.currentTarget.dataset.index]);
+    console.log(e)
+    var nub = this.data.comboData[e.currentTarget.dataset.index].nub
+    wx.navigateTo({
+      url: '/pages/home/goods/pay?param=' + param + '&type=' + 3 + '&nub=' + nub,
+    })
+  }
+})

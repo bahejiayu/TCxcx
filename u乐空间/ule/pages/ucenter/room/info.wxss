@@ -1,0 +1,8 @@
+/* pages/ucenter/room/info.wxss */
+.tui_view image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.tui_view{
+  text-align: center;
+}

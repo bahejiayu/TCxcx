@@ -1,0 +1,366 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.5.0",
+	"appid": "wxe3d08408979b78e2",
+	"projectname": "ColorUI-template",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "首页",
+					"pathName": "pages/home/home",
+					"query": "scene=806",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "店铺选择",
+					"pathName": "pages/home/address",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/auth/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "开门",
+					"pathName": "pages/door/door",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "首页订单",
+					"pathName": "pages/home/order/list",
+					"query": "userCode=oNy_l5fXyEI6hUa5zYEoWV1Q-2HQ"
+				},
+				{
+					"id": 5,
+					"name": "首页订单详情",
+					"pathName": "pages/home/order/info",
+					"query": "id=1164"
+				},
+				{
+					"id": -1,
+					"name": "首页商品",
+					"pathName": "pages/home/goods/list",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "首页商品支付",
+					"pathName": "pages/home/goods/pay",
+					"query": "param={\"mealId\":9,\"mealName\":\"乌龙茶\",\"mealMoney\":0.01,\"mealDisplay\":0,\"mealGroupId\":8,\"mealCreateTime\":1539863590000,\"mealPic\":\"/imgFile/1539834754116.jpg\",\"mealIntroduce\":\"原产地直销\"}&type=3"
+				},
+				{
+					"id": -1,
+					"name": "商城首页",
+					"pathName": "pages/shop/home",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "商城列表页",
+					"pathName": "pages/shop/list",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "商城详情页",
+					"pathName": "pages/shop/info",
+					"query": "goodsId=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购物车首页",
+					"pathName": "pages/cart/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购物车结算",
+					"pathName": "pages/cart/checkout",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人中心首页",
+					"pathName": "pages/ucenter/home",
+					"query": ""
+				},
+				{
+					"id": 14,
+					"name": "商城订单列表",
+					"pathName": "pages/ucenter/order/list",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "商城订单详情",
+					"pathName": "pages/ucenter/order/info",
+					"query": "goodsId=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商城订单评分",
+					"pathName": "pages/ucenter/order/score",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商城退款申请",
+					"pathName": "pages/ucenter/refund/apply",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商城退款列表",
+					"pathName": "pages/ucenter/refund/list",
+					"query": ""
+				},
+				{
+					"id": 19,
+					"name": "商城退款详情",
+					"pathName": "pages/ucenter/refund/info",
+					"query": "id=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "空间订单列表",
+					"pathName": "pages/ucenter/room/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "空间订单详情",
+					"pathName": "pages/ucenter/room/info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分销中心首页",
+					"pathName": "pages/dealer/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分销中心提现",
+					"pathName": "pages/dealer/getCash",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分销中心提现明细",
+					"pathName": "pages/dealer/detailCash",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分销中心分销佣金",
+					"pathName": "pages/dealer/money",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分销中心分销订单",
+					"pathName": "pages/dealer/roomList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分销中心我的团队",
+					"pathName": "pages/dealer/team",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分销中心推广二维码",
+					"pathName": "pages/dealer/share",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人中心 常见问题",
+					"pathName": "pages/ucenter/faq",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人中心 礼品订单",
+					"pathName": "pages/ucenter/gift",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人中心 充值",
+					"pathName": "pages/ucenter/recharge",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人中心 充值",
+					"pathName": "pages/ucenter/recharge",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "管理者中心-员工",
+					"pathName": "pages/manage/home",
+					"query": "status=staff"
+				},
+				{
+					"id": -1,
+					"name": "管理者中心-管理员",
+					"pathName": "pages/manage/home",
+					"query": "status=manage"
+				},
+				{
+					"id": 35,
+					"name": "管理者中心-核销订单",
+					"pathName": "pages/manage/done",
+					"query": "status=manage&userId=43",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "管理者中心-订单列表",
+					"pathName": "pages/manage/order/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "管理者中心-订单详情",
+					"pathName": "pages/manage/order/info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "管理者中心-年卡会员",
+					"pathName": "pages/manage/member",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "管理者中心-升级年卡",
+					"pathName": "pages/manage/memberUp",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "管理者中心-员工列表",
+					"pathName": "pages/manage/staff/list",
+					"query": ""
+				},
+				{
+					"id": 40,
+					"name": "管理者中心-员工详情",
+					"pathName": "pages/manage/staff/info",
+					"query": "userId=1008"
+				},
+				{
+					"id": 41,
+					"name": "管理者中心-添加员工",
+					"pathName": "pages/manage/staff/add",
+					"query": "userId=1073"
+				},
+				{
+					"id": 42,
+					"name": "管理者中心-员工进出记录",
+					"pathName": "pages/manage/staff/log",
+					"query": "userId=1013"
+				},
+				{
+					"id": -1,
+					"name": "管理者中心-营业额统计",
+					"pathName": "pages/manage/turnover",
+					"query": ""
+				},
+				{
+					"id": 45,
+					"name": "管理员审核",
+					"pathName": "pages/ucenter/done",
+					"query": "scene=Uid%253A10017",
+					"scene": null
+				},
+				{
+					"id": 46,
+					"name": "分享后的页面",
+					"pathName": "pages/share/share",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": 47,
+					"name": "空间商品列表",
+					"pathName": "pages/combo/combo",
+					"query": "groupId=10",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "管理者中心-核销退款申请",
+					"pathName": "pages/manage/tjsq/tjsq",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关于U乐",
+					"pathName": "pages/aboutUsp/aboutUsp",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/home/home",
+					"query": "scene=100",
+					"scene": null
+				}
+			]
+		}
+	}
+}

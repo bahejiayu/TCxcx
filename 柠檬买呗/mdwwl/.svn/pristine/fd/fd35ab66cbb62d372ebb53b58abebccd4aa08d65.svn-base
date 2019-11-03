@@ -1,0 +1,24 @@
+<view class='shopBox'>
+  <view class='shopItem'>
+    <view class='shopItem_top'>
+      <view class='shopItem_topShopInfo'>
+        <view class='shopLogo'>
+          <image src='https://school.ljq360.com/Upload/shop/2019-04-11/5caed62928d91.jpg'></image>
+        </view>
+        <view class='shopdes'>
+          <view class='dan'>九毛九山西手工面</view>
+          <view>折扣：
+            <text>8折</text> 让利：
+            <text>20%</text> 红包抵扣：
+            <text>10%</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='shopItem_bottom'>
+        <navigator class='jy'>经营情况</navigator>
+        <navigator class='bj'>编辑</navigator>
+    </view>
+
+  </view>
+</view>

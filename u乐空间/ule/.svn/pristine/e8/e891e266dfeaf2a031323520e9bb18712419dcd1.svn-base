@@ -1,0 +1,18 @@
+<view class="flex align-center bg-white padding margin-top"  wx:for="{{comboData}}" wx:key>
+	<image src="{{SERVER_URI+item.mealPic}}" mode="aspectFill" style="width: 160rpx;height: 160rpx;"></image>
+	<view class="flex-sub margin-left-sm" bindtap='toBuy' data-index='{{index}}'>
+		<view class="text-lg">
+			{{item.mealName}}
+		</view>
+		<view class="text-gray margin-top-xs">
+			{{item.mealIntroduce}}
+		</view>
+		<view class="flex justify-between align-end margin-top-xs">
+			<view>
+				<text class="text-price text-red text-xl">{{item.mealMoney}}</text>
+				<!-- <text class="text-price text-gray text-del">430.00</text> -->
+			</view>
+			<button class="bg-brown">立即购买</button>
+		</view>
+	</view>
+</view>

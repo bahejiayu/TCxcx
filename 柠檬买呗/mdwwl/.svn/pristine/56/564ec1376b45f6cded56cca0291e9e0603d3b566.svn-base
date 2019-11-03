@@ -1,0 +1,67 @@
+<view class='incomeTop'>
+  <view class='cityTop'>
+    <view>1508.00</view>
+    <view>分润金额(元)</view>
+  </view>
+  <view class='topBottom '>
+    <view class='hhr_get'>
+      <view class='hhr_item'>
+        <view>8折</view>
+        <view>优惠折扣</view>
+      </view>
+      <view class='hhr_item'>
+        <view>20%</view>
+        <view>让利比例</view>
+      </view>
+      <view class='hhr_item'>
+        <view>10%</view>
+        <view>红包抵扣(%)</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='incomeAhb'>
+  <view class='incomeAhb_item'>
+    <view>商家总收益(元)</view>
+    <view>214560.00</view>
+  </view>
+  <view class='incomeAhb_item'>
+    <view>红包抵扣(元)</view>
+    <view>268.00</view>
+  </view>
+</view>
+
+<view class='nav_line'>
+  <view class='cur'>
+    账单明细
+  </view>
+</view>
+<view class='shopIncomeBox'>
+  <view class='shopIncomeItem'>
+    <view class='shopIncomeTitle'>
+      <view>2019-03-30 19:50</view>
+      <view>¥5.00</view>
+    </view>
+    <view class='shopIncomeContetn'>
+      <view class='shopIncomeContetnLIne'>
+        <view>商家名称</view>
+        <view class='dan'>九毛九山西手工面</view>
+      </view>
+      <view class='shopIncomeContetnLIne'>
+        <view>订单金额</view>
+        <view class='dan'>¥200.00</view>
+      </view>
+       <view class='shopIncomeContetnLIne'>
+        <view>红包抵扣10%</view>
+        <view class='dan'>¥200.00</view>
+      </view>
+       <view class='shopIncomeContetnLIne'>
+        <view>让利实收金额</view>
+        <view class='dan'>¥5.00</view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

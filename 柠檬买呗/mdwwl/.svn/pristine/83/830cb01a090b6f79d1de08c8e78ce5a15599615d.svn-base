@@ -1,0 +1,54 @@
+<view class='top_nav'>
+  <view class='nav_item cur'>
+    全部
+  </view>
+  <view class='nav_item'>
+    待付款
+  </view>
+  <view class='nav_item'>
+    待发货
+  </view>
+  <view class='nav_item'>
+    待收货
+  </view>
+  <view class='nav_item'>
+    待评价
+  </view>
+</view>
+
+<view class='order_list'>
+  <view class='order_item'>
+    <view class='order_title'>
+      <view class='order_no'>订单编号：34611046</view>
+      <view class='order_status'>待付款</view>
+    </view>
+    <view class='order_goods'>
+      <view class='order_image'>
+        <image src='/images/goods_banner_02.jpg'></image>
+      </view>
+      <view class='order_goods_info'>
+        <view class='goods_des'>
+          <view class='goods_name dan'>
+            人参固体饮料人参固体饮料人参固体饮料
+          </view>
+          <view class='goods_price'>
+            ¥180.00
+          </view>
+        </view>
+        <view class='goods_range'>
+          <view class='goods_range_left'>
+            180g
+          </view>
+          <view class='goods_range_right'>
+            ×1
+          </view>
+        </view>
+      </view>
+     
+    </view>
+     <view class='order_footer'>
+        <navigator hover-class='none'>取消订单</navigator>
+        <navigator class='type_' hover-class='none'>去付款</navigator>
+      </view>
+  </view>
+</view>

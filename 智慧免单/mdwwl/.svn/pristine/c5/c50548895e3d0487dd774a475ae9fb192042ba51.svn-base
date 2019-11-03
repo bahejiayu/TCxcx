@@ -1,0 +1,40 @@
+
+
+<view class='classifyContainer ' >
+  <view class='classifItem mb0' >
+    <view class='headIcon'>
+      <image src='{{myClass.avater}}'></image>
+    </view>
+    <view class='classOrderInfo'>
+      <view class='classInfoone'>
+        <view class='dan'>{{myClass.name}}</view>
+        <view>¥ {{myClass.money}}</view>
+      </view>
+      <view class='classInfotwo'>
+        <view>{{myClass.pay_time}}</view>
+        <view>NO.{{myClass.ranking}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='title_code' >
+所有排队情况
+</view>
+
+<view class='classifyContainer '  >
+  <view class='classifItem' wx:for='{{allClass}}'>
+    <view class='headIcon'>
+      <image src='{{item.avater}}'></image>
+    </view>
+    <view class='classOrderInfo'>
+      <view class='classInfoone'>
+        <view class='dan'>{{item.name}}</view>
+        <view>¥ ***.**</view>
+      </view>
+      <view class='classInfotwo'>
+        <view>{{item.pay_time}}</view>
+        <view>NO.{{item.ranking}}</view>
+      </view>
+    </view>
+  </view>
+</view>

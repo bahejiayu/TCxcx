@@ -1,0 +1,40 @@
+<form-group class="margin-top">
+  <view class='title'>昵 称</view>
+  <input value="{{user.userName}}" disabled></input>
+</form-group>
+<form-group>
+  <view class='title'>用户ID</view>
+  <input value="{{user.userId}}" disabled></input>
+</form-group>
+<form-group>
+  <view class='title'>所属门店</view>
+  <input value="{{shop.siName}}" disabled></input>
+</form-group>
+<form-group bindtap="showModal" data-target="WorkModal">
+  <view class='title'>会员类型</view>
+  <view class="flex-sub">
+    {{menberType}}
+  </view>
+  <text class='icon-right text-gray'></text>
+</form-group>
+<view class="padding">
+  <button class="lg block bg-brown" bindtap='save'>添加会员</button>
+</view>
+
+<modal-box class="{{modalName=='WorkModal'?'show':''}}">
+  <dialog class=" ">
+    <radio-group class="block" bindchange="radioChange">
+      <list class="menu text-left">
+        <item wx:for="{{items}}" wx:key="index">
+          <label class='flex-sub flex justify-between align-center'>
+            <view class='flex-sub'> {{item.name}}</view>
+            <radio value="{{item.name+':'+item.value}}" checked="{{menberType==item.name}}" class='brown' />
+          </label>
+        </item>
+      </list>
+    </radio-group>
+    <view class="padding text-center solid-top" bindtap="hideModal">
+      确定
+    </view>
+  </dialog>
+</modal-box>

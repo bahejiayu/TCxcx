@@ -1,0 +1,20 @@
+<view class='formContainer'>
+
+  <form bindsubmit='subFrom'>
+    <view class='feedTitle'>
+      反馈&建议
+    </view>
+    <view class='areaBox'>
+      <textarea placeholder='我们将珍视您的每一条反馈&建议' maxlength='200'></textarea>
+      <view>0/200</view>
+    </view>
+    <view class='feedTitle'>
+      联系方式
+    </view>
+    <view class='inpContainer'>
+      <input type='text' placeholder='请输入手机号码/微信（选填）'></input>
+    </view>
+    <view class='fromTip'>请留下联系方式以便于我们更好的为您服务 ^_^</view>
+    <button class='btnF'>提交</button>
+  </form>
+</view>

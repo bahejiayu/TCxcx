@@ -1,0 +1,35 @@
+<form-group>
+  <view class='title'>
+    <text class="icon-calendar text-grey margin-right-xs"></text>开始日期</view>
+  <picker mode="date" value="{{date}}" bindchange="DateStartChange">
+    <view class="picker">
+      {{startTime?startTime:'选择开始日期'}}
+    </view>
+  </picker>
+</form-group>
+<form-group>
+  <view class='title'>
+    <text class="icon-calendar text-grey margin-right-xs"></text>结束日期</view>
+  <picker mode="date" value="{{date}}" bindchange="DateEndChange">
+    <view class="picker">
+      {{endTime?endTime:'选择结束日期'}}
+    </view>
+  </picker>
+</form-group>
+<view class="padding">
+  考勤记录
+</view>
+<view class="bg-brown flex text-center">
+  <view class="basis-lg padding">时间</view>
+  <view class="basis-sm padding">进/出</view>
+</view>
+
+<view class="bg-{{index%2==0?'white':'gray'}} flex text-center" wx:for="{{list}}" wx:key>
+  <view class="basis-lg padding">{{item.uirCreateTime}}</view>
+  <view class="basis-sm padding">{{item.uirType==0?'进':'出'}}</view>
+</view>
+<view class='padding-xl' wx:if="{{list.length==0}}">
+  <view class='padding-xl bg-white radius shadow-lg text-center'>
+    还 没 有 考 勤 记 录 ~ - ~
+  </view>
+</view>

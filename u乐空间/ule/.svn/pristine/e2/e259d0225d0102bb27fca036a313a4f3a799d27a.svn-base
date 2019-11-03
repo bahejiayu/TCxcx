@@ -1,0 +1,7 @@
+page{
+	background-color: #221c16;
+	color:#fff;
+}
+.classBox .block{
+  position: relative;
+}

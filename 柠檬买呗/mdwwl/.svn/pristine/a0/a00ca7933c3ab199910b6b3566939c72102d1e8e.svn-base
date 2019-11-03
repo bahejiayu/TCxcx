@@ -1,0 +1,20 @@
+<view class='top_img'>
+  <image src='{{http}}/Public/home/12.png' class='bg'></image>
+
+  <view class='code_'>
+    <image src='{{http+code_.share_qrcode}}'></image>
+  </view>
+</view>
+
+<view class='code_txt'>
+  <view>邀请码：{{code_.share_code}}</view>
+  <view>扫一扫加入柠檬买呗</view>
+</view>
+<view class='btns'>
+  <button hover-class='none' bindtap='saveImg'>
+    分享邀请图片
+  </button>
+  <button hover-class='none' open-type='share'>
+    分享链接
+  </button>
+</view>

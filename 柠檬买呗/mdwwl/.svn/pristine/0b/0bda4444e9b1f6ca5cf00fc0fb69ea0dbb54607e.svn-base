@@ -1,0 +1,5 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "期票详情",
+  "enablePullDownRefresh": true
+}

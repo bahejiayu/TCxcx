@@ -1,0 +1,27 @@
+page{
+  background-color: #f7f7f7;
+}
+.Man_item{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: #f4f4f4 1px solid;
+  font-size: 30rpx;
+  padding: 0 25rpx;
+  background-color: #fff;
+}
+.Man_item view:first-child{
+  float: left;
+}
+.Man_item view:last-child{
+  float: right;
+}
+.ManBox{
+  margin-bottom: 20rpx;
+}
+.Man_item .icon-right{
+  transform: rotate(90deg);
+  margin-left: 10rpx;
+}
+picker .Man_item view:last-child{
+  color: #7a7777;
+}

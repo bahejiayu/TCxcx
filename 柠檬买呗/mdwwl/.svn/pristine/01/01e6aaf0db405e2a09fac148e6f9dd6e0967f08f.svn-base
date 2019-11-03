@@ -1,0 +1,44 @@
+<view class='orderStatu'>
+  <view>
+    支付成功
+  </view>
+  <view>
+    您的订单已完成，欢迎下次惠顾
+  </view>
+</view>
+
+
+<view class='orderStatu'>
+  <view>
+    商品明细
+  </view>
+  <view class='shopInfo'>
+    <view>九毛九山西手工面</view>
+    <view>¥199.00</view>
+  </view>
+</view>
+
+
+<view class='payStyle'>
+  <view>支付方式</view>
+  <view>微信支付</view>
+</view>
+<view class='orderInfo'>
+  <view class='orderItem'>
+    <view>商品总价</view>
+    <view>¥199.00</view>
+  </view>
+  <view class='orderItem'>
+    <view>红包抵扣</view>
+    <view>- ¥10.00</view>
+  </view>
+</view>
+<view class='orderPrice'>
+  合计
+  <text>¥189.00</text>
+</view>
+
+<view class='timeList' >
+      <view>订单编号：<text>10059426462030</text></view>
+      <view>转账时间：<text>2018-07-30  12:53:32</text></view>
+</view>

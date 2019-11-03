@@ -1,0 +1,13 @@
+<view class='ti_y'   wx:if='{{is_sq==2}}'>
+  <image src='/images/ysq_03.png'></image>
+  <view>店铺入驻成功，请在我的“商家管理”查看</view>
+</view>
+<view class='imag_list'  wx:if='{{is_sq!=2}}' >
+  <image  wx:for='{{txt_}}' src='{{http+item}}' mode='widthFix'></image>
+  <!-- <view>
+    <rich-text nodes='{{txt_}}'></rich-text>
+  </view> -->
+</view>
+<view class='fix_buy' wx:if='{{is_gm==0}}'>
+  <view bindtap='pay_'>¥{{total_price}} 立即入驻</view>
+</view>

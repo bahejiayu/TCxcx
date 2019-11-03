@@ -1,0 +1,4 @@
+<view class='CodeContainer'>
+    <view class='codeTip' >二维码全国统一售价：¥680</view>
+    <button class='btnF' >支付</button>
+</view>

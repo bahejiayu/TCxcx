@@ -1,0 +1,90 @@
+<view class='index_top'>
+  <view class='index_top_left' bindtap='getAddress'>
+    <image src='/images/address_03.png'></image>
+    <text class='dan'>{{address_txt}}</text>
+    <view class='icon-triangledownfill'></view>
+  </view>
+  <view class='index_top_right'  data-id='0'>
+    <view class='search_btn' bindtap='go_search'>
+      <image src='/images/search_03.png'></image>
+    </view>
+    <input type='text' placeholder='搜索店铺' placeholder-class='pclass' disabled='{{true}}' bindtap='go_search'></input>
+    <view class='code_btn' bindtap='saoma'>
+      <image src='/images/codes_03.png'></image>
+    </view>
+
+  </view>
+  <view class='lty_'>
+    <image src='/images/lty_02.png'></image>
+  </view>
+</view>
+
+
+<view class='banner_box'>
+  <view class='bannerContainer'>
+    <swiper autoplay='{{true}}' indicator-dots='{{true}}' indicator-color='#c9afaf' indicator-active-color='#fff'>
+      <swiper-item wx:for='{{banner_list}}' wx:key="{{index}}">
+        <image src='{{http+item.img}}'></image>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
+
+<view class='navContainer'>
+  <view class='navItem' wx:for='{{nav_list}}' wx:key='{{index}}'>
+    <navigator data-id='{{item.id}}' bindtap='go_search' hover-class='none'>
+      <image src='{{http+item.img}}'></image>
+      <view>{{item.title}}</view>
+    </navigator>
+  </view>
+</view>
+
+<view class='rued' bindtap='go_enter'>
+  <view class='rued_box'>
+    <view>已有<text>{{enterNub}}</text>家商户</view>
+    <view>免单玩玩乐赚取利益</view>
+  </view>
+
+
+
+  <image src='/images/rued_03.png'></image>
+</view>
+
+
+
+
+<view class='shopContainer'>
+  <view class='shopNav'>
+    <view class='shopNav_item'>
+      <view class='{{nav_index==1?"cur":""}}' data-index='1' bindtap='get_nav'>附近商家 </view>
+    </view>
+    <view class='itemLine'>
+      |
+    </view>
+    <view class='shopNav_item'>
+      <view class='{{nav_index==2?"cur":""}}' data-index='2' bindtap='get_nav'>特惠商家</view>
+    </view>
+  </view>
+  <view class='shop_list'>
+    <view class='shop_item' wx:for='{{shop_list}}' wx:for-item='t1' wx:for-index='i1' wx:key='{{i1}}'  data-url='../shopDetail/shopDetail?id={{t1.id}}'  bindtap='goShopDetail'>
+    
+        <view class='shop_itmeLeft'>
+          <image src='{{http+t1.logo}}'></image>
+          <view class='shop_name dan'>{{t1.shop_name}}</view>
+          <view class='shop_info'>{{t1.cate_name}}
+            <text>|</text>{{t1.distance}}</view>
+        </view>
+        <view class='shop_itemRight'>
+          <view>分润{{t1.free_sum}}单</view>
+          <view class='hbdk'>{{t1.discount}}</view>
+
+        </view>
+    
+    </view>
+
+  </view>
+  <view class='kong' wx:if='{{shop_list.length<=0}}'>
+    <image src='/images/kong.png'></image>
+    <view>还没有相关数据 !</view>
+  </view>
+</view>

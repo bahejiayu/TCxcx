@@ -1,0 +1,12 @@
+<navigator class="margin-top" url="info" hover-class="none">
+	<bar class="solid-bottom">
+		<view class="action">订单编号：10059426462030</view>
+	</bar>
+	<view class="flex align-center padding bg-white ">
+		<view class="flex-sub">
+			<view class="text-lg">共享空间</view>
+			<view class="margin-top-sm text-sm text-gray">2018-07-30 12:53:32</view>
+		</view>
+		<view class="text-price text-red">15.00</view>
+	</view>
+</navigator>

@@ -1,0 +1,48 @@
+.topImgInfo image {
+  width: 100%;
+  height: 385rpx;
+}
+
+.topImgInfo {
+  margin-bottom: 85rpx;
+}
+
+.fy_title {
+  font-size: 28rpx;
+  color: #808080;
+  text-align: center;
+}
+
+.pay_price {
+  text-align: center;
+  font-size: 76rpx;
+  color: #1a171c;
+  margin-top: 10rpx;
+}
+
+.codeBtn {
+  width: 360rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #6b3c12;
+  margin: 0 auto;
+  background: linear-gradient(to right, #f8d693, #febb4b);
+  border-radius: 40rpx;
+  margin-top: 35rpx;
+}
+.codeContainer{
+  text-align: center;
+  font-size: 28rpx;
+}
+.codeContainer .sj_code{
+  width: 500rpx;
+  /* height: 500rpx; */
+  margin-bottom: 10rpx;
+  
+}
+.cabc{
+  width: 288rpx;
+  height:39rpx ;
+}

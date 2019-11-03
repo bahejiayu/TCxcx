@@ -1,0 +1,66 @@
+page{
+  background-color: #f4f4f4;
+}
+.orderNav{
+  border-top: 1px solid #dcdcdc;
+  height: 100rpx;
+  font-size: 32rpx;
+  background-color: #fff;
+  line-height: 100rpx;
+  position: relative;
+}
+.orderNavItem{
+  float: left;
+  color: #333333;
+  width: 50%;
+  text-align: center;
+}
+.orderNavItem.cur{
+  color: #ffda43;
+}
+.NavLine{
+  position: absolute;
+  width:50%;
+  height: 5rpx;
+  background-color: #ffda43;
+  bottom: 0;
+  transition: all 0.3s;
+}
+.messageList{
+  padding: 25rpx;
+}
+.messageItem{
+  padding: 20rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+.messTop{
+  position: relative;
+  padding-right: 240rpx;
+}
+.messTopLeft{
+  font-size: 30rpx;
+  color:#333 ;
+}
+.messTopRight{
+  font-size:24rpx ;
+  color: #999999;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+}
+.messageContent{
+  font-size:26rpx ;
+  color: #999999;
+  margin-top: 20rpx;
+  line-height: 40rpx;
+}
+
+
+
+
+
+
+
+

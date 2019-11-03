@@ -1,0 +1,77 @@
+<view class='all_goosc'>
+<view class='goosc' wx:for="{{comboData}}" wx:for-item="item"  wx:for-index='i1' wx:key>
+<view class='goosc_title'>{{item.mgName}}</view>
+  <view class="flex align-center bg-white padding margin-bottom" wx:for="{{item.goods}}"  wx:for-index='i2' wx:key>
+    <view class='rad_container' data-index1="{{i1}}"  data-index2="{{i2}}" bindtap='tog_rad'>
+      <view class='radio_ {{item.chk==true?"cur":""}}'>
+      <image src='/images/guo_03.png'>
+      </image>
+    </view>
+    </view>
+    <image src="{{SERVER_URI+item.mealPic}}" mode="aspectFill" style="width: 160rpx;height: 160rpx;" data-index1="{{i1}}"  data-index2="{{i2}}" bindtap='tog_rad'></image>
+    <view class="flex-sub margin-left-sm"  data-index='{{index}}'>
+      <view class="text-lg">
+        {{item.mealName}}
+      </view>
+
+      <view class="text-gray margin-top-xs">
+        {{item.mealIntroduce}}
+      </view>
+
+      <view class="flex justify-between align-end margin-top-xs">
+        <view>
+          <text class="text-price text-red text-xl">{{item.mealMoney}}</text>
+          <!-- <text class="text-price text-gray text-del">430.00</text> -->
+        </view>
+        <!-- <button class="bg-brown">立即购买</button> -->
+      </view>
+      <view class='count'>
+        <button bindtap='countNumber' data-index1="{{i1}}"  data-index2="{{i2}}" data-type="move" data-number='{{item.number}}'>
+          <text class='icon-move' data-type="move"></text>
+        </button>
+        <input value="{{item.nub}}" type='number' disabled></input>
+        <button bindtap='countNumber' data-index1="{{i1}}" data-index2="{{i2}}" data-type="add">
+          <text class='icon-add'  data-type="add"></text>
+        </button>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+</view>
+<view class='fixedBottom'>
+  <view class='fixLeftContent'>
+    <view>
+    <!-- <view class='radio_ cur' data-index='{{index}}' >
+        <image src='/images/guo_03.png'>
+        </image>
+      </view>  -->
+      已选({{nub_chk}})
+    </view>
+    <view>
+    ¥{{toatl_}}
+    </view>
+
+  </view>
+  <view class='right_btn' bindtap='buy_go'>
+    立即购买
+  </view>
+</view>
+
+<modal-box class="{{auth?'show':''}}">
+  <dialog>
+    <bar class="justify-end">
+      <view class='content'>用户信息授权</view>
+    </bar>
+    <view class='padding-lg'>
+      <view class='text-left text-content'>
+        <view class="auth_tips">1.同意当前小程序获取我的微信头像</view>
+        <view class="auth_tips">2.同意当前小程序获取我的微信昵称等其他信息</view>
+      </view>
+    </view>
+    <bar class="justify-center">
+      <button class='bg-green round shadow' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    </bar>
+  </dialog>
+</modal-box>

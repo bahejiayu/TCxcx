@@ -1,0 +1,44 @@
+<view class='withTop'>
+    <view class='TopCenter' >
+        <view>0 <text>元</text></view>
+        <view>待提现总额</view>
+    </view>
+    <navigator class='all_get' url='../getMoney/getMoney' >全部提现</navigator>
+
+<view class='bottomNav' >
+    <view class='bottomItem' data-index='0' bindtap='tog_nav'>待提现</view>
+    <view class='bottomItem' data-index='1' bindtap='tog_nav'>提现中</view>
+    <view class='bottomItem' data-index='2' bindtap='tog_nav'>已提现</view>
+    <view class='line_b' style='left:{{left}}%;'></view>
+</view>
+</view>
+
+<view class='toDay'>
+    <view>商家今日收益(不可提现)</view>
+    <view>¥ 0</view>
+
+</view>
+
+
+<view class='get_detailBox' >
+  <view class='get_detailItem' wx:for='[1]'>
+    <view class='detail_tiem'>
+      2019.03
+    </view>
+    <view class='get_detailContetn'>
+      <view class='detailContent' wx:for='[1]'>
+        <view class='detailContent_left'>
+          <view>赏金提现</view>
+          <view>2018-10-24 04:48:16</view>
+        </view>
+        <view class='detailContent_right'>+ 5.00元</view>
+
+      </view>
+
+    </view>
+
+  </view>
+
+
+
+</view>

@@ -1,0 +1,9 @@
+<view class="box">
+  <image src="/images/{{state===1?'openSuccess':'openFail'}}.png" mode="widthFix" style="width: 300rpx;"></image>  
+  <view wx:if="{{state===1}}" class="margin-top">
+    开门成功，请在
+    <text class="text-green"> {{sec}} </text>秒内拉开门
+  </view>
+  <view wx:if="{{state===0}}" class="margin-top">开门失败，空间正在使用</view>
+  <view wx:if="{{state===2}}" class="margin-top">等待支付</view>
+</view>

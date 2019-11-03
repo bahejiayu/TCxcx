@@ -1,0 +1,12 @@
+<form-group class="margin-top">
+  <view class='title'>手机号</view>
+  <input placeholder="请输入手机号" maxlength="11" type='number' bindinput="numberVerify"></input>
+</form-group>
+<form-group>
+  <view class='title'>验证码</view>
+  <input placeholder="请输入验证码" bindinput="codeVerify" type='number'></input>
+  <button class='bg-green shadow' bindtap="getCode" disabled="{{alterColor===false}}">{{codeName}}</button>
+</form-group>
+<view class="padding">
+  <button class="block lg bg-green shadow" bindtap="login" disabled='{{alterLoginBtn!=true}}'>登录</button>
+</view>

@@ -1,0 +1,24 @@
+<view class='getNowTop'>
+    <view class='topItemOne'>账户剩余金额：{{money}}元</view>
+    <view class='topItemTwo'>
+        <view class=''  >¥</view>
+        <input type='digit' placeholder='请输入金额' value='{{inpMoney}}' bindinput='getMoney'></input>
+    </view>
+</view>
+<view class='getTip'>
+提现金额不能小于{{minje}}元
+</view>
+<view class='getStyleBox'>
+    <view class='BoxsTitle'>提现方式</view>
+    <view class='styleList'>
+      <view class='styleItem cur'>
+        <image src='/images/weix_03.png' class='png styleicon'></image>
+        <image src='/images/guo_03.png' class='png jiao'></image>
+      </view>
+    </view>
+</view>
+
+<view class='btnCon'>
+    <view class='getBtn' bindtap='submitT'>提交申请</view>
+</view>
+

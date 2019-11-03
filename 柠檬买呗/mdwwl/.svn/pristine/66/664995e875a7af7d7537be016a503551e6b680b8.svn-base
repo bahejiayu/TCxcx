@@ -1,0 +1,18 @@
+<view class='CodeContainer'>
+  <view class='topImgInfo'>
+    <image src='/images/codebc_02.jpg'></image>
+  </view>
+  <view wx:if='{{!code_info.pay_code}}'>
+    <view class='fy_title'>费用</view>
+    <view class='pay_price'>￥{{code_info.qr_code_money}}</view>
+    <view class='codeBtn' bindtap='pay_'>
+      立即购买
+    </view>
+  </view>
+  <view class='codeContainer' wx:if='{{code_info.pay_code}}'>
+      <image src='{{http+code_info.pay_code}}'></image>
+      <view>扫描上方二维码向商家付款</view>
+  </view>
+
+
+</view>

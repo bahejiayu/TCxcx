@@ -1,0 +1,89 @@
+<view class="padding-xl text-center bg-brown">
+  <view class="icon-text text-xxl"></view>
+  <view class="margin-top-sm">
+    <block wx:if="{{orderInfo.orderStatus==1}}">
+      待付款
+    </block>
+    <block wx:if="{{orderInfo.orderStatus==2}}">
+      待发货
+    </block>
+    <block wx:if="{{orderInfo.orderStatus==3}}">
+      已发货
+    </block>
+    <block wx:if="{{orderInfo.orderStatus==4}}">
+      已到货
+    </block>
+    <block wx:if="{{orderInfo.orderStatus==5}}">
+      已取消
+    </block>
+    <block wx:if="{{orderInfo.orderStatus==6}}">
+      已完成
+    </block>
+  </view>
+</view>
+<list class="menu no-padding">
+  <item>
+    <text class="icon-location text-brown text-xxl margin-right-sm"></text>
+    <view class="content">
+      <view>
+        <text class="text-lg">{{orderInfo.consignee}}</text>
+        <text class="margin-left-sm text-gray">{{orderInfo.mobile}}</text>
+      </view>
+      <view class="text-gray text-sm">{{orderInfo.address}}</view>
+    </view>
+  </item>
+</list>
+<view class="flex bg-white padding align-center {{index==0?'margin-top':'solid-top'}}" wx:for="{{orderGoods}}" wx:key>
+  <image src="{{HOST_URI+item.picUrl}}" mode="aspectFill" style="width: 120rpx;height: 120rpx;" class="margin-right-sm radius"></image>
+  <view class="flex-sub">
+    <view class="text-lg">
+      {{item.goodsName}}
+    </view>
+    <view class="margin-top-sm flex justify-between">
+      <tag class="bg-brown radius">{{item.spec}}</tag>
+      <view class="flex">
+        <view class='margin-right'>x{{item.number}}</view>
+        <view class="text-price text-red text-xl">{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<bar class="padding justify-end bg-white solid-top">
+  总费用:
+  <text class="text-price text-red text-xxl margin-left">{{orderInfo.actualPrice}}</text>
+</bar>
+<!-- 订单信息 -->
+<bar class="margin-top solid-bottom">
+  <view class='action'>
+    <text class='icon-title text-green'></text> 订单信息
+  </view>
+  <view class="action">
+    <button class='bg-green sm' open-type='contact'>
+      联系客服
+      <text class='icon-service'></text>
+    </button>
+  </view>
+</bar>
+<view class='bg-white text-content padding-sm'>
+  <view class="padding-xs">
+    订单编号：{{orderInfo.orderSn}}
+    <button class='sm' bindtap="copyInfo" data-text="{{orderInfo.orderSn}}">复制</button>
+  </view>
+  <view class="padding-xs">下单时间：{{addTime}}</view>
+  <view class="padding-xs" wx:if="{{orderInfo.ship_sn}}">物流单号：{{orderInfo.ship_sn}}</view>
+  <view class="padding-xs" wx:if="{{orderInfo.ship_time}}">发货时间：{{shipTime}}</view>
+</view>
+<bar class='foot justify-end'>
+  <view class='action'>
+    <form bindsubmit="submitInfo" report-submit='true'>
+      <button class="line-black margin-right-sm" wx:if="{{orderInfo.orderStatus==1}}" bindtap='cancel' form-type="submit">取消订单</button>
+      <button class="line-brown" wx:if="{{orderInfo.orderStatus==1}}" form-type="submit" bindtap='toPay'>去付款</button>
+      <button class="line-brown" wx:if="{{orderInfo.orderStatus==2||orderInfo.orderStatus==3||orderInfo.orderStatus==5}}" bindtap='toRefund' form-type="submit">
+        申请退款
+      </button>
+      <button class="line-brown margin-lr-sm" wx:if="{{orderInfo.orderStatus==3}}" form-type="submit" bindtap='toTiming' data-code="{{orderInfo.shipSn}}">查看物流</button>
+      <button class="line-brown" wx:if="{{orderInfo.orderStatus==3}}" form-type="submit" bindtap='cofirmGet'>确认收货</button>
+    </form>
+  </view>
+</bar>

@@ -1,0 +1,31 @@
+<view class='FuTop'>
+  <view class='FuItem'>
+    <button hover-class='none' open-type="contact">
+      <image src='/images/fu1.png'></image>
+      <view>在线咨询</view>
+    </button>
+  </view>
+  <view class='FuItem' bindtap='boHao'>
+    <image src='/images/ke2.png'></image>
+    <view>电话咨询</view>
+  </view>
+  <view class='keLine'></view>
+</view>
+
+<view class='keTime'>
+  咨询时间为：9:00-21:00
+</view>
+<view class='questionContainer'>
+  <view class='questionTitle'>猜你想问</view>
+  <view class='questionList'>
+    <view wx:for='[1,2]' class='questionItem {{curIndex==index?"cur":""}}' data-index='{{index}}' bindtap='togContent'>
+      <view class='questionTop'>苹果手机无信号
+
+        <view class='icon-right icDown'></view>
+      </view>
+      <view class='questionContent'>正常使用情况下iPhone手机突然无信号，还可以通过尝试对网络设置进行重置操作，打开手机设置应用，在设置应用中，选择“通用”选项页面，点击进入“还原”选项然后再点击“还原网络设置”。</view>
+    </view>
+
+  </view>
+</view>
+<view class='cheng'></view>

@@ -1,0 +1,123 @@
+// pages/seller/code/code.js
+var app = getApp();
+var http = app.config.http;
+Page({
+
+      /**
+       * 页面的初始数据
+       */
+      data: {
+        http,
+        code_info: {}
+      },
+      pay_: function() {
+        wx.navigateTo({
+          url: '../../buy_bao/buy_bao',
+        })
+      },
+      //保存图片
+      saveImg: function(e) {　　
+        var _this = this;　　
+   
+          console.log("长按");
+        var imgUrl = http + _this.data.code_info.pay_code; //图片地址
+          　　　　
+          wx.downloadFile({ //下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径
+              url: imgUrl,
+              success: function(res) {　　　　　　　
+                console.log(res);
+                // 下载成功后再保存到本地
+                wx.saveImageToPhotosAlbum({
+                  filePath: res.tempFilePath, //返回的临时文件路径，下载后的文件会存储到一个临时文件
+                  success: function(res) {
+                      wx.showToast({
+                        title: '保存成功',
+                      })
+
+                  }　　　　　
+                })
+              }　　
+            })
+        },
+        /**
+         * 生命周期函数--监听页面加载
+         */
+        onLoad: function(options) {
+
+          },
+          getCode: function() {
+            wx.showLoading({
+              title: '加载中',
+            });
+            var that = this;
+            wx.request({
+              url: `${http}/home/shop/pay_qrcode`, // 仅为示例，并非真实的接口地址
+              data: {
+                uid: wx.getStorageSync('uid')
+              },
+              header: {
+                'content-type': 'application/json' // 默认值
+              },
+              success(res) {
+                wx.hideLoading();
+                console.log(res.data);
+
+                if (res.data.code == 1) {
+                  that.setData({
+                    code_info: res.data.date
+                  })
+                }
+
+              }
+            })
+          },
+          /**
+           * 生命周期函数--监听页面初次渲染完成
+           */
+          onReady: function() {
+
+          },
+
+          /**
+           * 生命周期函数--监听页面显示
+           */
+          onShow: function() {
+            this.getCode();
+
+          },
+
+          /**
+           * 生命周期函数--监听页面隐藏
+           */
+          onHide: function() {
+
+          },
+
+          /**
+           * 生命周期函数--监听页面卸载
+           */
+          onUnload: function() {
+
+          },
+
+          /**
+           * 页面相关事件处理函数--监听用户下拉动作
+           */
+          onPullDownRefresh: function() {
+
+          },
+
+          /**
+           * 页面上拉触底事件的处理函数
+           */
+          onReachBottom: function() {
+
+          },
+
+          /**
+           * 用户点击右上角分享
+           */
+          onShareAppMessage: function() {
+
+          }
+      })

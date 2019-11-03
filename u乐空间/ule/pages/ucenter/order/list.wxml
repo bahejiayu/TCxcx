@@ -1,0 +1,69 @@
+<scroll-view scroll-x class="bg-white nav">
+  <view class='flex text-center'>
+    <item class="flex-sub {{index==TabCur?'text-brown cur':''}}" wx:for="{{nav}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{nav[index]}}
+    </item>
+  </view>
+</scroll-view>
+<view class="bg-white margin-top" wx:if="{{TabCur!=4}}" wx:for="{{TabCur==0?allList:(TabCur==1?unPayList:(TabCur==2?unSendList:unGetList))}}" bindtap='toDetail' data-id="{{item.id}}" wx:key>
+  <bar class="solid-bottom">
+    <view class="action">订单编号：{{item.id}}</view>
+    <view class="action text-orange" wx:if="{{item.orderStatus==1}}">待付款</view>
+    <view class="action text-orange" wx:if="{{item.orderStatus==2}}">待发货</view>
+    <view class="action text-orange" wx:if="{{item.orderStatus==3}}">待收货</view>
+    <view class="action text-orange" wx:if="{{item.orderStatus==4}}">已取消</view>
+    <view class="action text-orange" wx:if="{{item.orderStatus==5}}">已到货</view>
+    <view class="action text-orange" wx:if="{{item.orderStatus==6}}">已完成</view>
+  </bar>
+  <view class="flex bg-white padding align-center {{sonindex>0?'solid-top':''}}" wx:for="{{item.orderGoodsList}}" wx:for-item="sonitem" wx:for-index="sonindex" wx:key>
+    <image src="{{SERVER_URI+sonitem.picUrl}}" mode="aspectFill" style="width: 120rpx;height: 120rpx;" class="margin-right-sm radius"></image>
+    <view class="flex-sub">
+      <view class="text-lg">
+        {{sonitem.goodsName}}
+      </view>
+      <view class="margin-top-sm flex justify-between">
+        <tag class="bg-brown radius">{{sonitem.spec}}</tag>
+        <view class="flex">
+          <view class='margin-right'>x{{sonitem.number}}</view>
+          <view class="text-price text-red ">{{sonitem.price}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="solid-top bg-white padding-lg">
+    <view class='justify-end margin-bottom flex align-center'>
+      <view class='margin-right-sm'>总金额:</view>
+      <view class='text-price text-red text-xl'>{{item.actualPrice}}</view>
+    </view>
+    <view class="justify-end flex">
+      <form bindsubmit="submitInfo" report-submit='true'>
+        <button class="line-black margin-right-sm" wx:if="{{item.orderStatus==1}}" form-type="submit" catchtap='cancel' data-id="{{item.id}}">取消订单</button>
+        <button class="line-brown" wx:if="{{item.orderStatus==1}}" form-type="submit" catchtap="toPay" data-id="{{item.id}}">去付款</button>
+        <button class="line-brown" catchtap='toRefund' data-price="{{item.actualPrice}}" data-id="{{item.id}}" wx:if="{{item.orderStatus==2||item.orderStatus==3||item.orderStatus==5}}" form-type="submit">申请退款</button>
+        <button class="line-brown margin-lr-sm" wx:if="{{item.orderStatus==3}}" form-type="submit" catchtap='cofirmGet' data-id="{{item.id}}">确认收货</button>
+        <button class="line-brown" wx:if="{{item.orderStatus==3}}" form-type="submit" catchtap='toTiming' data-sn="{{item.shipSn}}" data-channel="{{item.shipChannel}}">查看物流</button>
+      </form>
+    </view>
+  </view>
+</view>
+<view class="bg-white {{index>0?'margin-top-xs':'margin-top'}}" wx:if="{{TabCur==4}}" wx:for="{{unCommentList}}" wx:key>
+  <view class="flex bg-white padding align-center">
+    <image src="{{SERVER_URI+item.picUrl}}" mode="aspectFill" style="width: 120rpx;height: 120rpx;" class="margin-right-sm radius"></image>
+    <view class="flex-sub">
+      <view class="text-lg">
+        {{item.goodsName}}
+      </view>
+      <view class="margin-top-sm">
+        <tag class="bg-brown radius">{{item.spec}}</tag>
+      </view>
+    </view>
+    <view class="action">
+      <button class="line-black margin-right-sm" bindtap="toComment" data-url="{{item.picUrl}}" data-id="{{item.id}}" data-name="{{item.goodsName}}">评价</button>
+    </view>
+  </view>
+</view>
+<view class='padding-xl' wx:if="{{(unCommentList.length==0&&TabCur==4)||(allList==0&&TabCur==0)||(unPayList==0&&TabCur==1)||(unSendList==0&&TabCur==2)||(unGetList==0&&TabCur==3)}}">
+  <view class='padding-xl bg-white radius shadow-lg text-center'>
+    您还没有{{TabCur==0?'任何':nav[TabCur]}}的订单 ~ - ~
+  </view>
+</view>

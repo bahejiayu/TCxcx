@@ -1,0 +1,7 @@
+/* pages/combo/combo.wxss */
+.count {
+  /* text-align: right;
+   */
+   justify-content:flex-end ;
+   margin: 10rpx 0;
+}

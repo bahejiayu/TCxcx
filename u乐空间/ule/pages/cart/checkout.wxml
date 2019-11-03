@@ -1,0 +1,44 @@
+<list class="menu">
+  <item class="arrow" bindtap='chooseAddress'>
+    <text class="icon-roundaddfill text-brown text-xl margin-right-sm"></text>
+    <view class="content" bindtap='chooseAddress'>
+      添加收货地址
+    </view>
+  </item>
+</list>
+<list class="menu no-padding" wx:if="{{address!=null}}">
+  <item class="arrow">
+    <text class="icon-locationfill text-brown text-xxl margin-right-sm"></text>
+    <view class="content">
+      <view>
+        <text class="text-lg">{{address.name}}</text>
+        <text class="margin-left-sm text-gray">{{address.phone}}</text>
+      </view>
+      <view class="text-gray text-sm">{{address.place}}</view>
+    </view>
+  </item>
+</list>
+<view class="flex bg-white {{index>0?'solid-top':'margin-top'}} padding align-center" wx:for="{{cartList}}" wx:key>
+  <image src="{{SERVER_URI+item.picUrl}}" mode="aspectFill" style="width: 120rpx;height: 120rpx;" class="margin-right-sm radius"></image>
+  <view class="flex-sub">
+    <view class="text-lg">
+      {{item.goodsName}}
+    </view>
+    <view class="margin-top-sm flex justify-between">
+      <tag class="bg-brown radius">{{item.spec}}</tag>
+      <view class="flex">
+        <view class='margin-right'>x{{item.number}}</view>
+        <view class="text-price text-red text-xl">{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<bar class="foot shop">
+  <view class='margin-left basis-lg text-lg'>
+    应付：
+    <text class="text-price text-red text-xl">{{money}}</text>
+  </view>
+  <view class='submit bg-brown' bindtap='submit'>
+    去结算
+  </view>
+</bar>

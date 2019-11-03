@@ -1,0 +1,43 @@
+<view class='goods_info'>
+  <view class='goods_image'>
+    <image src='/images/goods_banner_02.jpg'></image>
+  </view>
+  <view class='order_info'>
+    <view class='order_status'>
+      物流状态
+      <text>派送中</text>
+    </view>
+    <view class='order_des'>
+      <view>承运来源:
+        <text>EMS</text>
+      </view>
+      <view>运单编号:
+        <text>9788944488532</text>
+      </view>
+      <view>官方电话:
+        <text>暂无</text>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view class='log_title'>
+  <image src='{{http}}/Public/home/9.png'></image>
+  物流详细信息
+</view>
+
+<view class='log_box'>
+  <view class='log_container'>
+    <view class='log_item cur'>
+      <view>【广州市】 广州速递公司中山大道东速递投递站 派件员: 朱锦华18922185769正在为您派件</view>
+      <view class='log_stus'><view></view></view>
+      <view>2017-08-10  08:39:21</view>
+    </view>
+     <view class='log_item '>
+      <view>【广州市】 广州速递公司中山大道东速递投递站 派件员: 朱锦华18922185769正在为您派件</view>
+      <view class='log_stus'><view></view></view>
+      <view>2017-08-10  08:39:21</view>
+    </view>
+  </view>
+</view>

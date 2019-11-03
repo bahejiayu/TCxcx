@@ -1,0 +1,61 @@
+<view class='accFrom'>
+  <form bindsubmit='subFrom'>
+    <view class='fromBox'>
+      <view class='from_item'>
+        <view class='from_title'>
+          卡号
+        </view>
+        <input type='text' placeholder='银行卡号'></input>
+      </view>
+      <view class='from_item'>
+        <view class='from_title'>
+          开户人
+        </view>
+        <input type='text' placeholder='银行卡开户人'></input>
+      </view>
+      <view class='from_item'>
+        <view class='from_title'>
+          所属银行
+        </view>
+        <input type='text' placeholder='如：中国银行、工商银行'></input>
+      </view>
+      <view class='from_item'>
+        <view class='from_title'>
+          开户支行
+        </view>
+        <input type='text' placeholder='如：××××支行'></input>
+      </view>
+      <view class='from_item'>
+        <view class='from_title'>
+          选择城市
+        </view>
+        <input type='text' value='-- 请选择 --' disabled='{{true}}'></input>
+        <view class='icon-right'></view>
+
+      </view>
+    </view>
+
+    <view class='fromBox'>
+      <view class='from_item'>
+        <view class='from_title'>
+          手机号
+        </view>
+        <input type='text' placeholder='请输入银行预留手机号'></input>
+      </view>
+
+      <view class='from_item'>
+        <view class='from_title'>
+          验证码
+        </view>
+        <input type='text' placeholder='请输入短信验证码' maxlength='8'></input>
+        <view class='codeBtn'>
+        获取验证码
+        </view>
+      </view>
+    </view>
+    <view class='fromTip'>卡信息用于账户实名认证，有效防止他人盗用</view>
+    <view class='btnBox' >
+        <button class='btnF' form-type='submit'>提交</button>
+    </view>
+  </form>
+</view>

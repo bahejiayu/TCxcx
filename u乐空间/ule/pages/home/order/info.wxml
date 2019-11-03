@@ -1,0 +1,37 @@
+<view class="padding bg-white text-center">
+  <view class="CountDown">
+    <view class="circular"></view>
+    <view class="text-lg margin-top-sm">{{clock}}</view>
+    <view class="margin-top-sm">空间计时</view>
+  </view>
+  <view class='margin'>
+    <tag class="bg-gray round">每小时{{order.uoUnit}}元</tag>
+  </view>
+  <view class="text-lg padding-bottom">您正在使用空间</view>
+</view>
+<bar class="solid-bottom margin-top">
+  <view class="action text-lg">商品详情</view>
+</bar>
+<view class="padding bg-white">
+  {{order.uoCommodityName}}
+</view>
+
+<form-group class="margin-top">
+  <view class="title">即时结算</view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">{{time?time:'选择'}}</view>
+  </picker>
+</form-group>
+
+
+<bar class="foot shop">
+  <view class="margin-left basis-lg text-lg">订单总额：
+    <text class="text-red text-price">{{showMoney}}</text>
+  </view>
+  <view class="submit bg-brown" bindtap="toIndent">
+    提交订单
+  </view>
+</bar>
+
+<navigator url="/pages/home/home" open-type="reLaunch" class="backHome">
+  <text class="icon-back"></text> 返回首页</navigator>

@@ -1,0 +1,61 @@
+.audBox{
+  padding: 20rpx 25rpx;
+  font-size: 32rp;
+  padding-bottom: 145rpx;
+}
+view{
+  font-size: 32rpx;
+  color: #333;
+}
+.audLine{
+  position: relative;
+  padding-left: 200rpx;
+  margin: 40rpx 0;
+}
+.yyzz image{
+  width: 100%;
+  height: 100%;
+}
+.audTitle{
+  position: absolute;
+  left: 0;
+  width: 200rpx;
+  color: #888888;
+  line-height:55rpx;
+
+}
+.audLine view:last-child{
+  line-height: 55rpx;
+}
+.yyzz{
+  width: 520rpx;
+  height:315rpx ;
+  background-color: #cfebff;
+  margin:  0 auto;
+  border-radius: 10rpx;
+
+}
+.pst{
+  position: static!important;
+}
+.pd0{
+  padding-left: 0;
+}
+.btns{
+    margin-top: 80rpx;
+}
+.btns view{
+  height: 95rpx;
+  line-height: 95rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 32rpx;
+  background-color: #bfbfbf;
+  border-radius: 10rpx;
+  float: left;
+  width: 330rpx;
+}
+.btns view:last-child{
+  float: right;
+  background-color: #fd6906;
+}

@@ -1,0 +1,10 @@
+.lane_h{
+  height: 20rpx;
+  background-color: #f4f4f4;
+  border-top:1px solid #dcdcdc;
+}
+.content_{
+    padding: 25rpx;
+    font-size: 30rpx;
+    line-height: 40rpx;
+}

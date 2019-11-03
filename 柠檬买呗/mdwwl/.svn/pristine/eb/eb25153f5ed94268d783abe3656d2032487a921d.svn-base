@@ -1,0 +1,29 @@
+<view class='moey_icon' >
+        <image src='{{http}}/Public/home/money.png'></image>
+</view>
+<view class='money_box'>
+      <view>可提现金额</view>
+      <view>¥39.90</view>
+</view>
+
+<view class='btnBox'>
+    <button class='btnF'>提现</button>
+</view>
+
+
+<view class='nav_list' >
+    <view class='nav_item'>
+      <navigator hover-class='none'>
+          <view>收支明细</view>
+          <view class='icon-right'></view>
+      </navigator>
+    </view>
+    <view class='nav_item'>
+      <navigator hover-class='none'>
+          <view>提现明细</view>
+          <view class='icon-right'></view>
+      </navigator>
+    </view>
+
+
+</view>

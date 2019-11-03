@@ -1,0 +1,89 @@
+.income_box{
+  padding: 0 35rpx;
+}
+.income_title{
+  font-size: 32rpx;
+  color: #7b7b7b;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.big_box{
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.big_box>view{
+flex: 1;
+height: 290rpx;
+box-sizing: border-box;
+border-radius: 15rpx;
+color: #fff;
+padding:130rpx  30rpx 0;
+box-shadow: 0 0 10px #fcdebc;
+}
+.big_box>view:first-child{
+margin-right: 50rpx;
+
+}
+
+
+.fx_money{
+   background-image: -webkit-linear-gradient(0deg, #fbde5d  , #f6752f); 
+}
+
+
+.yq_money{
+   background: linear-gradient(-200deg, #60b5fb  , #862ce7);
+}
+
+.big_box>view view:first-child{
+  font-size: 58rpx;
+}
+.big_box>view view:last-child{
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+.chaxun_line{
+  overflow: hidden;
+}
+.chaxun_line view{
+  float: left;
+  font-size:28rpx ;
+  color: #666666;
+}
+.chaxun_line text{
+  font-size: 40rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+.chaxun_line view:first-child{
+  margin-right: 130rpx;
+}
+.chaxunData_box{
+  display: flex;
+  margin-top: 55rpx;
+}
+.chaxunData_box>view{
+  flex: 1;
+  height: 180rpx;
+   box-shadow: 0 0 20px #e5e3e3;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  color: #707070;
+  padding:40rpx 30rpx 0;
+}
+.chaxunData_box>view:first-child{
+  margin-right:45rpx ;
+}
+
+.chaxunData_box>view view:first-child{
+  font-size: 48rpx;
+
+}
+.chaxunData_box>view view:last-child{
+  font-size: 30rpx;
+  margin-top: 10rpx;
+
+}
+
+
+

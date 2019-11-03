@@ -1,0 +1,173 @@
+.shopInfo {
+  padding: 25rpx 20rpx;
+  padding-left: 135rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size:36rpx ;
+  color: #333333;
+  position: relative;
+  background-color: #fff;
+}
+
+.shopLogo {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  left: 20rpx;
+}
+.ZkLine{
+  height:20rpx ;
+  background-color: #f4f4f4;
+}
+
+.formContainer{
+  padding: 0 25rpx;
+  padding-bottom: 100rpx;
+  background-color: #fff;
+}
+.feedTitle{
+  height: 80rpx;
+  line-height: 95rpx;
+  overflow: hidden;
+  font-size:30rpx ;
+  color:#000000 ;
+}
+
+.areaBox{
+  height: 350rpx;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  position: relative;
+
+}
+.areaBox textarea{
+  width: 100%;
+  height: 100%;
+  font-size: 28rpx;
+  padding-bottom: 30rpx;
+  box-sizing: border-box;
+}
+.areaBox view{
+  position: absolute;
+  bottom: 10rpx;
+  right: 20rpx;
+  color: #999999;
+}
+.inpContainer{
+  height: 100rpx;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  border-radius: 10rpx;
+}
+.inpContainer input{
+  height: 100%;
+  font-size: 28rpx;
+}
+.fromTip{
+  font-size:22rpx ;
+  color: #999999;
+  margin: 20rpx 0 80rpx 0;
+}
+.ModBtn{
+  margin-top: 70rpx;
+}
+.upImgBox{
+  margin: 25rpx 0;
+  padding:  25rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+}
+.upTitle{
+  overflow: hidden;
+}
+.uptLeft{
+  float: left;
+  font-size:30rpx ;
+  color: #222222;
+}
+.uptLeft text{
+  color: #c4c4c4;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+.upRight{
+  float: right;
+  width: 138rpx;
+  height:48rpx ;
+  text-align: center;
+  line-height: 48rpx;
+  background-color:#ffffff;
+  border: 1px solid #a0a0a0; 
+  font-size: 24rpx;
+  color: #333333;
+  border-radius: 10rpx;
+}
+.upFile{
+      width: 120rpx;
+      height: 120rpx; 
+      float: left;
+
+}
+.upFile image{
+    width: 100%;
+    height: 100%;
+}
+.upContainer{
+  margin-top: 40rpx;
+  overflow: hidden;
+}
+.upTxt{
+  float: left;
+  font-size: 24rpx;
+  color: #999999;
+overflow: hidden;
+}
+.smallTip{
+  font-size: 28rpx;
+  text-indent: 2em;
+  margin-bottom: 60rpx;
+  color: #b7b7b7;
+}
+.img_list{
+  overflow: hidden;
+  float: left;
+}
+.img_list image{
+    width: 120rpx;
+    height: 120rpx;
+}
+.img_item{
+  float: left;
+  margin-right: 25rpx;
+  border: 2rpx dashed #0097ff;
+  border-radius: 10rpx;
+  position: relative;
+}
+.del_img{
+  position: absolute;
+  background-color: #0097ff;
+  color: #fff;
+  font-size: 26rpx;
+  padding: 0 10rpx;
+  opacity: 0.8;
+  right: 0;
+  bottom: 0;
+}
+.areaInp{
+  height: 250rpx;
+  box-sizing: border-box;
+  padding: 25rpx;
+
+}
+.areaInp textarea{
+  height: 100%;
+  font-size:28rpx ;
+}
+
+

@@ -1,0 +1,106 @@
+page{
+  background-color: #f4f4f4;
+}
+.FromTop{
+  background-color: #fff;
+}
+.inpItem{
+  border-bottom: 1px solid #f4f4f4;
+  height: 100rpx;
+  position: relative;
+  padding: 0 25rpx;
+  padding-left: 180rpx;
+  line-height: 100rpx;
+}
+view,input,textarea{
+  font-size: 30rpx;
+  color: #3e3e3e;
+}
+.inpTitle{
+    position: absolute;
+    left: 25rpx;
+}
+.inpItem input{
+  height: 100rpx;
+  width: 100%;
+}
+.upImageBox{
+  padding: 35rpx 25rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  /* height: 130rpx; */
+  /* line-height: 130rpx; */
+}
+.upBtn{
+  width: 125rpx;
+  height: 125rpx;
+  border: 4rpx dashed #d2d2d2;
+  border-radius: 20rpx;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.upBtn image{
+  width:57rpx ;
+  height: 49rpx;
+}
+.fr{
+  float: right;
+
+}
+.img_list{
+  padding: 25rpx 0;
+  overflow: hidden;
+}
+.img_list image{
+    width: 140rpx;
+    height: 140rpx;
+}
+.img_item{
+  float: left;
+  margin-right: 25rpx;
+  border: 4rpx dashed #0596f8;
+  border-radius: 10rpx;
+  position: relative;
+}
+.del_img{
+  position: absolute;
+  background-color: #0596f8;
+  color: #fff;
+  font-size: 26rpx;
+  padding: 0 10rpx;
+  opacity: 0.8;
+  right: 0;
+  bottom: 0;
+}
+
+.upTxt{
+  line-height:130rpx;
+  float: left;
+}
+.linet{
+  overflow: hidden;
+}
+.goodsDes{
+  padding: 0 25rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.goodsTit{
+    line-height: 92rpx;
+    border-bottom: 2rpx solid #eeeeee;
+}
+
+.areaContainer{
+  padding: 25rpx 0;
+}
+.areaContainer textarea{
+  height:290rpx ;
+}
+.up_line{
+  padding-bottom: 25rpx;
+}
+.addSub{
+      padding: 80rpx 25rpx;
+
+}

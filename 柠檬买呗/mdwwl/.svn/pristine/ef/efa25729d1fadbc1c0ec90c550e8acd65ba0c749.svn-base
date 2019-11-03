@@ -1,0 +1,76 @@
+<view class='enterTop'>
+  <view class='enterTip'>
+    <view class='enterTopTitle'>
+      申请提示
+    </view>
+    <view class='enterContent'>
+      如果您也想成为我们的代理商，请留下您的信息， 方便我们尽快与您取得联系~ 或者您也可以直接拨打下方电话、添加微信，立即 开始沟通~
+    </view>
+  </view>
+  <view class='concatStyle'>
+    <view class='concatTitle'>
+      我们的联系方式
+    </view>
+    <view class='concatItem wx'>
+      <view>
+        微信号 {{concat[1]}}
+      </view>
+      <image src='/images/wx_03.png'></image>
+    </view>
+    <view class='concatItem dh' bindtap='makePhone'>
+      <view>服务热线 {{concat[0]}}</view>
+      <image src='/images/phonedh_03.png'></image>
+
+    </view>
+
+  </view>
+</view>
+
+<view class='lineH_'></view>
+
+<view class='enterForm'>
+  <view class='enterFormTitle'>
+    请填写您的联系发生
+  </view>
+  <form bindsubmit='formSubmit4'>
+    <view class='enterBox'>
+      <view class='enterItem'>
+        <view class='enterTitle'>
+          <text></text> 代理商名称
+        </view>
+        <input type='text' placeholder='请输入代理商名称' name='shop_name'></input>
+      </view>
+      <view class='enterItem'>
+        <view class='enterTitle'>
+          <text>*</text> 代理负责人
+        </view>
+        <input type='text' placeholder='请输入负责人' name='lx_name'></input>
+      </view>
+      <view class='enterItem'>
+        <view class='enterTitle'>
+          <text>*</text> 负责人电话
+        </view>
+        <input type='number' placeholder='请输入负责人电话' name='lx_phone'></input>
+      </view>
+      <view class='enterItem'>
+        <view class='enterTitle'>
+          <text>*</text> 服务商地址
+        </view>
+        <picker mode="region" bindchange="bindRegionChange">
+          <input type='text' placeholder='广州省-广州市-海珠区' disabled='{{true}}' name='yy_dz' value='{{yy_dz}}'></input>
+        </picker>
+      </view>
+      <view class='enterItem'>
+        <view class='enterTitle'>
+          详细地址
+        </view>
+        <input type='text' placeholder='请输入详细地址' name='address'></input>
+      </view>
+    </view>
+
+    <view class='enterBtn '>
+      <button class='btnF' form-type='submit'>提交</button>
+    </view>
+
+  </form>
+</view>

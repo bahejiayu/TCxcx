@@ -1,0 +1,4 @@
+<view class='lane_h' ></view>
+<view class='content_' >
+    <view><rich-text nodes='{{content_}}' ></rich-text> </view>
+</view>

@@ -1,0 +1,48 @@
+  <view class='shopInfo'>
+    <image src='https://school.ljq360.com/Upload/shop/2019-04-11/5caed62928d91.jpg' class='shopLogo'></image>
+    <view class='dan'>111</view>
+  </view>
+<view class='ZkLine'></view>
+
+
+<view class='formContainer'>
+
+  <form bindsubmit='subFrom'>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        折扣方式
+      </view>
+      <view class='inpContainer'>
+        <input type='text' placeholder='请输入需要修改的折扣让利比例' name='discount' value='{{trimeValue}}'></input>
+      </view>
+    </view>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        商家让利
+      </view>
+      <view class='inpContainer'>
+        <input type='text' placeholder='请输入需要修改的让例比例 %' name='shop_rl' value='{{trimeValue}}'></input>
+      </view>
+    </view>
+    <view class='ModifItem'>
+      <view class='feedTitle'>
+        红包抵扣
+      </view>
+      <view class='inpContainer'>
+        <input type='text' placeholder='请输入需要修改的红包抵扣比例 %' name='coupon_dk' value='{{trimeValue}}'></input>
+      </view>
+    </view>
+ 
+ 
+
+
+    <view class='ModBtn'>
+      <button class='btnF' form-type='submit'>提交</button>
+
+    </view>
+  </form>
+</view>
+
+
+
+

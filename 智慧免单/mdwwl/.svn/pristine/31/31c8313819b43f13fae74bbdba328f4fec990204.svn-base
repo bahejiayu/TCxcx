@@ -1,0 +1,29 @@
+<view class='getNowTop'>
+    <view class='topItemOne'>消费金额(元)</view>
+    <view class='topItemTwo'>
+        <view class=''>¥</view>
+        <input type='text' placeholder='询问服务员后输入金额'></input>
+    </view>
+</view>
+<view class='getTip'>
+温馨提示：付款金额100%都将参与排队退款
+</view>
+<view class='getStyleBox'>
+    <view class='BoxsTitle'>提现方式</view>
+    <view class='styleList'>
+      <view class='styleItem cur'>
+        <image src='/images/weix_03.png' class='png styleicon'></image>
+        <image src='/images/guo_03.png' class='png jiao'></image>
+      </view>
+    </view>
+</view>
+
+<view class='aggren_'>
+    <radio checked='{{ag}}' color='#ff9f29' bindtap='togRad' name='rad'></radio>
+    <label>我已阅读并同意</label>
+    <text>《付款前协议》</text>
+</view>
+<view class='btnCon'>
+    <view class='getBtn' bindtap='payBtn' >确认购买并支付</view>
+</view>
+

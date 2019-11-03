@@ -1,0 +1,51 @@
+<view class="margin-top" wx:if="{{cartGoods!=''}}">
+	<view class="flex bg-white solid-top padding align-center" wx:for="{{cartGoods}}" wx:key="{{item.id}}">
+		<checkbox class="round brown" checked="{{item.checked ? 'checked' : ''}}" bindtap="checkedItem" data-index="{{index}}" data-id="{{item.id}}" data-checked="{{item.checked ? 0 : 1}}"></checkbox>
+		<image src="{{HOST_URI + item.picUrl}}" mode="aspectFill" style="width: 160rpx;height: 160rpx;" class="margin-lr-sm radius"></image>
+		<view class="flex-sub">
+			<view class="text-lg">
+				{{item.goodsName}}
+			</view>
+			<view class="flex justify-between margin-tb-xs">
+				<tag class="bg-brown radius" wx:if="{{item.spec}}">{{item.spec}}</tag>
+				<view class="text-price text-red text-xl">{{item.price}}</view>
+			</view>
+			<view>
+				<view class='count'>
+					<button bindtap='countNumber' data-id="{{item.id}}" data-checked="{{item.checked ? 1 : 0}}" data-type="move" data-number='{{item.number}}'>
+						<text class='icon-move'></text>
+					</button>
+					<input value="{{item.number}}" type='number' disabled></input>
+					<button bindtap="countNumber" data-id="{{item.id}}" data-checked="{{item.checked ? 1 : 0}}" data-type="add">
+						<text class='icon-add'></text>
+					</button>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class='box' wx:else>
+	<view class='icon-cart text-gray'></view>
+	<view class='text-lg text-bold text-grey'>购物车竟然是空的</view>
+	<view class='text-gray margin-top-sm'>快去首页看看有什么折扣吧</view>
+</view>
+<bar class="foot" wx:if="{{cartGoods!=''}}">
+	<view class='action'>
+		<checkbox checked="{{checkedAllStatus ? 'checked' : ''}}" bindtap='checkedAll' class="round margin-right-sm brown"></checkbox>
+		已选({{cartTotal.checkedGoodsCount}})
+	</view>
+	<view class='action'>
+		<view class='text-red mini-price text-lg' wx:if="{{!isEditCart}}">
+			{{cartTotal.checkedGoodsAmount}}
+		</view>
+		<button class="{{!isEditCart ? 'bg-orange' : 'bg-blue'}} round margin-lr-sm" bindtap="editCart">
+			{{!isEditCart ? '编辑' : '完成'}}
+		</button>
+		<button class="bg-red round margin-right" bindtap="deleteCart" wx:if="{{isEditCart}}">
+			删除({{cartTotal.checkedGoodsCount}})
+		</button>
+		<button class="bg-brown round margin-right" bindtap="checkoutOrder" wx:if="{{!isEditCart}}">
+			下单
+		</button>
+	</view>
+</bar>

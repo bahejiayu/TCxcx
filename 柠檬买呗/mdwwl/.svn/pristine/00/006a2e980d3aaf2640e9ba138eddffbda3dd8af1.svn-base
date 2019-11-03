@@ -1,0 +1,115 @@
+page{
+    border-top: 1px solid #dcdcdc;
+}
+.enterTop{
+  padding: 30rpx 25rpx 5rpx;
+}
+.enterTip{
+  padding: 25rpx;
+  background-color: #e5f4ff;
+  border-radius: 10rpx;
+}
+.enterTopTitle{
+  font-size: 30rpx;
+  color: #333f1a;
+}
+.enterItem picker{
+  height: 90rpx;
+  line-height: 90rpx;
+  display: block;
+}
+.enterContent{
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 40rpx;
+}
+.concatTitle{
+  font-size: 30rpx;
+  line-height: 80rpx;
+  color: #333;
+}
+.concatStyle view{
+  padding: 0 10rpx;
+}
+.concatItem{
+  line-height: 95rpx;
+  border-top: 2rpx solid #e5e5e5;
+  font-size: 30rpx;
+  color: #666666;
+  overflow: hidden;
+  position: relative;
+}
+.concatItem view{
+  float: left;
+}
+.concatItem image{
+  position: absolute;
+  right: 10rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.wx image{
+  width: 40rpx;
+  height: 32rpx;
+  vertical-align: middle;
+}
+.dh image{
+  width:35rpx ;
+  height: 35rpx;
+}
+
+.lineH_{
+  height: 20rpx;
+  background-color: #f4f4f4;
+}
+.enterForm{
+  padding: 0 25rpx;
+}
+.enterFormTitle{
+  height: 74rpx;
+  line-height: 74rpx;
+  padding-left: 25rpx;
+  font-size:30rpx ;
+  color:#333;
+  border-bottom: 1px solid #eeeeee;
+}
+.enterItem{
+  position: relative;
+  padding-left: 220rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #ededed;
+}
+.enterTitle{
+  font-size: 30rpx;
+  color: #323232;
+  padding-left: 20rpx;
+  position: absolute;
+  left: 0;
+}
+.enterTitle text{
+  color: #e60012;
+  position: absolute;
+  left: 0;
+  font-size: 30rpx;
+}
+
+.enterItem input{
+  width: 100%;
+  height: 90rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+}
+.enterBtn{
+  padding: 70rpx 0;
+}
+
+
+
+
+
+
+
+
+
+

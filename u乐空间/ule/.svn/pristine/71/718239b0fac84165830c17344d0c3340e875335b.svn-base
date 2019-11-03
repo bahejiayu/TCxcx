@@ -1,0 +1,91 @@
+.top {
+  padding: 0 25rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  background-color: #221c16;
+  color: #fff;
+  font-size: 25rpx;
+}
+
+.top text {
+  font-size: 25rpx;
+  color: #e5d6bd;
+  margin-left: 20rpx;
+}
+
+.banner_mid {
+  height: 420rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.banner_mid image {
+  width: 390rpx;
+  height: 187rpx;
+}
+
+.aboutUsBox {
+  background-color: #221c16;
+  color: #fff;
+  font-size: 25rpx;
+}
+
+.aobutTitle {
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  height: 130rpx;
+  line-height: 160rpx;
+  overflow: hidden;
+  color: #fff;
+  padding: 0 25rpx;
+}
+
+.aobutContent {
+  padding: 0 25rpx;
+  line-height: 47rpx;
+  text-indent: 1rem;
+  text-align: left;
+  padding-bottom: 70rpx;
+  color: #cececd;
+  border-bottom: 1px solid #fff;
+}
+.dszBox image {
+    width: 100%;
+
+}
+.banner_mid video{
+   width:100% ;
+  height: 420rpx;
+}
+.dszBox video{
+  width:100%;
+  height: 420rpx;
+}
+.lingyu_{
+  background-color: #221c16;
+}
+.lyu_{
+  padding: 0 25rpx;
+  font-size:  25rpx;
+  color:#cececd;
+  font-weight: bold;
+  padding-bottom: 100rpx;
+}
+.ly_title{
+  font-size:  30rpx;
+  color:#cececd;
+  margin-bottom: 5rpx;
+}
+.ly_content{
+  line-height: 45rpx;
+}
+.ly_item{
+  margin-bottom: 40rpx;
+}
+
+page{
+  background-color: #221c16;
+}

@@ -1,0 +1,30 @@
+<view class='padding-xl' wx:if="{{list.length==0}}">
+  <view class='padding-xl bg-white radius shadow-lg text-center'>
+    您 还 没 有 任 何 订 单 ~ - ~
+  </view>
+</view>
+<view class="margin-top" wx:for="{{list}}" wx:key>
+  <bar class="solid-bottom">
+    <view class="action">
+      <block wx:if="{{item.ugType==0}}">未发货</block>
+      <block wx:if="{{item.ugType!=0}}">快递单号：{{item.ugNum}}</block>
+    </view>
+  </bar>
+  <view class="padding bg-white">
+    <view class="text-lg">{{item.giftName}}</view>
+    <view class="margin-top-sm text-sm text-gray">{{item.ugCreateTime}}</view>
+    <view class="margin-top-sm text-sm text-gray" wx:if="{{item.ugPlace!=null&&item.ugPlace!=''}}">
+      地址:{{item.ugPlace}}
+    </view>
+  </view>
+  <bar class="solid-top justify-end">
+    <view class="action">
+      <button class="line-black" bindtap="toTiming" data-code="{{item.ugNum}}" wx:if='{{item.ugType!=0}}' data-sn="{{item.ugNum}}" data-channel="{{item.ugChannel}}">
+        查看物流
+      </button>
+      <button class="line-black"  bindtap="editAdress" data-id="{{item.ugId}}" wx:if='{{item.ugType==0}}'>
+        修改地址
+      </button>
+    </view>
+  </bar>
+</view>

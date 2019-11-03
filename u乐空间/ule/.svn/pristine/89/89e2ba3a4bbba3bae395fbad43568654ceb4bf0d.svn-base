@@ -1,0 +1,72 @@
+<view class="bg-brown padding flex align-center">
+	<avatar class="round" style="background-image:url({{userHeadIcon}});width:150rpx;height:150rpx;"></avatar>
+	<view class="flex-sub padding-left text-white padding-tb-lg">
+		<view class="text-lg">{{userName}} 
+    <tag wx:if="{{userYearType===0}}" class="round sm margin-left-sm" style="background-color: #f4d57a;"><text class="text-brown">普通用户</text></tag>
+    <tag wx:if="{{userYearType===1}}" class="round sm margin-left-sm" style="background-color: #f4d57a;"><text class="text-brown">年卡会员</text></tag>
+    </view>
+		<view class="margin-top-sm">ID: {{userId}} </view>
+		<view wx:if="{{pUser!=''&&pUser!=null}}" class="margin-top-xs">推荐人：{{pUser}}</view>
+	</view>
+</view>
+<view class="dashed-top padding-lr bg-brown">
+	<view class="flex align-center padding-tb">
+		<view class="flex-sub text-lg">
+			<view class="">可提现佣金</view>
+			<view class="margin-top-sm">{{moneyStatus.surplus}}元</view>
+		</view>
+		<navigator url="getCash?money={{surplus}}" hover-class="none"><button class="line-white" data-surplus="{{surplus}}">提现</button></navigator>
+	</view>
+	<!-- <view class="solid-top flex align-center  padding-tb">
+		<view class="flex-sub text-lg">
+			<view class="">成功提现佣金</view>
+			<view class="margin-top-sm">{{moneyStatus.isApply}}元</view>
+		</view>
+	</view> -->
+</view>
+
+<list class="menu bg-black">
+	<item class="arrow">
+		<navigator class='content' hover-class='none' url='money'>
+			<text class='icon-sponsor text-brown'></text>
+			<text>分销佣金</text>
+		</navigator>
+		<navigator class='action' hover-class='none' url='money'>
+			<text class="text-red">{{moneyStatus.all}} </text> 元
+		</navigator>
+	</item>
+	<item class="arrow">
+		<navigator class='content' hover-class='none' url='roomList'>
+			<text class='icon-form text-brown'></text>
+			<text>订单业绩</text>
+		</navigator>
+    <navigator class='action' hover-class='none' url='roomList'>
+			<text class="text-red">{{moneyStatus.sOrderAllMoney}}</text> 元
+		</navigator>
+	</item>
+	<item class="arrow">
+		<navigator class='content' hover-class='none' url='detailCash'>
+			<text class='icon-recharge text-brown'></text>
+			<text>提现明细</text>
+		</navigator>
+    <navigator class='action' hover-class='none' url='detailCash'>
+			<text class="text-red">{{moneyStatus.isApply}} </text> 元
+		</navigator>
+	</item>
+	<item class="arrow">
+		<navigator class='content' hover-class='none' url='team'>
+			<text class='icon-group_fill text-brown'></text>
+			<text>我的团队</text>
+		</navigator>
+    <navigator class='action' hover-class='none' url='team'>
+			<text class="text-red">{{moneyStatus.sUserSize}} </text> 人
+		</navigator>
+	</item>
+	<item class="arrow">
+		<navigator class='content' hover-class='none' url='share'>
+			<text class='icon-qr_code text-brown'></text>
+			<text>推广二维码</text>
+		</navigator>
+	</item>
+</list>
+

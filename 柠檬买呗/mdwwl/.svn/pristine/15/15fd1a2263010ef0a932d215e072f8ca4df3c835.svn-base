@@ -1,0 +1,205 @@
+page {
+  background-color: #f4f4f4;
+}
+
+.orderNav {
+  border-top: 1px solid #dcdcdc;
+  height: 100rpx;
+  font-size: 32rpx;
+  background-color: #fff;
+  line-height: 100rpx;
+  position: relative;
+}
+
+.orderNavItem {
+  float: left;
+  color: #333;
+  width: 50%;
+  text-align: center;
+}
+
+.orderNavItem.cur {
+  color: #0097ff;
+}
+
+.NavLine {
+  position: absolute;
+  width: 50%;
+  height: 5rpx;
+  background-color: #0097ff;
+  bottom: 0;
+  /* transition: all 0.3s; */
+}
+
+.qiContainer {
+  padding: 25rpx;
+  padding-bottom: 0;
+}
+
+.qiItem {
+  position: relative;
+  padding-left: 80rpx;
+  margin-bottom: 25rpx;
+  /* height: 220rpx; */
+}
+
+.qiLeft {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  top: 0;
+  width: 80rpx;
+  background-color: #0d98f9;
+  color: #fff;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25rpx 0;
+
+}
+.byj{
+  width: 20rpx;
+  height:20rpx ;
+  background-color: #f4f4f4;
+  position: absolute;
+  border-radius: 50%;
+}
+.leftTopY{
+      left: 0;
+      top: 0;
+      transform: translate(-50%,-50%);
+}
+.leftBottomY{
+      left: 0;
+      bottom: 0;
+      transform: translate(-50%,50%);
+}
+.rightTopY{
+      right: 0;
+      top: 0;
+      transform: translate(50%,-50%);
+}
+.rightBottomY{
+      right: 0;
+      bottom: 0;
+      transform: translate(50%,50%);
+}
+.small_by{
+  position: absolute;
+  top: 20rpx;
+  height: 180rpx;
+  right: 0;
+  overflow: hidden;
+}
+.small_by view{
+  width:10rpx ;
+  height: 10rpx;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin-bottom: 10rpx;
+  transform: translateX(50%);
+}
+.qiRight{
+  background-color: #fff;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.qi_content{
+  padding: 0 25rpx;
+  /* padding-top: 10rpx; */
+/* padding-bottom: 10rpx; */
+}
+.yjs{
+  display: none;
+}
+
+.qContetnTop{
+  padding-top: 20rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1px dashed #cccccc;
+  overflow: hidden;
+}
+.qiPrice{
+  font-size:40rpx ;
+  color: #ff1a39;
+  float: left;
+  padding-top: 10rpx;
+  /* width: 35%; */
+  white-space: nowrap;
+
+}
+.qiPrice text{
+  font-size: 36rpx;
+  margin-right: 10rpx;
+  font-weight: bold;
+}
+.qiLv{
+  float: right;
+  text-align: right;
+  /* width: 65%; */
+}
+.lvGu{
+  width: 255rpx;
+  height: 18rpx;
+  border: 2rpx solid #ff9900;
+  border-radius: 10rpx;
+  position: relative;
+  display: inline-block;
+}
+.lvjin{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  border-radius: 10rpx;
+  background-color: #ff9900;
+
+}
+.qiInfo{
+  margin-top: 15rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+.qiInfo text{
+  color: #fd6906;
+}
+.qContetnBottom{
+  line-height: 70rpx;
+  font-size: 24rpx;
+  height: 70rpx;
+  padding: 0 25rpx;
+}
+.qContetnBottom .dan{
+  color: #434343;
+  float: left;
+  width: 60%;
+}
+
+.qContetnBottom view:first-child{
+  color: #a5a5a5;
+  float: right;
+  width: 40%;
+  text-align: right;
+
+}
+.complete .qiTxt{
+  display: none;
+}
+.complete .yjs{
+  display: block;
+}
+.complete .qiLeft{
+    background-color: #9d9e9e;
+}
+.complete .lvGu {
+  border:2rpx solid #9d9e9e;
+
+}
+.complete .lvjin{
+  background-color:#9d9e9e;
+
+}

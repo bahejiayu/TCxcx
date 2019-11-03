@@ -1,0 +1,36 @@
+<view class='dis_banner'>
+    <image src='{{http}}/Public/home/1.jpg' mode='widthFix'></image>
+</view>
+<view class='title_dis'>
+    <view>好货严选商品 任选一款</view>
+    <view><image src='{{http}}/Public/home/3.png'></image> <text>成功购买后  即可开通会员</text><image src='{{http}}/Public/home/2.png'></image> </view>
+</view>
+<view class='goods_list'>
+  <view class='goods_item'>
+    <navigator hover-class='none'>
+      <view class='goods_img'>
+        <image src='http://192.168.0.253/dotiings/Upload/shop/2019-04-11/5caed62928d91.jpg'></image>
+      </view>
+      <view class='goods_info'>
+        <view class='name_height'>
+          <view class='goods_name'>
+            网易智造3D揉捏按摩肩带/肩颈部位全方位按摩放松 网易智造3D揉捏按摩肩带/肩颈部位全方位按摩放松
+          </view>
+        </view>
+        <view class='goods_price'>
+          ¥399.00
+        </view>
+        <view class='once_buy'>
+          立即购买
+        </view>
+
+      </view>
+    </navigator>
+  </view>
+</view>
+
+
+<view  class='fix_tip  {{dong==true?"fadeInUp":""}}  animated infinite'>
+    <image src='http://192.168.0.253/dotiings/Upload/shop/2019-04-11/5caed62928d91.jpg'></image>
+<text>新订单来自 Sandy 7分钟前</text>
+</view>

@@ -1,0 +1,150 @@
+page{
+  background-color: #f7f7f7;
+}
+.userContainer{
+  height: 450rpx;
+  /* background-color: #f5a623; */
+  /* overflow: hidden; */
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 60rpx;
+  border-top:1px solid #dcdcdc;
+  text-align: center;
+}
+.uleft,.uright{
+  position: absolute;
+  width:25rpx ;
+  height:14rpx ;
+  bottom: 0;
+
+}
+.uleft{
+  left: 0;
+}
+.uright{
+  right: 0;
+}
+.ubg{
+  position: absolute;
+  width: 100%;
+  height: 450rpx;
+  top:0;
+  left: 0;
+}
+.userInfo{
+  position: relative;
+  z-index: 1000;
+}
+.headIcon{
+    width: 144rpx;
+    height: 144rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #fff;
+    margin: 0 auto;
+}
+.headIcon image{
+    width: 100%;
+    height: 100%;
+}
+.moeyContainer{
+  padding: 0 25rpx;
+  /* background-color: #f7f7f7; */
+  position: relative;
+  z-index: 10000;
+  transform: translateY(-145rpx);
+}
+.moneyBox{
+   box-shadow: 0 0 10px #dcdcdc ;
+
+}
+
+.userName{
+  font-size: 28rpx;
+  color:#ffffff ;
+  margin-top: 20rpx;
+}
+.moneyBox{
+  display: flex;
+  background-color: #ffffff;
+  height: 170rpx;
+  justify-content:space-around;
+  border-radius: 10rpx;
+  align-items: center;
+}
+.money_item view:first-child{
+    color:#f9484d;
+    font-size: 44rpx;
+}
+.money_item view:last-child{
+    color:#949494;
+    margin-top: 15rpx;
+    font-size: 24rpx;
+}
+.money_item text{
+  font-size: 30rpx;
+}
+.green{
+  color: #76c126!important;
+}
+.UserNavContainer{
+  transform: translateY(-120rpx);
+    background-color: #fff;
+    padding-left: 25rpx;
+}
+.UserNavItem{
+  height: 99rpx;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0 25rpx 0 30rpx;
+  line-height: 99rpx;
+  font-size: 30rpx;
+  position: relative;
+  color: #333333;
+  overflow: hidden;
+}
+.UserNavItem image{
+  vertical-align: middle;
+  width: 40rpx;
+  margin-right: 30rpx;
+  height: 40rpx;
+}
+.icRight{
+  position: absolute;
+  right: 25rpx;
+  color: #c7c7cc;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hotPhone{
+  font-size: 30rpx;
+  line-height: 90rpx;
+  color: #ff8124;
+  transform: translateY(-120rpx);
+  text-align: center;
+}
+.userInfo button{
+  display: inline-block;
+  /* width: 50%;
+  
+  margin: 0 auto; */
+}
+button{
+  background-color: transparent;
+  line-height: 1;
+}
+button::after{
+    border: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

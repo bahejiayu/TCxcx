@@ -1,0 +1,46 @@
+
+.line_top{
+  height: 20rpx;
+  background-color: #f4f4f4;
+}
+
+.modItem{
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #f4f4f4; 
+  padding: 0 25rpx;
+  font-size:30rpx ;
+  color: #191919;
+  padding-left: 400rpx;
+}
+input{
+   font-size:30rpx ;
+  color: #191919;
+}
+.modTitle{
+  position: absolute;
+  left: 25rpx;
+}
+.modItem input{
+  width: 100%;
+  height: 100%;
+}
+.modBtn{
+  margin-top: 50rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

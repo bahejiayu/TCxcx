@@ -1,0 +1,46 @@
+<view class='InfoBox'>
+  <view class='InfoItem'>
+    <view class='InfoLeft'>
+      头像
+    </view>
+    <view class='InfoRirht'>
+      <view class='headIcon'>
+        <image src='{{user_info.headpath}}'></image>
+      </view>
+    </view>
+  </view>
+  <view class='InfoItem'>
+    <view class='InfoLeft'>昵称</view>
+    <view class='InfoRirht'>
+      <view class='TextRight'>{{user_info.nickname}}</view>
+    </view>
+  </view>
+
+  <view class='InfoItem'>
+    <view class='InfoLeft'>性别</view>
+    <view class='InfoRirht'>
+      <view class='TextRight'>
+        <view class='RightItem' bindtap='togGen' data-g='0'>
+          <radio color='#ffa027' checked='{{gender==1}}' data-g='1'></radio>
+          <label data-g='0'>男</label>
+        </view>
+        <view class='RightItem' bindtap='togGen' data-g='1'>
+          <radio color='#ffa027' checked='{{gender==2}}' data-g='2'></radio>
+          <label data-g='1'>女</label>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='InfoItem'>
+    <navigator url='{{user_info.phone==null?"../../verification/verification":""}}  ' hover-class='none' >
+      <view class='InfoLeft'>手机号</view>
+      <view class='InfoRirht'>
+        <view class='TextRight {{user_info.phone==null?"":"hui"}}'>{{user_info.phone}}
+          <view class='icon-right'></view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+</view>

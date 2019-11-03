@@ -1,0 +1,10 @@
+<view class='bg_container' >
+<image src='{{http}}/Public/home/haibao.png'  mode='widthFix'></image>
+</view>
+<view  class='invite_box'>
+    <view class='invite_container'>
+        <view class='invite_title'>您的邀请码</view>
+        <view class='invite_code'>ABC123456</view>
+        <text bindtap='copy_code'>复制邀请码</text>
+    </view>
+</view>

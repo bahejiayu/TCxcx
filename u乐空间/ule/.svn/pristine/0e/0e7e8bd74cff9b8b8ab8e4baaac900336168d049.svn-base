@@ -1,0 +1,20 @@
+page{
+  padding-top: 100rpx;
+}
+.goodsScroll {
+  white-space: nowrap;
+  padding: 20rpx;
+}
+
+.goodsScroll .cu-item {
+  display: inline-block;
+  padding: 10rpx;
+  width: 200rpx;
+}
+
+.goodsScroll .cu-item image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+}

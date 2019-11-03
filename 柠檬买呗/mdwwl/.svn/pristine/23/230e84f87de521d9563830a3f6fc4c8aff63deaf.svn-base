@@ -1,0 +1,26 @@
+
+<template  name='foot' >
+
+  <view class='bheight'>
+  </view>
+  <view class='FixBottomNav'>
+    <view class='Fix_item {{Findex==0?"bcur":""}}'>
+      <navigator url='{{Findex==0?"":"../FreeSheet/FreeSheet"}}' hover-class='none' open-type='redirect'>
+        <image src='/images/tab1.png'></image>
+        <image src='/images/tab1c.png' class='curImg'></image>
+        <view>首页</view>
+      </navigator>
+    </view>
+    <view class='Fix_item {{Findex==1?"bcur":""}}' >
+      <navigator hover-class='none' open-type='redirect'url='{{Findex==1?"":"../order/order"}}' >
+        <image src='/images/tab2.png'></image>
+        <image src='/images/tab2c.png' class='curImg'></image>
+        <view>订单</view>
+      </navigator>
+    </view>
+  
+    
+  </view>
+
+
+</template>

@@ -1,0 +1,35 @@
+<view class='address_from'>
+    <form>
+        <view class='address_item'>
+            <view class='address_item_title'>收货人</view>
+              <input type='text' placeholder='请填写收货人'></input>
+        </view>    
+         <view class='address_item'>
+            <view class='address_item_title'>手机号码</view>
+              <input type='text' placeholder='11位手机号'></input>
+        </view>   
+        <view class='address_item'>
+            <view class='address_item_title'>选择地区</view>
+            <picker mode = "region">
+             <input type='text' placeholder='地区信息' disabled='{{true}}'></input>
+            
+            </picker>         
+
+
+        </view>
+         <view class='address_item'>
+            <view class='address_item_title'>详细地址</view>
+              <textarea  placeholder='街道门牌信息'></textarea>
+        </view>  
+          <view class='address_item'>
+            <view class='address_item_title'>邮政编码</view>
+              <input type='text' placeholder='邮政编码'></input>
+        </view>    
+
+
+        <view class='btn_box'>
+          <button class='btnF'>保  存</button>
+        </view>
+
+    </form>
+</view>

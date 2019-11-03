@@ -1,0 +1,49 @@
+<view class='shopImgList'>
+  <swiper indicator-dots='{{true}}' autoplay='{{true}}' indicator-color='#876940' indicator-active-color='#f5a623'>
+    <swiper-item wx:for='{{goods_data.img}}' wx:key='{{index}}'>
+      <image src='{{http+item}}'></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class='goodsDetail'>
+  <view class='goodsName'>{{goods_data.title}}</view>
+  <view class='goodsPrice'>
+    <text>¥</text> {{goods_data.price}}</view>
+</view>
+
+<view class='shopInfo'>
+  <view class='shopContainer'>
+    <view class='shopLogo'>
+      <image src='/images/shoplogo_03.png'></image>
+    </view>
+    <view class='shopContent'>
+      <view class='shopName dan'>
+        {{goods_data.shop_name}}
+      </view>
+      <view class='shopViewNumber'>
+        {{goods_data.flow}}人访问
+      </view>
+      <view class='hot_list'>
+        <image src='/images/hot_03.png' wx:for='{{goods_data.heat}}' wx:key='{{index}}'></image>
+      </view>
+    </view>
+    <!-- <view class='goShop' ><navigator url='../shopDetail/shopDetail' >进店逛逛</navigator></view> -->
+    <view class='goShop' bindtap='goBack'>进店逛逛</view>
+
+  </view>
+</view>
+
+
+<view class='shopDesc'>
+  <view class='shopTitle'>
+    <text>商品详情</text>
+  </view>
+  <view class='shopHtml'>
+    <rich-text nodes='{{goods_data.info}}'></rich-text>
+    <view class='imgInfo_list'>
+      <image wx:for='{{goods_data.info_img}}' mode='widthFix' src='{{http+item}}'></image>
+    </view>
+  </view>
+
+</view>

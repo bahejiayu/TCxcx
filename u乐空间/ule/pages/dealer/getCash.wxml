@@ -1,0 +1,40 @@
+<view class="bg-white margin-top padding-xl">
+	<view class="margin-bottom flex justify-between">
+		<view class="">剩余佣金（元）:{{userInfo.balance}}</view>
+		<navigator url="detailCash" class="text-sm text-blue" hover-class="none">提现明细</navigator>
+	</view>
+	<view class="text-sl flex align-center">
+		<text class="text-price margin-right-sm text-red"></text><input bindinput="inputMoney" type="number"  class="MoneyInput" placeholder="0.00" />
+	</view>
+</view>
+<view class="padding">提现不能小于{{putMinimum}}元</view>
+<bar class="solid-bottom">
+	<view class="action">提现到</view>
+</bar>
+<radio-group class="block">
+	<view class="padding bg-white flex align-center">
+		<avatar class="round lg bg-green">
+			<text class='icon-weixin'></text>
+		</avatar>
+		<view class='text-grey padding text-lg flex-sub'>微信</view>
+		<view class='action'>
+			<radio checked class="round green"></radio>
+		</view>
+	</view>
+</radio-group>
+<view class="padding">
+	<button class="block lg bg-brown" bindtap="withdraw">提交申请</button>
+</view>
+<modal-box class="{{modalName=='DoneModal'?'show':''}}">
+	<dialog class=" ">
+		<view class="padding">
+			<text class="text-xsl icon-roundcheckfill text-green"></text>
+			<view class="padding">
+				提现申请提交成功
+			</view>
+		</view>
+		<view class="padding text-center solid-top" bindtap="hideModal">
+			好的
+		</view>
+	</dialog>
+</modal-box>

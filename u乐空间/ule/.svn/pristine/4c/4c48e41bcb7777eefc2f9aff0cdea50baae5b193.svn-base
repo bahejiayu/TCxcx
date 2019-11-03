@@ -1,0 +1,7 @@
+// 配置域名
+//var DOMAIN = "192.168.0.102:809";
+var DOMAIN = "www.ulznkj.com";
+
+export default {
+  getDomain: DOMAIN
+}

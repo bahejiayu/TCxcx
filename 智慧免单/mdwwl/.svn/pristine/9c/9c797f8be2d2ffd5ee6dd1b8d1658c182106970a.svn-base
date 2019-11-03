@@ -1,0 +1,36 @@
+<view class='FuTop'>
+  <view class='FuItem'>
+    <button hover-class='none' open-type="contact">
+      <image src='/images/fu1.png'></image>
+      <view>在线咨询</view>
+    </button>
+  </view>
+  <view class='FuItem' bindtap='boHao'>
+    <image src='/images/ke2.png'></image>
+    <view>电话咨询</view>
+  </view>
+  <view class='keLine'></view>
+</view>
+
+<view class='keTime'>
+  咨询时间为：{{keInfo[1]}}
+</view>
+<view class='questionContainer'>
+  <view class='questionTitle'>猜你想问</view>
+  <view class='questionList'>
+    <view wx:for='{{questionList}}' wx:key='{{index}}' class='questionItem {{curIndex==index?"cur":""}}' data-index='{{index}}' bindtap='togContent'>
+      <view class='questionTop'>{{item.title}}
+
+        <view class='icon-right icDown'></view>
+      </view>
+      <view class='questionContent'>
+        <rich-text nodes='{{item.content}}'></rich-text>
+      </view>
+    </view>
+
+  </view>
+  <view class='kong' wx:if='{{questionList.length<=0}}'>
+    <image src='/images/kong.png'></image>
+    <view>还没有相关数据 !</view>
+  </view>
+</view>

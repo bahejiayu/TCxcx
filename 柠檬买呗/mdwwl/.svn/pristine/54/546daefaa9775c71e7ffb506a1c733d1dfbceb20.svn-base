@@ -1,0 +1,118 @@
+<view class='setTOP'>
+  <image src='/images/setyop_03.png'></image>
+</view>
+
+<view class='upFrom'>
+  <form bindsubmit='submit_' report-submit='true'>
+    <view class='fromBox'>
+      <view class='fromItem'>
+        <input type='text' name='type' value='{{sjlxValue}}' hidden='{{true}}'></input>
+        <picker range='{{array1}}' bindchange='bindPickerChange1' mode="selector">
+          <view class='fromTitl'>商家类型 :</view>
+          <input type='text' placeholder='选择商家类型 ' value='{{txt1}}' disabled='{{true}}'></input>
+          <view class='icon-right'></view>
+        </picker>
+      </view>
+      <view class='fromItem'>
+        <input type='text' name='cate_id' value='{{sjflValue}}' hidden='{{true}}'></input>
+        <picker range='{{array2}}' bindchange='bindPickerChange2' mode="selector">
+          <view class='fromTitl'>商铺分类 :</view>
+          <input type='text' placeholder='选择商铺分类 ' value='{{txt2}}' disabled='{{true}}'></input>
+          <view class='icon-right'></view>
+        </picker>
+      </view>
+      <view class='fromItem'>
+        <view class='fromTitl'>全称 :</view>
+        <input type='text' placeholder='须与营业执照一致 ' value='{{mr_data.shop_names}}' name='shop_names'></input>
+      </view>
+      <view class='fromItem'>
+        <view class='fromTitl'>简称 :</view>
+        <input type='text' placeholder='6字以内 '  value='{{mr_data.shop_name}}'  name='shop_name'></input>
+      </view>
+
+    </view>
+    <view class='fromBox'>
+      <view class='fromItem'>
+        <view class='fromTitl'>联系人姓名 :</view>
+        <input type='text' placeholder='请输入联系人姓名 ' value='{{mr_data.lx_name}}' name='lx_name'></input>
+      </view>
+      <view class='fromItem'>
+        <view class='fromTitl'>联系人电话 :</view>
+        <input type='number' placeholder='请输入手机号码 ' name='lx_phone'  value='{{mr_data.lx_phone}}'></input>
+      </view>
+      <view class='fromItem'>
+        <view class='fromTitl'>邮箱 :</view>
+        <input type='text' placeholder='请输入邮箱 ' name='email'  value='{{mr_data.email}}'></input>
+      </view>
+    </view>
+
+ <view class='fromBox'>
+      <view class='fromItem'>
+        <view class='fromTitl'>商家折扣 :</view>
+        <input type='digit' placeholder='请输入商家折扣 '  value='{{mr_data.discount}}'  name='discount'></input>
+      </view>
+      <view class='fromItem'>
+        <view class='fromTitl'>红包抵扣 :</view>
+        <input type='digit' placeholder='请输入红包抵扣% ' name='max_deduction' value='{{mr_data.max_deduction}}'></input>
+      </view>
+      <!-- <view class='fromItem'>
+        <view class='fromTitl'>邀请码 :</view>
+        <input type='text' placeholder='请输入邀请码 ' name='email'></input>
+      </view> -->
+    </view>
+
+
+    <view class='fromBox'>
+      <view class='fromItem'>
+        <picker mode="region" bindchange='getAddress'>
+
+          <view class='fromTitl'>经营地址 :</view>
+          <input type='text' placeholder='请输入所在地区 ' name='yy_dz' value='{{address_des}}' disabled='{{true}}'></input>
+          <view class='icon-right'></view>
+        </picker>
+      </view>
+      <view class='fromItem' bindtap='getLoction'>
+        <view class='fromTitl'>店铺坐标 :</view>
+        <input  placeholder='获取店铺坐标 '  disabled='{{true}}' value='{{log_txt}}'></input>
+      </view>
+      <view >
+        <view class='fromItem bdn'>
+          <view class='fromTitl'>详细地址 :</view>
+
+        </view>
+        <view class='areaContainer'>
+          <!-- <view class='Farea'>{{address_txt!=''?address_txt:"请输入您的详细地址"}}</view> -->
+          <textarea placeholder='请输入您的详细地址' name='address' value='{{mr_data.address}}' ></textarea>
+          <!-- disabled='{{true}}' -->
+          <!-- hidden='{{true}}' -->
+          <!-- value='{{address_txt}}' -->
+        </view>
+      </view>
+    </view>
+
+    <view class='upImgBox'>
+      <view class='upTitle'>
+        <view class='uptLeft'>
+          营业执照
+          <!-- ： -->
+          <!-- <text>(拍照或扫描均可)</text> -->
+        </view>
+        <view class='upRight' bindtap='lookImg'>
+          查看样板
+        </view>
+      </view>
+      <view class='upContainer'>
+        <view class='upFile' bindtap='bindUp2'>
+          <image src='{{up2img}}'></image>
+        </view>
+        <view class='upTxt'>上传图片({{up2img=="/images/jhx_03.png"?0:1}}/1)</view>
+      </view>
+
+
+
+    </view>
+    <view class='smallTip'>温馨提示：以上信息仅做认证用途</view>
+    <button class='btnF {{mr_data.status==2?"hui":""}}  ' form-type='submit'>{{mr_data.status==2?"正在审核":"确定"}}</button>
+    <input name='yyzz' value='{{imgValue2}}' hidden='{{true}}'></input>
+  </form>
+</view>

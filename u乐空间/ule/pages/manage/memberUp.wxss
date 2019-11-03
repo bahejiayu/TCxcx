@@ -1,0 +1,6 @@
+.picker{
+	text-align: left !important;
+}
+form-group .title {
+  min-width: calc(4em + 15px);
+}

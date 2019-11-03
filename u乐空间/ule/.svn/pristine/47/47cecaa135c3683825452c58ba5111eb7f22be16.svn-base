@@ -1,0 +1,4 @@
+
+form-group + form-group {
+  border-top: 0rpx solid #eee;
+}

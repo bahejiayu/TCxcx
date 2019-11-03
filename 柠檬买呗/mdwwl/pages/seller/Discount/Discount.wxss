@@ -1,0 +1,54 @@
+.DisTop{
+  height: 430rpx;
+  background-color: #ffda43;
+  color: #333;
+  box-sizing: border-box;
+  padding-top: 125rpx;
+}
+.topTxt{
+  text-align: center;
+
+}
+.topTxt view:first-child{
+  font-size: 30rpx;
+}
+.topTxt view:last-child{
+   font-size: 30rpx;
+   text-align: center;
+  color: #333;
+
+
+}
+.topTxt view:nth-of-type(2){
+  font-size: 62rpx;
+  margin-top: 20rpx;
+  line-height: 90rpx;
+  height: 90rpx;
+  color: #333;
+}
+ .topTxt .line_top{
+  display: inline-block;
+  width: 2rpx;
+  height:90rpx ;
+  margin: 0 20rpx;
+  background-color: #333;
+} 
+.DisTip{
+  line-height: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #333333;
+}
+
+.DisTop navigator{
+  display: block;
+  width: 175rpx;
+  height:55rpx ;
+  line-height: 55rpx;
+  font-size: 24rpx;
+  color: #333;
+  border: 2rpx solid #333;
+  margin: 35rpx auto 0;
+  text-align: center;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,123 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/switchcity/switchcity",
+    "pages/shopDetail/shopDetail",
+    "pages/goodsDetail/goodsDetail",
+    "pages/myOrder/myOrder",
+    "pages/search/search",
+    "pages/classify/classify",
+    "pages/userCenter/userCenter",
+    "pages/keFu/keFu",
+    "pages/verification/verification",
+    "pages/enter/enter",
+    "pages/login/login",
+    "pages/login_new/login_new",
+    "pages/feedback/feedback",
+    "pages/getCenter/getCenter",
+    "pages/write/write",
+    "pages/code/code",
+    "pages/hongbao/hongbao",
+    "pages/orderInfo/orderInfo",
+    "pages/qiPiaoList/qiPiaoList",
+    "pages/qiPiao/qiPiao",
+    "pages/qiInfo/qiInfo",
+    "pages/pay/pay",
+    "pages/message/message",
+    "pages/shop/FreeSheet/FreeSheet",
+    "pages/retail/retail_center/retail_center",
+    "pages/retail/income/income",
+    "pages/retail/income_record/income_record",
+    "pages/retail/income_record_info/income_record_info",
+    "pages/retail/my_group/my_group",
+    "pages/retail/settlement/settlement",
+    "pages/retail/getMoney/getMoney",
+    "pages/retail/shou_detail/shou_detail",
+    "pages/retail/tc_detail/tc_detail",
+    "pages/retail/invite_member/invite_member",
+    "pages/retail/invite_code/invite_code",
+    "pages/retail/training_award/training_award",
+    "pages/seller/order/order",
+    "pages/seller/personalInfo/personalInfo",
+    "pages/seller/sellerMessage/sellerMessage",
+    "pages/getMoney/getMoney",
+    "pages/seller/sqzk/sqzk",
+    "pages/seller/getMoney/getMoney",
+    "pages/seller/personaCenter/personaCenter",
+    "pages/seller/aboutUs/aboutUs",
+    "pages/seller/goodsList/goodsList",
+    "pages/seller/addGoods/addGoods",
+    "pages/seller/editorGoods/editorGoods",
+    "pages/seller/ManagementInfo/ManagementInfo",
+    "pages/seller/setUpShop/setUpShop",
+    "pages/seller/ModifiShop/ModifiShop",
+    "pages/seller/ModifiPay/ModifiPay",
+    "pages/seller/FreeSheet/FreeSheet",
+    "pages/seller/Discount/Discount",
+    "pages/seller/code/code",
+    "pages/seller/codeOrder/codeOrder",
+    "pages/seller/codeOrderDetail/codeOrderDetail",
+    "pages/seller/AccountModification/AccountModification",
+    "pages/seller/withdrawalCenter/withdrawalCenter",
+    "pages/seller/footer/footer",
+    "pages/city/city_index/city_index",
+    "pages/city/shop_income/shop_income",
+    "pages/city/auditing/auditing",
+    "pages/city/auditingDetail/auditingDetail",
+    "pages/city/shopManager/shopManager",
+    "pages/city/modifyZk/modifyZk",
+    "pages/city/applyZk/applyZk",
+    "pages/city/getDetail/getDetail",
+    "pages/buy/discover/discover",
+    "pages/buy/goods_detail/goods_detail",
+    "pages/buy/order_table/order_table",
+    "pages/buy/address_manager/address_manager",
+    "pages/buy/add_address/add_address",
+    "pages/buy/my_order/my_order",
+    "pages/buy/look_logistics/look_logistics",
+    "pages/buy/order_detail/order_detail",
+    "pages/city/getMoney/getMoney"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarTitleText": "柠檬买呗",
+    "navigationBarBackgroundColor": "#ffda43",
+    "navigationBarTextStyle": "black"
+  },
+
+"tabBar": {
+  "color":"#777777",
+  "selectedColor":"#ffda43",
+  "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/images/ju1_03.png",
+      "selectedIconPath": "/images/ju1c_03.png"
+    },
+      
+      {
+        "pagePath": "pages/qiPiaoList/qiPiaoList",
+        "text": "分润",
+        "iconPath": "/images/ju2_03.png",
+        "selectedIconPath": "/images/ju2c_03.png"
+      },
+      
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的",
+        "iconPath": "/images/ju4_03.png",
+        "selectedIconPath": "/images/ju4c_03.png"
+      }
+
+  ]
+},
+
+"permission": {
+  "scope.userLocation": {
+    "desc": "柠檬买呗将获取你的位置信息"
+  }
+}
+
+}

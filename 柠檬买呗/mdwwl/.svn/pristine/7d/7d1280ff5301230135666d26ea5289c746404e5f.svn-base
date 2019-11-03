@@ -1,0 +1,40 @@
+
+
+<view class='classifyContainer ' >
+  <view class='classifItem mb0' >
+    <view class='headIcon'>
+      <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2796238002,2709204796&fm=27&gp=0.jpg'></image>
+    </view>
+    <view class='classOrderInfo'>
+      <view class='classInfoone'>
+        <view>sandy</view>
+        <view>¥ 218.00</view>
+      </view>
+      <view class='classInfotwo'>
+        <view>2019-02-28 16:02:01</view>
+        <view>NO.12</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='title_code' >
+所有排队情况
+</view>
+
+<view class='classifyContainer '  >
+  <view class='classifItem' wx:for='[1,2]'>
+    <view class='headIcon'>
+      <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2796238002,2709204796&fm=27&gp=0.jpg'></image>
+    </view>
+    <view class='classOrderInfo'>
+      <view class='classInfoone'>
+        <view>sandy</view>
+        <view>¥ ***.**</view>
+      </view>
+      <view class='classInfotwo'>
+        <view>2019-02-28 16:02:01</view>
+        <view>NO.12</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,97 @@
+
+
+<scroll-view scroll-x class="bg-white nav">
+	<item class="flex-sub {{navIndex==0?'text-brown cur':''}}  "  bindtap='tog_nav' data-index='0' >
+		已核销
+	</item>
+  <item class="flex-sub {{navIndex==1?'text-brown cur':''}} "  bindtap='tog_nav'  data-index='1' >
+		退款
+	</item>
+</scroll-view>
+<view class="bg-white margin-top" wx:for="{{list}}" wx:key bindtap='showTip' data-index='{{index}}' wx:if='{{navIndex==0}}'>
+  <view class="solid-top padding-tb flex align-center">
+    <view class=" padding-lr-lg padding-tb text-center">
+      <view class="text-price text-xl">{{item.cmMoney}}</view>
+      <button class="line-gray margin-top-sm">已核销</button>
+    </view>
+    <view class="flex-sub padding-lr-sm solid-left">
+      <view class="padding-xs">订单编号：
+        <text>{{item.cmOrderId}}</text>
+      </view>
+      <view class="padding-xs">下单时间：
+        <text>{{item.uoCreateTime}}</text>
+      </view>
+      <view class="padding-xs">商品类型：
+        <text>套餐购买</text>
+      </view>
+      <view class="padding-xs">用 户 名：
+        <text>{{item.userName}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='padding-xl' wx:if="{{list.length==0&&navIndex==0}}">
+  <view class='padding-xl bg-white radius shadow-lg text-center'>
+    还 没 有 订 单 核 销 ~ - ~
+  </view>
+</view>
+
+<!-- 退款 -->
+<view class='tuiBox' wx:if='{{navIndex==1}}' wx:for="{{refundOrderList}}" wx:for-item="item" wx:key>
+    <view class='tui_item'>
+      <view class='tui_title'>
+          <view>{{item.refundDate}}</view>
+          <view>¥{{item.uoMoney}}</view>
+      </view>
+      <view class='tui_content'>
+          <view  class='tui_line'>
+            <view>订单编号</view>
+            <view>{{item.orderId}}</view>
+          </view>
+           <view  class='tui_line'>
+            <view>退款原因</view>
+            <view>{{item.refundWhy}}</view>
+          </view>
+          <view  class='tui_line'>
+            <view>退款说明 </view>
+            <view>{{item.refundRemark}}</view>
+          </view>
+          <view  class='tui_line'>
+            <view>经手人</view>
+            <view>{{item.userName}}</view>
+          </view>
+      </view> 
+    
+    </view>
+</view>
+
+<view class='zz' wx:if='{{show_top}}'></view>
+<view class='orderBox'  wx:if='{{show_top}}'>
+<view class='orderClose' bindtap='close_show_tip'>
+  <view class='icon-close'></view>
+</view>
+  <view class='orderBTitle'>订单信息</view>
+  <view class='orderInfoList'>
+    <view class='orderInfoItem'>
+      订单编号：
+      <text>{{goodInfo.cmOrderId}}</text>
+    </view>
+    <view class='orderInfoItem'>
+      下单时间：
+      <text>{{goodInfo.uoCreateTime}}</text>
+    </view>
+    <view class='orderInfoItem'>
+      商品类型：
+      <text>套餐购买</text>
+    </view>
+    <view class='orderInfoItem'>
+      用 户 名 ：
+      <text>{{goodInfo.userName}}</text>
+    </view>
+
+  </view>
+  <view class='orderDes'>
+    数量：<text>{{goodInfo.uoNumber}}</text> 金额：<text>¥{{goodInfo.uoMoney}}</text>
+  </view>
+  <view class='bnt_ti' bindtap='userRefund'>退款</view>
+</view>

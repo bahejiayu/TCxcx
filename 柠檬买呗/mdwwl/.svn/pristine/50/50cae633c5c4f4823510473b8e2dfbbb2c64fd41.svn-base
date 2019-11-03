@@ -1,0 +1,91 @@
+<view class='top_nav'>
+  <view class='{{type==0?"cur":""}}' data-type='0' bindtap='tog_type'>粉丝({{other_info.fans_count}})</view>
+  <view class='{{type==1?"cur":""}}'   data-type='1' bindtap='tog_type'>会员({{other_info.vip_count}})</view>
+</view>
+<view class='top_chk'>
+  <view class='top_chk_left'>
+  <view data-txt='昨天' class='{{time_txt=="昨天"?"cur":""}}' bindtap='tog_txt'>昨天</view>
+    <view data-txt='近七天' class='{{time_txt=="近七天"?"cur":""}}' bindtap='tog_txt'>近七天</view>
+    <view data-txt='全部' class='{{time_txt=="全部"?"cur":""}}' bindtap='tog_txt'>全部</view>
+  </view>
+ <view class='top_chk_right' bindtap='cha_time' data-type='k'>
+    <picker mode="date" start="2019-01-01" end="{{toDay}}" value='2019-01-01' bindchange="bindDateChange">
+      {{down_time}}
+      <view class='icon-right'></view>
+    </picker>
+
+  </view>
+</view>
+<view class='team_list'>
+  <view class='team_item' wx:for='{{record_list}}' data-id='{{item.id}}' data-index='{{index}}' bindtap='show_content'>
+    <view class='team_top'>
+      <view class='head_img'>
+        <image src='{{item.headpath}}'></image>
+      </view>
+      <view class='team_top_content'>
+        <view class='dan'>{{item.nickname}}</view>
+        <view class='tema_des'>
+          <view class='dan'>推荐人:{{item.p_nickname}}</view>
+          <view class='dan'>{{item.rmeak}}：{{item.add_time}}</view>
+        </view>
+      </view>
+      <view class='donw_icon  {{item.show==true?"zk":""}} '>
+        <view class='icon-right  '></view>
+      </view>
+    </view>
+    <view class='team_content' wx:if='{{item.show}}'>
+      <view class='team_content_item'>
+        <view class='team_content_item_title'>今日数据</view>
+        <view class='data_info'>
+          <view>新增直属会员数：{{item_detail.day_new_vip}}</view>
+          <view>今日销售额：{{item_detail.day_sale_volume}}</view>
+          <view>今日本人消费：{{item_detail.day_consume}}</view>
+          <!-- <view>今日团队自购会员礼包：0</view> -->
+        </view>
+      </view>
+      <view class='team_content_item'>
+        <view class='team_content_item_title'>本周数据</view>
+        <view class='data_info'>
+          <view>新增直属会员数：{{item_detail.week_new_vip}}</view>
+          <view>本周销售额：{{item_detail.week_sale_volume}}</view>
+          <view>本周本人消费：{{tem_detail.week_consume}}</view>
+          <!-- <view>本周团队自购会员礼包：0</view> -->
+        </view>
+      </view>
+      <view class='team_content_item'>
+        <view class='team_content_item_title'>本月数据</view>
+        <view class='data_info'>
+          <view>新增直属会员数：{{item_detail.month_new_vip}}</view>
+          <view>本月销售额：{{item_detail.month_sale_volume}}</view>
+          <view>本月本人消费：{{item_detail.month_consume}}</view>
+          <!-- <view>本月团队自购会员礼包：0</view> -->
+        </view>
+      </view>
+        <view class='team_content_item'>
+        <view class='team_content_item_title'>累计数据</view>
+        <view class='data_info'>
+          <view>新增直属会员数：{{item_detail.all_new_vip}}</view>
+          <view>累计销售额：{{item_detail.all_sale_volume}}</view>
+          <view>累计数据本人消费：{{item_detail.all_consume}}</view>
+          <!-- <view>累计数据团队自购会员礼包：0</view> -->
+        </view>
+      </view>
+
+    </view>
+
+
+  </view>
+  <view class='kong' wx:if='{{record_list.length<=0}}'>
+    <image src='/images/kong.png'></image>
+    <view>还没有相关数据 !</view>
+  </view>
+</view>
+<view class='begin_end' wx:if='{{time_module}}'>
+  <picker mode="date" start="2019-01-01" end="{{toDay}}" value='2019-01-01' bindchange="bindDateChange">
+    <view class='{{zdy_=="k"?"cur":""}}  ' bindtap='tog_zdy'  data-type='k'> 开始时间 ({{startDate}})</view>
+  </picker>
+  <picker mode="date" start="{{startDate=='请选择'?'2019-01-01':startDate}}" end="{{toDay}}" bindchange="bindDateChange2">
+    <view bindtap='tog_zdy' class='{{zdy_=="j"?"cur":""}}  '  data-type='j'>结束时间 ({{endDate}})</view>
+  </picker>
+</view>
+<view class='zz' wx:if='{{time_module}}' bindtap='close_timeModule'></view>

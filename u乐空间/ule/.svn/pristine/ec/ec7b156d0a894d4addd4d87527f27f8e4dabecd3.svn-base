@@ -1,0 +1,19 @@
+<view class="bg-white margin-top" wx:for="{{list}}" wx:key>
+	<view class="solid-top padding-tb flex align-center">
+		<view class=" padding-lr-lg padding-tb text-center">
+			<view class="text-price text-xl">{{item.cmMoney}}</view>
+			<button class="line-gray margin-top-sm">已核销</button>
+		</view>
+		<view class="flex-sub padding-lr-sm solid-left">
+			<view class="padding-xs">订单编号： <text>{{item.cmOrderId}}</text></view>
+			<view class="padding-xs">下单时间： <text>{{item.uoCreateTime}}</text></view>
+			<view class="padding-xs">商品名称：<text>{{item.mealName}}</text></view>
+			<view class="padding-xs">用  户  名：<text>{{item.mealName}}</text></view>
+		</view>
+	</view>
+</view>
+<view class='padding-xl' wx:if="{{list.length==0}}">
+  <view class='padding-xl bg-white radius shadow-lg text-center'>
+    还 没 有 订 单 核 销 ~ - ~
+  </view>
+</view>

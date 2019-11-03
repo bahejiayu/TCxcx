@@ -1,0 +1,95 @@
+.sheetTop .sheetTopBg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.sheetTop{
+  position: relative;
+  height: 425rpx;
+}
+.MothInfo{
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding-top: 40rpx;
+
+}
+.MothInfo view:first-child{
+  font-size: 26rpx;
+}
+.MothPrice{
+  font-size: 72rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+}
+.getNowBtn{
+  width:150rpx ;
+  height: 44rpx;
+  border: 2rpx solid #fff;
+  font-size: 24rpx;
+  line-height: 44rpx;
+  border-radius: 20rpx;
+  margin: 0 auto;
+}
+.todayInfo{
+  padding: 0 25rpx;
+  position: relative;
+  z-index: 1000;
+  transform: translateY(-150rpx);
+}
+.toDayBox{
+   box-shadow: 0 0 6px #dcdcdc ;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10rpx;
+
+
+  padding: 50rpx 0;
+}
+.todayItem{
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.todayItem view:first-child{
+  color: #ff970f;
+  font-size: 48rpx;
+}
+.todayItem view:last-child{
+  color: #333;
+  font-size: 26rpx;
+}
+.todayItem:first-child{
+  border-right: 2rpx solid  #eeeeee;
+}
+.FreeNav{
+  transform: translateY(-150rpx);
+}
+.FreeNavList{
+  display: flex;
+  justify-content:space-around;
+  margin-top: 55rpx;
+}
+.FreeNavItem{
+  text-align: center;
+  
+
+}
+.Navimg image{
+  width: 100rpx;
+  height:100rpx ;
+}
+.NavTitle{
+  font-size:24rpx ;
+  color: #333333;
+  margin-top: 20rpx;
+  }
+
+
+
+
+
+

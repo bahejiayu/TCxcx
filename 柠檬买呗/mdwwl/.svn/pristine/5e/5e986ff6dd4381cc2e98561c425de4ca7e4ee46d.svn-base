@@ -1,0 +1,86 @@
+<view class='top_nav'>
+  <view class='cur'>顾客(0)</view>
+  <view>会员(0)</view>
+</view>
+<view class='top_chk'>
+  <view class='top_chk_left'>
+    <view>昨天</view>
+    <view>近七天</view>
+    <view class='cur'>全部</view>
+  </view>
+  <view class='top_chk_right'>
+    自定义时间
+    <view class='icon-right'></view>
+  </view>
+</view>
+<view class='team_list'>
+  <view class='team_item'>
+    <view class='team_top'>
+      <view class='head_img'>
+        <image src='http://192.168.0.253/dotiings/Upload/shop/2019-04-11/5caed62928d91.jpg'></image>
+      </view>
+      <view class='team_top_content'>
+        <view class='dan'>Sandy ID: 798050(本人)</view>
+        <view class='tema_des'>
+          <view class='dan'>累计消费金额：148元</view>
+          <view class='dan'>成为分销商时间：2018-04-25</view>
+        </view>
+      </view>
+      <view class='donw_icon zk'>
+        <view class='icon-right  '></view>
+      </view>
+    </view>
+    <view class='team_content'>
+      <view class='team_content_item'>
+        <view class='team_content_item_title'>今日数据</view>
+        <view class='data_info'>
+          <view>新增直属会员数：0</view>
+          <view>今日销售额：0.00</view>
+          <view>今日本人消费：0.00</view>
+          <view>今日团队自购会员礼包：0</view>
+        </view>
+      </view>
+      <view class='team_content_item'>
+        <view class='team_content_item_title'>本周数据</view>
+        <view class='data_info'>
+          <view>新增直属会员数：0</view>
+          <view>本周销售额：0.00</view>
+          <view>本周本人消费：0.00</view>
+          <view>本周团队自购会员礼包：0</view>
+        </view>
+      </view>
+      <view class='team_content_item'>
+        <view class='team_content_item_title'>本月数据</view>
+        <view class='data_info'>
+          <view>新增直属会员数：0</view>
+          <view>本月销售额：0.00</view>
+          <view>本月本人消费：0.00</view>
+          <view>本月团队自购会员礼包：0</view>
+        </view>
+      </view>
+        <view class='team_content_item'>
+        <view class='team_content_item_title'>累计数据</view>
+        <view class='data_info'>
+          <view>新增直属会员数：0</view>
+          <view>累计销售额：0.00</view>
+          <view>累计数据本人消费：0.00</view>
+          <view>累计数据团队自购会员礼包：0</view>
+        </view>
+      </view>
+
+    </view>
+
+
+  </view>
+
+</view>
+
+<!-- <view class='begin_end'>
+<picker mode="date" start="2019-01-01" end="{{toDay}}" value='2019-01-01' bindchange="bindDateChange">
+    <view class='cur' >  开始时间 ({{startDate}})</view>
+      </picker>
+      <picker mode="date" start="{{startDate=='请选择'?'2019-01-01':startDate}}" end="{{toDay}}"  bindchange="bindDateChange2">
+    <view>结束时间 ({{endDate}})</view>
+      </picker>
+</view>
+<view class='zz'></view>  -->

@@ -1,0 +1,49 @@
+<view class='centerTop' >
+    <view class='cenHeadICon' >
+       <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2796238002,2709204796&fm=27&gp=0.jpg'></image>
+    </view>
+    <view class='TopContetn' >
+        <view>Sandy</view>
+        <!-- <view><navigator url=''>编辑个人资料</navigator></view> -->
+    </view>
+</view>
+<view class="padding solid-bottom bg-white margin-top text-bold">商品明细</view>
+<view class="padding bg-white flex">
+	<view class="flex-sub">阿萨姆奶茶</view>
+	<view class="padding-lr">x1</view>
+	<view class="text-price text-orange">0.01</view>
+</view>
+<view class="padding solid-top bg-white margin-top flex justify-between">
+	<view class="text-bold">支付方式</view>
+	<view class="text-grey">微信支付</view>
+</view>
+
+<view class="padding solid-top bg-white flex justify-between">
+	<view class="text-bold">合计</view>
+	<view class="text-price text-orange text-xl">100</view>
+</view>
+
+<view class="padding solid-top bg-white flex justify-between">
+	<view class="text-bold">订单编号</view>
+	<view class="text-gray">141452452445</view>
+</view>
+<view class="padding solid-top bg-white flex justify-between">
+	<view class="text-bold">下单时间</view>
+	<view class="text-gray">2019-04-01 12:44:08</view>
+</view>
+<view class="padding solid-top bg-white flex justify-between" wx:if="{{obj.uoType==1||obj.uoType==0}}">
+	<view class="text-bold">结束时间</view>
+	<view class="text-gray">2019-04-01 12:44:08</view>
+</view>
+<view class="padding" >
+	<button class="bg-brown block lg"  bindtap="showModal" data-target="QrModal"> <text class="icon-qrcode margin-right-sm"></text> 核销订单</button>
+</view>
+
+<!-- <modal-box class="{{modalName=='QrModal'?'show':''}}">
+  <dialog style="width:500rpx;" class="none-bg">
+    <view class="bg-img radius" style="background-image: url({{codeSrc}});height:500rpx;"></view>
+    <view class="text-center padding" bindtap='hideModal'>
+      <text class='icon-roundclose text-sl text-white'></text>
+    </view>
+  </dialog>
+</modal-box> -->

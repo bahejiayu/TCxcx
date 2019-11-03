@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "免单玩玩乐",
+  "navigationBarBackgroundColor": "#ff970f",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+}

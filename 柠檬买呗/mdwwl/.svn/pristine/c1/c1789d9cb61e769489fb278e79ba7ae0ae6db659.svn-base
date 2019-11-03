@@ -1,0 +1,10 @@
+<view class='ti_y' wx:if='{{is_sq}}'>
+  <image src='/images/ysq_03.png'></image>
+  <view>您已提交开店申请，等待审核...</view>
+</view>
+<view class='imag_list'>
+  <image></image>
+</view>
+<view class='fix_buy'>
+  <view>¥399 立即入驻</view>
+</view>

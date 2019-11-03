@@ -1,0 +1,56 @@
+const API = require('../../../utils/api')
+const request = require('../../../utils/request')
+const wxReq = require('../../../utils/wxRequest')
+const commen = require('../../../utils/commen')
+const app = getApp();
+
+Page({
+  data: {
+    HOST_URL: API.getHOSTURI(),
+    userCode: '',
+    list: [],
+    userInfo:null
+  },
+	onShareAppMessage() {
+		return app.globalData.shareMessage
+	},
+  onLoad: function (options) {
+    console.log(options)
+    this.setData({
+      userCode: options.userCode
+    })
+    this.getUserInfo();
+  },
+  //获取用户信息
+  getUserInfo: function () {
+    var that = this;
+    wx.getUserInfo({
+      success(res) {
+        commen.loginByWeixin(res.userInfo, that.options.redPId).then(res => {
+          var _userCode = res.data.data.userInfo.userCode;
+          that.setData({
+            userCode: res.data.data.userInfo.userCode
+          });
+          that.getList();
+        })
+      }
+    })
+  },
+  getList: function () {
+    var self = this
+    var url = API.getTimeOrderList();
+    var getReq = wxReq.get(url, {
+      code: self.data.userCode
+    })
+    getReq.then(res => {
+      self.setData({
+        list: res.data.data
+      })
+    })
+  },
+  toTiming: (e) => {
+    wx.navigateTo({
+      url: 'info?id=' + e.currentTarget.dataset.id
+    })
+  }
+})

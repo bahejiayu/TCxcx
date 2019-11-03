@@ -1,0 +1,16 @@
+page {
+	background: #221c16;
+}
+
+.homeFoot {
+	color: #fff;
+	width: 100%;
+	padding: 30rpx 20rpx;
+	font-size: 27rpx;
+  line-height: 1.4;
+}
+
+.homeFoot [class*="icon"] {
+	font-size: 40rpx;
+	margin: 8rpx;
+}

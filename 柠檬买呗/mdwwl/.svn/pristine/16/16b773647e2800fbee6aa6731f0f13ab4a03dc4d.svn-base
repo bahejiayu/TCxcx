@@ -1,0 +1,60 @@
+page{
+  background-color: #f7f7f7;
+  border-top: 1px solid #f4f4f4;
+}
+.InfoBox{
+  background-color: #fff;
+  padding-left: 25rpx;
+}
+.InfoItem{
+  padding: 25rpx 25rpx 25rpx 180rpx;
+  border-bottom: 1px solid #e5e5e5;
+  font-size:32rpx ;
+  color: #333333;
+  position: relative;
+  overflow: hidden;
+}
+.InfoItem:last-child{
+  border-bottom: none;
+}
+.InfoLeft{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.InfoRirht{
+  float: right;
+}
+.headIcon{
+    width:110rpx ;
+    height:110rpx ;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.headIcon image{
+    width: 100%;
+    height: 100%;
+}
+.TextRight{
+  line-height: 55rpx;
+}
+.RightItem{
+  display: inline-block;
+  margin-left: 35rpx;
+}
+
+.RightItem radio{
+  margin-right: 10rpx;
+}
+.icon-right{
+  display: inline-block;
+  margin-left: 25rpx;
+  color: #999999;
+} 
+
+
+
+
+
+

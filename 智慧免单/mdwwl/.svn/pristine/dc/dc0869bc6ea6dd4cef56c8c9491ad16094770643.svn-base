@@ -1,0 +1,191 @@
+.index_top{
+  padding: 15rpx 25rpx;
+  position: relative;
+  padding-left: 305rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+}
+page{
+  background-color: #ffffff;
+}
+.index_top_left{
+  position: absolute;
+  left: 25rpx;
+}
+.index_top_left view{
+  display: inline-block;
+}
+.index_top_left image{
+    width:22rpx ;
+    height: 28rpx;
+    vertical-align: text-top;
+}
+.index_top_left text{
+  font-size: 32rpx;
+  color: #333333;
+  padding: 0 15rpx;
+  max-width: 190rpx;
+  display: inline-block;
+}
+.index_top_right{
+  height: 58rpx;
+  background-color: #f2f2f2;
+  position: relative;
+  border-radius: 25rpx;
+  overflow: hidden;
+  padding-left: 70rpx;
+}
+.search_btn{
+  position: absolute;
+  left: 25rpx;
+}
+.search_btn image{
+  width: 30rpx;
+  height: 30rpx;
+
+}
+.index_top_right input{
+    width: 100%;
+    height: 100%;
+    font-size: 26rpx;
+
+}
+.pclass{
+  color: #a5a5a5;
+}
+.banner_box{
+  padding: 0 25rpx;
+}
+.bannerContainer{
+  height: 280rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+
+}
+.bannerContainer swiper-item{
+border-radius: 10rpx;
+  overflow: hidden;
+}
+
+  
+
+.bannerContainer swiper{
+  height: 100%;
+}
+.bannerContainer image{
+  width: 100%;
+  height: 100%;
+}
+.navContainer{
+  overflow: hidden;
+  padding-top: 30rpx;
+}
+.navItem{
+  float: left;
+  width: 20%;
+  margin-bottom: 35rpx;
+}
+
+.navItem navigator{
+  display: block;
+  width: 100%;
+  font-size:24rpx ;
+  color: #656565;
+  text-align: center;
+}
+.navItem image{
+    width:80rpx ;
+    height: 80rpx;
+    margin-bottom: 20rpx;
+}
+.shopContainer{
+  background-color: #f4f4f4;
+}
+.shopNav{
+  height: 90rpx;
+  /* padding: 0 60rpx; */
+  display: flex;
+  justify-content:space-around;
+}
+.shopNav_item view{
+  line-height: 86rpx;
+  padding: 0 10rpx;
+  font-size: 32rpx;
+  color: #282828;
+  display: block;
+}
+.shopNav_item view.cur{
+  color: #0097ff;
+  border-bottom: 5rpx solid #0097ff;
+}
+.shop_list{
+  background-color: #f4f4f4;
+  padding-bottom: 50rpx;
+
+}
+.shop_item{
+  background-color: #fff;
+  border-bottom: 15rpx;
+  position: relative;
+  padding: 25rpx;
+  padding-right: 225rpx;
+  height: 90rpx;
+  margin-bottom: 15rpx;
+}
+.shop_itmeLeft{
+  position: relative;
+  padding-left: 112rpx;
+
+}
+.shop_itmeLeft image{
+  width:90rpx ;
+  height: 90rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  left: 0;
+}
+.shop_name{
+  font-size:32rpx ;
+  color:#000000 ;
+  padding-top: 5rpx;
+
+}
+.shop_info{
+  font-size:24rpx ;
+  color: #ababab;
+  margin-top: 7rpx;
+}
+.shop_info text{
+
+  margin:0 30rpx; 
+}
+.shop_itemRight{
+  position: absolute;
+  right: 25rpx;
+  top: 25rpx;
+  font-size: 24rpx;
+  color: #000000;
+}
+.hot_list{
+  text-align: right;
+  margin-top: 10rpx;
+
+}
+.hot_list image{
+  width: 20rpx;
+  height: 22rpx;
+  margin-left: 10rpx;
+}
+.shop_itemRight view:first-child{
+  padding-top: 10rpx;
+}
+
+
+
+
+
+
+
+
+
+

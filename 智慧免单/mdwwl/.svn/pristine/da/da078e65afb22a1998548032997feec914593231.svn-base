@@ -1,0 +1,105 @@
+<view class='userContainer'>
+  <image src='/images/ubg_02.png' class='ubg'></image>
+  <view class='userInfo' wx:if='{{userInfo}}'>
+    <view class='headIcon'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+    </view>
+    <view class='userName'>{{userInfo.nickName}}</view>
+  </view>
+
+  <view class='userInfo ' wx:if='{{!userInfo}}'>
+
+    <button hover-class='none' open-type="getUserInfo" bindgetuserinfo='LoginBtn'>
+      <view class='headIcon bdn'>
+        <image src='/images/smr.png'></image>
+      </view>
+      <view class='userName'>请登录</view>
+    </button>
+
+  </view>
+
+
+</view>
+
+<view class='moeyContainer'>
+  <view class='moneyBox'>
+    <view class='money_item'>
+      <navigator hover-class='none'>
+        <view>{{moneyData.xf_money[0]||0}}.<text>{{moneyData.xf_money[1]||"00"}}</text>
+        </view>
+        <view>消费金额(元)</view>
+      </navigator>
+    </view>
+    <view class='money_item'>
+      <navigator hover-class='none'>
+        <view>{{moneyData.pd_money[0]||0}}.<text>{{moneyData.pd_money[1]||"00"}}</text>
+        </view>
+        <view>排队金额(元)</view>
+      </navigator>
+    </view>
+    <view class='money_item'>
+      <navigator hover-class='none'>
+        <view class='green'>{{moneyData.yt_money[0]||0}}.<text>{{moneyData.yt_money[1]||"00"}}</text>
+        </view>
+        <view> 到账金额(元)</view>
+      </navigator>
+
+    </view>
+
+  </view>
+</view>
+<view class='UserNavContainer'>
+  <!-- <view class='UserNavItem'>
+    <navigator hover-class='none' bindtap='goVerif'  >
+      <image src='/images/un1.png'></image>手机验证
+      <view class='ItemTxt'>{{moneyData.phone||""}}</view>
+      <view class='icon-right  icRight' wx:if='{{!moneyData.phone}}'></view>
+    </navigator>
+  </view> -->
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../write/write?title=用户条款&type=2'>
+      <image src='/images/un2.png'></image>用户条款
+
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../write/write?title=退款说明&type=3'>
+      <image src='/images/un3.png'></image>退款说明
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../feedback/feedback'>
+      <image src='/images/un4.png'></image>意见反馈
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem' wx:if='{{moneyData.level!=2}}'>
+    <navigator hover-class='none' url='../enter/enter'>
+      <image src='/images/un5.png'></image>我要开店
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../write/write?title=关于我们?type=1'>
+      <image src='/images/un11.png'></image>关于我们
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'>
+    <navigator hover-class='none' url='../keFu/keFu'>
+      <image src='/images/un7.png'></image>联系客服
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+  <view class='UserNavItem'  wx:if='{{moneyData.level==2}}'>
+    <navigator hover-class='none' url='../seller/FreeSheet/FreeSheet?id={{moneyData.shop_id}}'>
+      <image src='/images/un8.png'></image>管理员
+      <view class='icon-right icRight'></view>
+    </navigator>
+  </view>
+</view>
+<view class='hotPhone' bindtap='boHao'>
+  代理加盟热线：{{phone}}
+</view>

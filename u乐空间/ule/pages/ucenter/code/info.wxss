@@ -1,0 +1,36 @@
+/* pages/ucenter/code/info.wxss */
+page{
+  background-color: #f4f4f4;
+  border-top: 1px solid #f4f4f4;
+}
+.centerTop{
+  background-color: #fff;
+  padding: 40rpx 25rpx;
+  overflow: hidden;
+  margin-bottom: 18rpx;
+}
+
+.cenHeadICon{
+  width:135rpx ;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 135rpx;
+  float: left;
+
+}
+.cenHeadICon image{
+    width: 100%;
+    height: 100%;
+}
+.TopContetn{
+  float: left;
+  margin-left: 20rpx;
+  /* padding-top: 20rpx; */
+    line-height: 135rpx;
+
+}
+
+.TopContetn view:first-child{
+    font-size:38rpx ;
+    color: #191919;
+}

@@ -1,0 +1,58 @@
+page{
+  background-color: #f4f4f4;
+}
+.order_item{
+  margin-top: 20rpx;
+  padding: 20rpx 25rpx;
+  background-color: #fff;
+  padding-left: 145rpx;
+  position: relative;
+  padding-right: 205rpx;
+  height: 100rpx;
+
+}
+.order_image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  position: absolute;
+  left: 25rpx;
+}
+.order_image image{
+  width: 100%;
+  height: 100%;
+}
+.order_content view:first-child{
+  font-size:24rpx ;
+  color: #000000;
+  margin-top: 10rpx
+}
+.order_content view:last-child{
+  font-size:24rpx ;
+  color: #929292;
+  margin-top: 20rpx;
+}
+.yongjing_{
+  font-size:24rpx ;
+  color: #666666;
+  position: absolute;
+  right: 25rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 15rpx;
+  height:40rpx ;
+  line-height: 40rpx;
+  border-left: 2rpx solid #e5e5e5;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+page{
+  background-color: #f1f1f1;
+}
+.orderTitle{
+  overflow: hidden;
+  height:65rpx ;
+  line-height: 65rpx;
+  border-bottom: 2rpx solid #ededed;
+  padding: 0 25rpx;
+}
+.orderItem{
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.orderTitle view:first-child{
+    font-size:24rpx ;
+    float: left;
+    color: #878787;
+}
+.orderTitle view:last-child{
+    font-size:24rpx ;
+    color: #f56d12;
+    float: right;
+}
+.orderContent{
+  padding: 30rpx 25rpx 35rpx 25rpx;
+  border-bottom: 2rpx solid #ededed;
+
+}
+.orderContent view:first-child{
+  font-size: 32rpx;
+  color: #000000;
+  margin-bottom: 20rpx;
+}
+
+.orderContent view:last-child{
+  font-size: 26rpx;
+  color: #878787;
+}
+.orderBottom{
+  padding: 15rpx 25rpx;
+  overflow: hidden;
+}
+.orderBottom navigator{
+      float: right;
+      width: 158rpx;
+      font-size: 26rpx;
+      color: #333333;
+      height:58rpx ;
+      line-height: 58rpx;
+      border: 1px solid #a0a0a0;
+      border-radius: 10rpx;
+      text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+

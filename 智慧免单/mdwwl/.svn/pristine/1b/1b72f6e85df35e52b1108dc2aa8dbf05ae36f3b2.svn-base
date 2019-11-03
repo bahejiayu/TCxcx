@@ -1,0 +1,18 @@
+<view class='verifContainer'>
+    <view class='verBox'>
+        <view class='verItem'>
+        <view class='verTitle'>手机号</view>
+        <input type='number' placeholder-class='inpclass' bindinput='getPhone'  placeholder='请输入手机号'></input>
+    </view>
+    <view class='verItem'>
+        <view class='verTitle'>验证码</view>
+        <input type='number' placeholder-class='inpclass' placeholder='请输入验证码' bindinput='getCode'  maxlength='10' ></input>
+        <view class='get_Code' bindtap='codeBtn'>{{codeTxt}}</view>
+    </view>
+    </view>
+
+  <view class='btn' bindtap='sureBtn'>
+  确定
+  </view>
+
+</view>

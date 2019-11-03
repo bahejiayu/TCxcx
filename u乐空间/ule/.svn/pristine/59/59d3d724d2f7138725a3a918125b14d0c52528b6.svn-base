@@ -1,0 +1,65 @@
+<!-- success == 退款成功 -->
+<view class="box margin-top-sm text-grey" wx:if="{{refund.examieStatus=='3'}}">
+  <view class='text-xxl margin-bottom-sm text-black'>
+    <text class='icon-roundcheckfill text-green'> </text> 退款成功
+  </view>
+  <view>退款金额：
+    <text class='text-red'>¥12.9</text>
+  </view>
+</view>
+<!-- close == 退款关闭 -->
+<view class="box margin-top-sm text-grey" wx:if="{{refund.examieStatus=='2'}}">
+  <view class='text-xxl margin-bottom-sm text-black'>
+    <text class='icon-roundclosefill text-red'> </text> 退款申请被驳回
+  </view>
+  <view>您的退货退款申请不符合要求，如果您有其他退款诉求，建议您及时联系客服。</view>
+</view>
+<!-- revork == 撤销 -->
+<view class="box margin-top-sm text-grey" wx:if="{{refund.examieStatus=='4'}}">
+  <view class='text-xxl margin-bottom-sm text-black'>
+    <text class='icon-forwardfill text-grey'> </text> 申请已撤销
+  </view>
+  <view>您已撤销此次退款申请，如有疑问您可以联系商家协商处理。</view>
+</view>
+<!-- wait == 处理中 -->
+<view class="box margin-top-sm text-grey" wx:if="{{refund.examieStatus=='0'}}">
+  <view class='text-xxl margin-bottom-sm text-black'>
+    <text class='icon-timefill text-orange'> </text> 申请已提交，审核中
+  </view>
+  <view>若商家同意：申请将达成并退款至您支付账号</view>
+  <view>若商家拒接：您将有7天时间修改申请或联系客服处理</view>
+</view>
+<view class="box margin-top-sm text-grey" wx:if="{{refund.examieStatus=='1'}}">
+  <view class='text-xxl margin-bottom-sm text-black'>
+    <text class='icon-timefill text-orange'> </text> 申请已通过，商家处理中
+  </view>
+  <view>等待退款至您支付账号</view>
+</view>
+<list class="menu text-gray margin-top">
+  <item>
+    <view class='content text-df'>
+      收货状态：{{refund.takeStatus=='0'?'未收到货':'已收到货'}}
+    </view>
+  </item>
+  <item>
+    <view class='content text-df'>
+      退款金额：¥{{refund.refundMoney}}
+    </view>
+  </item>
+  <item>
+    <view class='content text-df'>
+      商品名称：
+      <text wx:for="{{refund.goodsName}}" wx:key>{{refund.goodsName[index]}}<block wx:if="{{index!=refund.goodsName.length-1}}">,</block></text>
+    </view>
+  </item>
+  <item>
+    <view class='content text-df'>
+      订单编号：{{refund.refundSn}}
+    </view>
+  </item>
+  <item>
+    <view class='content text-df'>
+      申请时间：{{createTime}}
+    </view>
+  </item>
+</list> 

@@ -1,0 +1,47 @@
+<form-group bindtap="showModal" data-target="RadioModal">
+  <view class='title'>收货状态</view>
+  <view class='text-left flex-sub'>{{takeStatus==0?'未收货':'已收货'}}</view>
+</form-group>
+<form-group>
+  <view class='title'>退款金额</view>
+  <view class='text-left flex-sub text-red text-price'>{{price}}</view>
+</form-group>
+<form-group>
+  <view class='title'>退款原因</view>
+  <picker bindchange="PickerChange" value="{{explainIndex}}" range="{{explainList}}">
+    <view class="picker">
+      {{explainIndex?explainList[explainIndex]:'请选择'}}
+    </view>
+  </picker>
+</form-group>
+<view class='flex padding-top-lg padding-lr justify-between bg-white solid-top' wx:if="{{explainIndex==explainList.length-1}}">
+  <view class="flex-sub">退款说明
+    <text class="text-red">(必填)</text>
+  </view>
+  <view class="text-gray">你还可以输入{{explainLength}}字</view>
+</view>
+<form-group wx:hide="{{modalName==null}}"  wx:if="{{explainIndex==(explainList.length-1)}}">
+  <textarea placeholder='请您详细填写退款说明。(最多140字)' maxlength="140" disabled="{{modalName!=null}}" placeholder-class='placeholder' bindinput='textareaInput' value='{{explain}}'></textarea>
+</form-group>
+<form-group>
+  <view class='title'>联系电话</view>
+  <input placeholder="请填写联系电话" type='number' value="{{phone}}" bindinput='phoneInput'></input>
+</form-group>
+<view class="foot padding">
+  <button class="bg-brown block lg" bindtap='save'>提交</button>
+</view>
+
+<modal-box class="{{modalName=='RadioModal'?'show':''}}" bindtap='hideModal'>
+  <dialog>
+    <radio-group class="block" bindchange="takeStatus">
+      <list class='menu text-left'>
+        <item wx:for="{{2}}" wx:key>
+          <label class='flex justify-between align-center flex-sub'>
+            <view class='flex-sub'>{{index==0?'未收货':'已收货'}}</view>
+            <radio class='round' value='{{index}}' checked='{{index==takeStatus}}'></radio>
+          </label>
+        </item>
+      </list>
+    </radio-group>
+  </dialog>
+</modal-box>

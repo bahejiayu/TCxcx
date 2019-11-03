@@ -1,0 +1,51 @@
+<view class='centerTop' >
+    <view class='cenHeadICon' >
+       <image src='{{orderInfo.userHeadIcon}}'></image>
+    </view>
+    <view class='TopContetn' >
+        <view>{{orderInfo.userName}}</view>
+        <!-- <view><navigator url=''>编辑个人资料</navigator></view> -->
+    </view>
+</view>
+<view class="padding solid-bottom bg-white margin-top text-bold">商品明细</view>
+<view class="padding bg-white flex">
+	<view class="flex-sub">{{orderInfo.uoCommodityName}}</view>
+	<view class="padding-lr">x{{orderInfo.uoNumber}}</view>
+	<view class="text-price text-orange">{{orderInfo.uoUnit}}</view>
+</view>
+<view class="padding solid-top bg-white margin-top flex justify-between">
+	<view class="text-bold">支付方式</view>
+	<view class="text-grey">微信支付</view>
+</view>
+
+<view class="padding solid-top bg-white flex justify-between">
+	<view class="text-bold">合计</view>
+	<view class="text-price text-orange text-xl">{{orderInfo.uoActualMoney}}</view>
+</view>
+
+<view class="padding solid-top bg-white flex justify-between">
+	<view class="text-bold">订单编号</view>
+	<view class="text-gray">{{orderInfo.uoId}}</view>
+</view>
+<view class="padding solid-top bg-white flex justify-between">
+	<view class="text-bold">下单时间</view>
+	<view class="text-gray">{{orderInfo.orderCreateTime}}</view>
+</view>
+<view class="padding solid-top bg-white flex justify-between" wx:if="{{obj.uoType==1||obj.uoType==0}}">
+	<view class="text-bold">结束时间</view>
+	<view class="text-gray">{{orderInfo.uoFinishDate}}</view>
+</view>
+<view class="padding" >
+	<button class="bg-brown block lg"  bindtap="review" data-target="QrModal">
+    立即核销
+  </button>
+</view>
+
+<!-- <modal-box class="{{modalName=='QrModal'?'show':''}}">
+  <dialog style="width:500rpx;" class="none-bg">
+    <view class="bg-img radius" style="background-image: url({{codeSrc}});height:500rpx;"></view>
+    <view class="text-center padding" bindtap='hideModal'>
+      <text class='icon-roundclose text-sl text-white'></text>
+    </view>
+  </dialog>
+</modal-box> -->

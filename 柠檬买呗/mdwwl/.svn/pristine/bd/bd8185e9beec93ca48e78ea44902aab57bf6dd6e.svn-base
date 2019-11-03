@@ -1,0 +1,58 @@
+<view class='shopImgList'>
+  <swiper indicator-dots='{{true}}' autoplay='{{true}}' indicator-color='#876940' indicator-active-color='#f5a623'>
+    <swiper-item wx:for='{{shop_data.slide_img}}' wx:key="{{index}}" >
+      <image src='{{http+item}}'></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class='shopInfo'>
+  <view class='shopInfo_top'>
+    <view class='SiTop_left'>
+      <view>{{shop_data.shop_name}}</view>
+      <view class='hot_list'>
+        <image src='/images/hot_03.png' wx:for='{{shop_data.heat}}'  wx:key='{{index}}'></image>
+      </view>
+    </view>
+    <view class='SiTop_right' bindtap='go_Pay'>付款</view>
+  </view>
+  <view class='shopDes'>
+      {{shop_data.info}}
+  </view>
+  <view class='completOrder'>近期成交 {{shop_data.volume}} 单</view>
+</view>
+
+<view class='shop_work'>
+  <view class='work_item'>营业时间：{{shop_data.yy_tsection}}</view>
+  <view class='work_item'>联系电话：{{shop_data.phone}}</view>
+  <view class='work_item'>地址：{{shop_data.address}}
+    <text bindtap='lookAddress'>(点击查看位置)</text>
+  </view>
+</view>
+
+
+<view class='all_goods'>
+  <view class='all_goodsTitle'>
+    <text>所有商品</text>
+    <view class='top_Line'></view>
+  </view>
+  <view class='goods_Container'>
+    <view class='goodsItemContainer' wx:for='{{shop_data.item}}' wx:key='{{index}}'>
+      <view class='goods_item'>
+        <navigator hover-class='none' url='../goodsDetail/goodsDetail?id={{item.id}}'>
+          <view class='goodsImage'>
+            <image src='{{http+item.img[0]}}'></image>
+          </view>
+          <view class='goods_content'>
+            <view class='goods_name'>{{item.shop_name}}</view>
+            <view class='goods_price'>¥ {{item.price}}</view>
+          </view>
+
+        </navigator>
+      </view>
+    </view>
+
+
+  </view>
+
+</view>

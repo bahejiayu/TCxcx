@@ -1,0 +1,23 @@
+<view class="bg-white padding-lr" wx:for="{{teamData}}" wx:key>
+	<view class="flex align-center padding-tb margin-top">
+		<image src="{{item.userHeadIcon}}" mode="aspectFill" style="width: 100rpx;height: 100rpx;" class="radius"></image>
+		<view class="flex-sub margin-left-sm" url="pay" hover-class="none">
+			<view class="flex justify-between">
+				<view class="text-lg">{{item.userName}}<tag wx:if="{{item.userYearType===1}}" class="round sm margin-left-sm" style="background-color: #f4d57a;"><text class="text-brown">年卡会员</text></tag></view>
+				<view>推广{{item.sUserSize}}人</view>
+			</view>
+			<view class="text-gray margin-top-sm">
+				注册时间：{{item.createTime}}
+			</view>
+		</view>
+	</view>
+	<view class="padding-tb flex justify-between solid-top">
+		<view>空间消费{{item.allPayMoney}}元 | 商城消费{{item.sUserSize}}元</view>
+		<view>{{item.orderSize}}个订单</view>
+	</view>	
+</view>
+<view class='padding-xl' wx:if="{{teamData.length==0}}">
+  <view class='padding-xl bg-white radius shadow-lg text-center'>
+    您尚未有团队~！
+  </view>
+</view>

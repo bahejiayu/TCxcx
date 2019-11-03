@@ -1,0 +1,156 @@
+page {
+  background-color: #f4f4f4;
+}
+
+.shopImgList {
+  height: 470rpx;
+}
+
+.shopImgList swiper {
+  height: 100%;
+}
+
+.shopImgList image {
+  width: 100%;
+  height: 100%;
+}
+
+.zc_ {
+  font-size: 24rpx;
+  color: #fd6906;
+  padding-top: 5rpx;
+}
+
+.shopInfo {
+  padding: 30rpx 25rpx;
+  background-color: #fff;
+}
+
+.shopInfo_top {
+  padding-right: 145rpx;
+  position: relative;
+}
+
+.SiTop_left {
+  font-size: 36rpx;
+  color: #000;
+}
+
+.hot_list image {
+  width: 22rpx;
+  height: 22rpx;
+  margin-right: 8rpx;
+}
+
+.SiTop_right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 135rpx;
+  height: 68rpx;
+  color: #fff;
+  font-size: 32rpx;
+  background-color: #fd6906;
+  text-align: center;
+  line-height: 68rpx;
+  border-radius: 10rpx;
+}
+
+.shopDes {
+  font-size: 26rpx;
+  color: #444343;
+  line-height: 38rpx;
+  margin: 20rpx 0;
+}
+
+.completOrder {
+  font-size: 26rpx;
+  color: #ffda43;
+}
+
+.work_item {
+  padding: 25rpx;
+  border-bottom: 2rpx solid #f4f4f4;
+  font-size: 30rpx;
+  line-height: 43rpx;
+  color: #333;
+}
+
+.shop_work {
+  background-color: #fff;
+  margin-top: 15rpx;
+}
+
+.all_goods {
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding-bottom: 50rpx;
+}
+
+.all_goodsTitle {
+  height: 97rpx;
+  line-height: 97rpx;
+  margin-bottom: 10rpx;
+  font-size: 34rpx;
+  color: #232323;
+  text-align: center;
+  position: relative;
+}
+
+.all_goodsTitle text {
+  padding: 0 25rpx;
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.top_Line {
+  position: absolute;
+  width: 440rpx;
+  height: 2rpx;
+  background-color: #333;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.goods_Container {
+  padding: 0 15rpx;
+  overflow: hidden;
+}
+
+.goodsItemContainer {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0 15rpx;
+  float: left;
+}
+
+.goodsImage {
+  width: 330rpx;
+  height: 330rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+
+.goodsImage image {
+  width: 100%;
+  height: 100%;
+}
+
+.goods_name {
+  font-size: 28rpx;
+  color: #333;
+  margin: 15rpx 0;
+}
+
+.goods_price {
+  font-size: 32rpx;
+  color: #f43737;
+}
+
+.goods_content {
+  height: 140rpx;
+}

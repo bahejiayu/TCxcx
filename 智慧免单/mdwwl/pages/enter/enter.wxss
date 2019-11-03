@@ -1,0 +1,43 @@
+.enterTitle{
+  line-height: 98rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333333;
+  border-top: 1rpx solid #dcdcdc;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+.fromItem{
+  line-height: 100rpx;
+  height: 100rpx;
+  padding: 0 25rpx;
+  padding-left: 205rpx;
+  border-bottom: 1px dashed #b2b2b2;
+  position: relative;
+}
+.fromTitle{
+  position: absolute;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color:#000000 ;
+  left: 25rpx;
+}
+
+.fromItem input{
+  height: 100rpx;
+  font-size:30rpx ;
+  color:#000000 ;
+
+
+}
+.enterBtn{
+  margin-top: 45rpx;
+}
+
+
+
+
+
+
+
+

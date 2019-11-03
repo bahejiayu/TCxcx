@@ -1,0 +1,111 @@
+<view class='ManBox' >
+    <view class='Man_item' >
+        <view>本日订单笔数</view>
+        <view>0</view>
+    </view>
+    <view class='Man_item' >
+        <view>本日营业额</view>
+        <view>0</view>
+    </view>
+     <view class='Man_item' >
+        <view>本日商家收益</view>
+        <view>0</view>
+    </view>
+     <view class='Man_item' >
+        <view>本日折扣总额</view>
+        <view>0</view>
+    </view>
+</view>
+
+
+<view class='ManBox' >
+    <view class='Man_item' >
+        <view>本月订单笔数</view>
+        <view>0</view>
+    </view>
+    <view class='Man_item' >
+        <view>本月营业总额</view>
+        <view>0</view>
+    </view>
+     <view class='Man_item' >
+        <view>本月商家收益</view>
+        <view>0</view>
+    </view>
+     <view class='Man_item' >
+        <view>本月折扣总额</view>
+        <view>0</view>
+    </view>
+</view>
+
+
+<view class='ManBox' >
+    <view class='Man_item' >
+        <view>前12个月订单笔数</view>
+        <view>0</view>
+    </view>
+    <view class='Man_item' >
+        <view>前12个月营业总额</view>
+        <view>0</view>
+    </view>
+     <view class='Man_item' >
+        <view>前12个月商家收益</view>
+        <view>0</view>
+    </view>
+     <view class='Man_item' >
+        <view>前12个月折扣总额</view>
+        <view>0</view>
+    </view>
+</view>
+
+
+<view class='ManBox' >
+    <view class='Man_item' >
+        <view>待退款金额</view>
+        <view>0</view>
+    </view>
+    <view class='Man_item' >
+        <view>待退款订单笔数</view>
+        <view>0</view>
+    </view>
+     <view class='Man_item' >
+        <view>平均退款天数</view>
+        <view>0</view>
+    </view>
+   
+</view>
+
+<view class='ManBox' >
+    <view class='Man_item' >
+        <view>起始日期</view>
+        <view>2019-01-01</view>
+    </view>
+    <view class='Man_item' >
+        <view>结束日期</view>
+        <view>2019-01-01</view>
+    </view>
+     <view class='Man_item' >
+        <view>起始日到结束日订单数</view>
+        <view>0</view>
+    </view>
+      <view class='Man_item' >
+        <view>起始日到结束日营业额</view>
+        <view>0</view>
+    </view>
+      <view class='Man_item' >
+        <view>起始日到结束日商家收益</view>
+        <view>0</view>
+    </view>
+      <view class='Man_item' >
+        <view>起始日到结束日折扣总额</view>
+        <view>0</view>
+    </view>
+   
+</view>
+
+
+<view class='ManBox' >
+    <view class='Man_item' >
+        <view>某日营业信息</view>
+        <view>2019-01-01</view>
+    </view>
+</view>

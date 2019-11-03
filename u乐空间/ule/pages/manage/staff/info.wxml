@@ -1,0 +1,28 @@
+<view class="bg-white padding flex flex-direction align-center">
+  <avatar class="round" style="background-image:url({{user.userHeadIcon}});width:150rpx;height:150rpx;">
+    <tag class="round margin-left-sm">
+      <block wx:if="{{user.userType==1}}">员工</block>
+      <block wx:if="{{user.userType==2}}">店长</block>
+      <block wx:if="{{user.userType==3}}">管理员</block>
+    </tag>
+  </avatar>
+  <view class="padding-lr-sm padding-tb-lg text-center">
+    <view class="text-lg">{{user.userName}}</view>
+    <view class="margin-top-sm">{{shop.siName}} {{user.userMobile}}</view>
+  </view>
+</view>
+<list class="menu margin-top">
+  <item class="arrow">
+    <navigator class='content' hover-class='none' url='log?userId={{user.userId}}'>
+      <text>进出记录</text>
+    </navigator>
+  </item>
+  <item class="arrow">
+    <navigator class='content' hover-class='none' url='../done?userId={{user.userId}}'>
+      <text>核销订单</text>
+    </navigator>
+  </item>
+</list>
+<view class="padding">
+  <button class="lg block bg-brown" bindtap="showHint">解绑会员</button>
+</view>

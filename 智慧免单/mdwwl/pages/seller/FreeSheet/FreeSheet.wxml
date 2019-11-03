@@ -1,0 +1,71 @@
+
+<import src="../footer/footer" />
+
+
+<view class='FreeTop'>
+  <image src='/images/sebg.png' class='ubg'></image>
+  <view class='shopMoneyInfo'>
+    <view class='getMoney'>
+      <view>{{num1}}</view>
+      <view>本月营业总额</view>
+    </view>
+
+    <view class='toDay'>
+      <view class='toDayItem'>
+        <view>{{num2}}</view>
+        <view>今日营业额(元)</view>
+      </view>
+      <view class='toDayItem'>
+        <view>{{num3}}</view>
+        <view>今日订单笔数(个)</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='freeContainer' >
+<view class='freeNavBox'>
+    <view class='feeItem'>
+        <navigator url='' hover-class='none' url='{{shopInfo.is_perfect==2?"../ModifiShop/ModifiShop":"../setUpShop/setUpShop"}}' >
+            <image src='/images/fre1.png'></image>
+            <view>店铺信息</view>
+        </navigator>
+    </view>
+     <view class='feeItem' bindtap='boHao'>
+        <navigator url='' hover-class='none' >
+            <image src='/images/fre2.png'></image>
+            <view>在线客服</view>
+        </navigator>
+    </view>
+     <view class='feeItem'>
+        <navigator url='../code/code' hover-class='none' >
+            <image src='/images/fre3.png'></image>
+            <view>店铺二维码</view>
+        </navigator>
+    </view>
+     <view class='feeItem'>
+        <navigator url='../ManagementInfo/ManagementInfo' hover-class='none' >
+            <image src='/images/fre4.png'></image>
+            <view>经营信息</view>
+        </navigator>
+    </view>
+     <view class='feeItem'>
+        <navigator url='../../write/write?title=关于我们?type=1' hover-class='none' >
+            <image src='/images/fre5.png'></image>
+            <view>关于我们</view>
+        </navigator>
+    </view>
+     <view class='feeItem'>
+        <navigator url='../../feedback/feedback' hover-class='none' >
+            <image src='/images/fre6.png'></image>
+            <view>意见反馈</view>
+        </navigator>
+    </view>
+
+</view>
+
+
+</view>
+
+
+<template is="foot"  data='{{Findex:0}}' />

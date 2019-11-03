@@ -1,0 +1,26 @@
+
+
+
+
+<view class='get_detailBox txList' wx:if='{{navIndex==1}}'>
+  <view class='get_detailItem'>
+    <view class='get_detailContetn'>
+      <view class='detailContent' wx:for='{{tx_list}}'>
+        <view class='detailContent_left'>
+          <view class='dan'>{{item.name}}</view>
+          <view>{{item.time}}</view>
+        </view>
+        <view class='mx_right'>
+          <view>{{item.money}}</view>
+          <view class='wait_' wx:if='{{item.state=="提现中"}}'>提现中</view>
+          <view class='fail_' wx:if='{{item.state=="提现失败"}}'>提现失败</view>
+          <view class='success_' wx:if='{{item.state=="提现成功"}}'>提现成功</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+ <view class='kong' wx:if='{{navIndex==1&&tx_list.length<=0}}'>
+    <image src='/images/kong.png'></image>
+    <view>还没有相关提现 !</view>
+  </view>

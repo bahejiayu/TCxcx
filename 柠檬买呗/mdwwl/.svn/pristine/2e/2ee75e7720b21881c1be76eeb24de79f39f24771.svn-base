@@ -1,0 +1,63 @@
+<view class='cityTop'>
+  <view>200.56</view>
+  <view>可提现收益(元)</view>
+</view>
+<view class='topBottom '>
+  <view class='bg_topBottom  '>
+    <image src='/images/zjy666_02.png'></image>
+  </view>
+  <view class='hhr_get'>
+    <view class='hhr_item'>
+      <view>98513.00</view>
+      <view>累计收益(元)</view>
+    </view>
+    <view class='hhr_item'>
+      <view>98513.00</view>
+      <view>商家营业额(元)</view>
+    </view>
+    <view class='hhr_item'>
+      <view>98513.00</view>
+      <view>现金红包抵扣(元)</view>
+    </view>
+  </view>
+</view>
+
+
+<view class='cityNav_list'>
+  <view class='cityNav_item'>
+    <navigator url='' hover-class='none'>
+      <image src='/images/ct1.png'></image>
+      账单明细
+      <view class='icon-right'></view>
+    </navigator>
+  </view>
+   <view class='cityNav_item'>
+    <navigator url='' hover-class='none'>
+      <image src='/images/ct2.png'></image>
+      分润提现
+      <view class='icon-right'></view>
+    </navigator>
+  </view>
+   <view class='cityNav_item'>
+    <navigator url='' hover-class='none'>
+      <image src='/images/ct3.png'></image>
+      商家管理
+      <view class='icon-right'></view>
+    </navigator>
+  </view>
+  <view class='cityNav_item'>
+    <navigator url='' hover-class='none'>
+      <image src='/images/ct4.png'></image>
+      入驻审核
+      <view class='icon-right'></view>
+    </navigator>
+  </view>
+ <view class='cityNav_item'>
+    <navigator url='' hover-class='none'>
+      <image src='/images/ct5.png'></image>
+      商家折扣修改申请
+      <view class='icon-right'></view>
+    </navigator>
+  </view>
+
+</view>

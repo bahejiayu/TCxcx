@@ -1,0 +1,136 @@
+<view class="bg-img padding flex align-center" style="background-image:url(../../images/ucBg.jpg)">
+  <avatar class="round" style="background-image:url({{userHeadIcon}});width:150rpx;height:150rpx;"></avatar>
+  <view class="flex-sub padding-lr-sm text-white padding-tb-lg" bindtap="toFenXiaoCode" data-target="QrModal">
+    <view class="text-lg">{{userName}}
+      <tag class="round sm margin-left-sm" style="background-color: #f4d57a;" wx:if="{{userYearType===1}}">
+        <text class="text-brown">年卡会员</text>
+      </tag>
+    </view>
+    <view class="margin-top-sm">ID:{{userId}}
+      <text class="icon-qrcode"></text>
+    </view>
+    <view class="margin-top-xs" wx:if="{{userYearType===1}}">有效期：{{userYearEnd}}</view>
+  </view>
+  <view>
+    <navigator url='recharge' hover-class='none' wx:if="{{userYearType===0}}">
+      <button class="round bg-black">
+        <text class="icon-vip round bg-orange margin-right-xs"></text> 成为店主
+      </button>
+    </navigator>
+  </view>
+</view>
+<bar class="bg-black" bindtap="toOrderList" data-type="0">
+  <view class="action text-lg">
+    商城订单
+    <form bindsubmit="submitInfo" report-submit='true'>
+      <button form-type="submit" class='formIdBtn'></button>
+    </form>
+  </view>
+  <view class="action">
+    查看全部
+    <text class="icon-right"></text>
+  </view>
+</bar>
+<list class="grid col-5 no-border bg-black">
+  <item bindtap="toOrderList" data-type="1">
+    <view class='icon-pay'>
+      <tag class="badge bg-brown" wx:if="{{unPaySize>0}}">{{unPaySize}}</tag>
+    </view>
+    <text>待付款</text>
+  </item>
+  <item bindtap="toOrderList" data-type="2">
+    <view class='icon-deliver'>
+      <tag class="badge bg-brown" wx:if="{{unSendSize>0}}">{{unSendSize}}</tag>
+    </view>
+    <text>待发货</text>
+  </item>
+  <item bindtap="toOrderList" data-type="3">
+    <view class='icon-send'>
+      <tag class="badge bg-brown" wx:if="{{unGetSize>0}}">{{unGetSize}}</tag>
+    </view>
+    <text>待收货</text>
+  </item>
+  <item bindtap="toOrderList" data-type="4">
+    <view class='icon-evaluate'></view>
+    <text>待评价</text>
+  </item>
+  <item bindtap="toRefund">
+    <view class='icon-refund'></view>
+    <text>退款/售后</text>
+  </item>
+</list>
+
+<list class="menu bg-black">
+
+  <item class="arrow">
+    <navigator class='content' hover-class='none' url='/pages/dealer/home'>
+      <text class='icon-circle text-brown'></text>
+      <text>分销中心</text>
+      <form bindsubmit="submitInfo" report-submit='true'>
+        <button form-type="submit" class='formIdBtn'></button>
+      </form>
+    </navigator>
+  </item>
+
+  <view class='flex text-center margin-tb'>
+    <view class='flex-sub padding-sm radius gradual-brown margin-right' bindtap='toDelaerHome'>
+      <view class='text-price text-xxl text-bold text-black'>{{moneyStatus.surplus}}</view>
+      <view class='text-sm text-black margin-top-xs'>可提现佣金（元）</view>
+    </view>
+    <view class='flex-sub padding-sm radius gradual-brown' bindtap='toRoomList'>
+      <view class='text-price text-xxl text-bold text-black'>{{moneyStatus.sOrderAllMoney}}</view>
+      <view class='text-sm text-black margin-top-xs'>订单业绩（元）</view>
+    </view>
+  </view>
+  <item class="arrow">
+    <navigator class='content' hover-class='none' url='room/list'>
+      <text class='icon-crown text-brown'></text>
+      <text>空间订单</text>
+    </navigator>
+    <navigator class='action' hover-class='none' url='room/list'>
+      查看全部
+    </navigator>
+  </item>
+  <item class="arrow">
+    <navigator class='content' hover-class='none' url='gift'>
+      <text class='icon-present text-brown'></text>
+      <text>我的礼品</text>
+    </navigator>
+  </item>
+  <item class="arrow">
+    <button class='content' open-type="contact">
+      <text class='icon-service text-brown'></text>
+      <text>客服咨询</text>
+    </button>
+  </item>
+  <item class="" bindtap="callPhone" data-tel="400-123-4568">
+    <view class='content'>
+      <text class='icon-present text-brown'></text>
+      <text>加盟热线</text>
+    </view>
+    <view class="action">020-22911113</view>
+  </item>
+  <item class="arrow">
+    <navigator class='content' hover-class='none' url='faq'>
+      <text class='icon-question text-brown'></text>
+      <text>常见问题</text>
+    </navigator>
+  </item>
+  <item class="arrow" wx:if="{{userType==1||userType==2||userType==3}}">
+    <navigator class='content' hover-class='none' url='/pages/manage/home'>
+      <text class='icon-profile text-brown'></text>
+      <text>工作人员入口</text>
+    </navigator>
+  </item>
+</list>
+
+<modal-box class="{{modalName=='QrModal'?'show':''}}">
+  <dialog style="width:500rpx;" class="none-bg">
+    <view class="padding-xl bg-white radius">
+      <image src='{{src}}' class="response" mode='widthFix'></image>
+    </view>
+    <view class="text-center padding" bindtap='hideModal'>
+      <text class='icon-roundclose text-sl text-white'></text>
+    </view>
+  </dialog>
+</modal-box>

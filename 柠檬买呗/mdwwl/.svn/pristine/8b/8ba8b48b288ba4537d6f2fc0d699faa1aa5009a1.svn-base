@@ -1,0 +1,21 @@
+<view class='top_img'>
+  <image src='/images/fxbg_02.png' class='bg'></image>
+
+  <view class='code_'>
+    <image src='https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1750833952,2529388352&fm=58&bpow=380&bpoh=380'></image>
+  </view>
+</view>
+
+<view class='code_txt'>
+  <view>邀请码：sppww20501</view>
+  <view>扫一扫加入柠檬买呗</view>
+</view>
+
+<view class='btns'>
+  <button hover-class='none'>
+    分享邀请图片
+  </button>
+  <button hover-class='none'>
+    分享链接
+  </button>
+</view>

@@ -1,0 +1,47 @@
+<view class='audBox' wx:if="{{comLoading}}">
+  <view class='audLine'>
+    <view class='audTitle'>商家类型：</view>
+    <view>{{shop_info.cate_name}}</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>全称：</view>
+    <view>{{shop_info.shop_names}}</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>简称：</view>
+    <view>{{shop_info.shop_name}}</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>联系人姓名：</view>
+    <view>{{shop_info.lx_name}}</view>
+  </view>
+  <view class='audLine' bindtap='bohao' >
+    <view class='audTitle'>联系人电话：</view>
+    <view>{{shop_info.lx_phone}}</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>邮箱：</view>
+    <view>{{shop_info.email}}</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>经营地址：</view>
+    <view>{{shop_info.provinces}}</view>
+  </view>
+  <view class='audLine'>
+    <view class='audTitle'>详细地址：</view>
+    <view>{{shop_info.address}}
+    </view>
+  </view>
+  <view class='audLine pd0'>
+    <view class='audTitle pst'>营业执照：</view>
+    <view>
+    </view>
+  </view>
+  <view class='yyzz' bindtap='lookImg' data-img='{{http+shop_info.yyzz}}'>
+        <image src='{{http+shop_info.yyzz}}'></image>
+  </view>
+  <view class='btns' wx:if='{{shop_info.status==2}}'>
+    <view  bindtap='ckBtn'  data-index='2'>驳回</view>
+    <view  bindtap='ckBtn' data-index='1'>审核通过</view>
+  </view>
+</view>

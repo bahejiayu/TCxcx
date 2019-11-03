@@ -1,0 +1,402 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
+	"appid": "wxb7a8c7a427e4c42b",
+	"projectname": "mdwwl(%E5%86%85%E9%83%A8)",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 47,
+			"list": [
+				{
+					"id": 0,
+					"name": "商铺详情",
+					"pathName": "pages/shopDetail/shopDetail",
+					"query": "id=2",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "支付",
+					"pathName": "pages/pay/pay",
+					"query": "shop_id=39",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "商品详情",
+					"pathName": "pages/goodsDetail/goodsDetail",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": "id=17&lat=23.08331&lon=113.3172",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "我的订单",
+					"pathName": "pages/myOrder/myOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "我的排队",
+					"pathName": "pages/classify/classify",
+					"query": "id=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/userCenter/userCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "联系客服",
+					"pathName": "pages/keFu/keFu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "手机验证",
+					"pathName": "pages/verification/verification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请入驻",
+					"pathName": "pages/enter/enter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "意见反馈",
+					"pathName": "pages/feedback/feedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "扫码付款",
+					"pathName": "pages/code/code",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "消息",
+					"pathName": "pages/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "商家端-免单",
+					"pathName": "pages/seller/FreeSheet/FreeSheet",
+					"query": "id=38",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "商家端-订单",
+					"pathName": "pages/seller/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家端-个人信息",
+					"pathName": "pages/seller/personalInfo/personalInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家端-个人中心",
+					"pathName": "pages/seller/personaCenter/personaCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家端-商品列表",
+					"pathName": "pages/seller/goodsList/goodsList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家端-添加商品",
+					"pathName": "pages/seller/addGoods/addGoods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 19,
+					"name": "商家端-关于我们",
+					"pathName": "pages/seller/aboutUs/aboutUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "商家端-经营信息",
+					"pathName": "pages/seller/ManagementInfo/ManagementInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 21,
+					"name": "商家端-开店申请",
+					"pathName": "pages/seller/setUpShop/setUpShop",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 22,
+					"name": "商家端-商家折扣",
+					"pathName": "pages/seller/Discount/Discount",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 23,
+					"name": "商家端-提现账号修改",
+					"pathName": "pages/seller/AccountModification/AccountModification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家端-提现中心",
+					"pathName": "pages/seller/withdrawalCenter/withdrawalCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家端-提现申请",
+					"pathName": "pages/seller/getMoney/getMoney",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 26,
+					"name": "商家端-消息中心",
+					"pathName": "pages/seller/sellerMessage/sellerMessage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家端-修改店铺信息",
+					"pathName": "pages/seller/ModifiShop/ModifiShop",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家端-修改支付限额",
+					"pathName": "pages/seller/ModifiPay/ModifiPay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家端-购买二维码",
+					"pathName": "pages/seller/code/code",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家端-二维码订单",
+					"pathName": "pages/seller/codeOrder/codeOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家端-二维码订单详情",
+					"pathName": "pages/seller/codeOrderDetail/codeOrderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 32,
+					"name": "我的期票(列表)",
+					"pathName": "pages/qiPiao/qiPiao",
+					"query": "id=39",
+					"scene": null
+				},
+				{
+					"id": 33,
+					"name": "商家端-编辑商品",
+					"pathName": "pages/seller/editorGoods/editorGoods",
+					"query": "id=5",
+					"scene": null
+				},
+				{
+					"id": 34,
+					"name": "期票详情",
+					"pathName": "pages/qiInfo/qiInfo",
+					"query": "id=26&shopid=2&index=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请提现(用户端)",
+					"pathName": "pages/getMoney/getMoney",
+					"query": "id=5",
+					"scene": null
+				},
+				{
+					"id": 36,
+					"name": "我的期票",
+					"pathName": "pages/qiPiaoList/qiPiaoList",
+					"query": "id=39",
+					"scene": null
+				},
+				{
+					"id": 37,
+					"name": "订单详情",
+					"pathName": "pages/orderInfo/orderInfo",
+					"query": "id=7",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现中心",
+					"pathName": "pages/getCenter/getCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 39,
+					"name": "商家端-折扣申请",
+					"pathName": "pages/seller/sqzk/sqzk",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "现金红包",
+					"pathName": "pages/hongbao/hongbao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "城市合伙人-首页",
+					"pathName": "pages/city/city_index/city_index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "城市合伙人-店铺收益",
+					"pathName": "pages/city/shop_income/shop_income",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "城市合伙人-商家入驻审核",
+					"pathName": "pages/city/auditing/auditing",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "城市合伙人-商家入驻审核详情",
+					"pathName": "pages/city/auditingDetail/auditingDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "城市合伙人-商家管理",
+					"pathName": "pages/city/shopManager/shopManager",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 47,
+					"name": "城市合伙人-修改商家折扣",
+					"pathName": "pages/city/modifyZk/modifyZk",
+					"query": "id=46",
+					"scene": null
+				},
+				{
+					"id": 48,
+					"name": "城市合伙人-折扣申请",
+					"pathName": "pages/city/applyZk/applyZk",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 49,
+					"name": "城市合伙人-提现记录",
+					"pathName": "pages/city/getDetail/getDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "城市选择",
+					"pathName": "pages/switchcity/switchcity",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

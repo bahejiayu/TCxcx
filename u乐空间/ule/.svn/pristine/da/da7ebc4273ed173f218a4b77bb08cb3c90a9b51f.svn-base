@@ -1,0 +1,118 @@
+<scroll-view class='nav bg-white fixed'>
+  <view class='flex justify-center'>
+    <item class="{{index==TabCur?'text-brown cur':''}}" wx:for="{{nav}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{nav[index]}}
+    </item>
+  </view>
+</scroll-view>
+
+<form-group bindtap="showModal" data-target="ShopModal">
+  <view class='title'>选择门店</view>
+  <view class="flex-sub">
+    {{shop}}
+  </view>
+  <text class='icon-right text-gray'></text>
+</form-group>
+<form-group>
+  <view class='title'>
+    <text class="icon-calendar text-grey margin-right-xs"></text>开始日期
+  </view>
+  <picker mode="date" value="{{date}}" bindchange="DateStartChange">
+    <view class="picker">
+      {{startTime?startTime:'选择开始日期'}}
+    </view>
+  </picker>
+</form-group>
+<form-group>
+  <view class='title'>
+    <text class="icon-calendar text-grey margin-right-xs"></text>结束日期
+  </view>
+  <picker mode="date" value="{{date}}" bindchange="DateEndChange">
+    <view class="picker">
+      {{endTime?endTime:'选择结束日期'}}
+    </view>
+  </picker>
+</form-group>
+<block wx:if="{{TabCur==0}}">
+  <view class="padding-tb bg-brown flex text-center">
+    <view class="flex-sub padding">
+      <view class="text-yellow text-xxl">{{money}}</view>
+      <view class="text-white margin-top-xs">营业额(元)</view>
+    </view>
+    <view class="flex-sub padding">
+      <view class="text-yellow text-xxl">{{size}}</view>
+      <view class="text-white margin-top-xs">订单数(个)</view>
+    </view>
+  </view>
+  <navigator class="margin-top" url="info" hover-class="none" wx:for="{{orderList}}" wx:key>
+    <bar class="solid-bottom">
+      <view class="action">订单编号：{{item.uoId}}</view>
+    </bar>
+    <view class="flex align-center padding bg-white ">
+      <view class="flex-sub">
+        <view class="text-lg">{{item.uoCommodityName}}</view>
+        <view class="margin-top-sm text-sm text-gray">{{item.uoCreateTime}}</view>
+      </view>
+      <view class="text-price text-red">{{item.uoActualMoney}}</view>
+    </view>
+  </navigator>
+  <view class='padding-xl' wx:if="{{orderList.length==0}}">
+    <view class='padding-xl bg-white radius shadow-lg text-center'>
+      还 没 有 营 业 额 ~ - ~
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class="padding-tb bg-brown flex text-center">
+    <view class="flex-sub padding">
+      <view class="text-yellow text-xxl">{{mallMoney}}</view>
+      <view class="text-white margin-top-xs">营业额(元)</view>
+    </view>
+    <view class="flex-sub padding">
+      <view class="text-yellow text-xxl">{{mallSize}}</view>
+      <view class="text-white margin-top-xs">订单数(个)</view>
+    </view>
+  </view>
+  <navigator class="margin-top" url="info" hover-class="none" wx:for="{{mallOrderList}}" wx:key>
+    <bar class="solid-bottom">
+      <view class="action">订单编号：{{item.id}}</view>
+      <view class='action' wx:if="{{item.reId}}">
+        <view class="text-red">退款订单</view>
+      </view>
+    </bar>
+    <scroll-view class='goodsScroll' scroll-x scroll-with-animation wx:if="{{item.orderGoodsList}}">
+      <view class="cu-item" wx:for="{{item.orderGoodsList}}" wx:for-item="sonitem">
+        <image src='{{HOST_URL + sonitem.picUrl}}' mode='aspectFill'></image>
+        <view class='text-cut'>{{sonitem.goodsName}}</view>
+      </view>
+    </scroll-view>
+    <view class="flex align-center padding bg-white">
+      <view class="flex-sub">
+        <view class="margin-top-sm text-sm text-gray">{{item.payTime}}</view>
+      </view>
+      <view class="text-price text-red">{{item.actualPrice}}</view>
+    </view>
+  </navigator>
+  <view class='padding-xl' wx:if="{{mallOrderList.length==0}}">
+    <view class='padding-xl bg-white radius shadow-lg text-center'>
+      还 没 有 营 业 额 ~ - ~
+    </view>
+  </view>
+</block>
+<modal-box class="{{modalName=='ShopModal'?'show':''}}">
+  <dialog class=" ">
+    <radio-group class="block" bindchange="radioChange">
+      <list class="menu text-left">
+        <item wx:for="{{items}}" wx:key="index">
+          <label class='flex-sub flex justify-between align-center'>
+            <view class='flex-sub'>{{item.siName}}</view>
+            <radio value="{{item.siId}}" checked="{{item.siName==shop}}" data-name="{{item.siName}}" class='brown' />
+          </label>
+        </item>
+      </list>
+    </radio-group>
+    <view class="padding text-center solid-top" bindtap="hideModal">
+      确定
+    </view>
+  </dialog>
+</modal-box>

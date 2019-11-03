@@ -1,0 +1,27 @@
+page {
+	background: #221c16;
+}
+
+.homeFoot {
+	color: #fff;
+	width: 100%;
+	padding: 30rpx 20rpx;
+	font-size: 27rpx;
+  line-height: 1.4;
+}
+
+.homeFoot [class*="icon"] {
+	font-size: 40rpx;
+	margin: 8rpx;
+}
+.mfzc{
+  position: fixed;
+  padding: 10rpx 30rpx;
+  font-size: 26rpx;
+  color: #98795d;
+  border: 1px solid #98795d;
+  border-radius: 30rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 300rpx;
+}

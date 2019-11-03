@@ -1,0 +1,26 @@
+<import src="../footer/footer" />
+
+<view class='orderNav'>
+
+  <view class='orderNavItem {{nav_index==0?"cur":""}}' bindtap='tog_nav' data-o='0'>系统消息</view>
+  <view class='orderNavItem {{nav_index==50?"cur":""}}' bindtap='tog_nav' data-o='50'>新店开张</view>
+  <view class='NavLine' style='left:{{nav_index}}%;'></view>
+</view>
+
+<view class='messageList'>
+    <view class='messageItem' wx:for='[1,2]'>
+        <view class='messTop'>
+            <view class='messTopLeft dan'>查询订单优化</view>
+            <view class='messTopRight'>2019-01-19 14:10:01</view>
+        </view>
+        <view class='messageContent'>
+        欢迎加入免单世界，这里有的freestyle哦！
+        </view>
+    
+    </view>
+
+
+</view>
+<template is="foot"  data='{{Findex:2}}' />
+
+

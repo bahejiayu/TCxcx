@@ -1,0 +1,92 @@
+<view class='shopInfo'>
+  <image src='http://192.168.0.253/Upload/shop/2019-04-11/5caed62928d91.jpg' class='shopLogo'></image>
+  广州麦当劳敦和店
+</view>
+
+<view class='myClassInfo'>
+  <view class='classItem'>
+    <view class='leftInfo'>
+      <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2796238002,2709204796&fm=27&gp=0.jpg' class='leftimg'></image>
+      <view>sandy</view>
+      <view>2019-02-28 16:02:01</view>
+    </view>
+    <view class='rightInfo'>NO.1</view>
+  </view>
+  <view class='priceInfo'>
+    <view class='price_item'>
+      <view>¥98.00</view>
+      <view>待分润</view>
+    </view>
+    <view class='price_item'>
+      <view>¥2.00</view>
+      <view>今日分润</view>
+    </view>
+    <view class='price_item'>
+      <view>¥2.00</view>
+      <view>累计分润</view>
+    </view>
+  </view>
+
+</view>
+<view class='allClassTitle'>所有排队情况</view>
+<view class='classFirst'>
+  <view class='headImg'>
+    <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2796238002,2709204796&fm=27&gp=0.jpg'></image>
+  </view>
+  <view class='line1'>
+    <view>小明同学</view>
+    <view>已:
+      <text>￥ 10</text> / 待:
+      <text>¥ 110</text>
+    </view>
+  </view>
+  <view class='line2'>
+    <view>2019-02-28 16:02:01</view>
+    <view>NO.10</view>
+  </view>
+</view>
+
+<view class='classList'>
+  <view class='classFirst'>
+    <view class='headImg'>
+      <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2796238002,2709204796&fm=27&gp=0.jpg'></image>
+    </view>
+    <view class='line1'>
+      <view>小明同学</view>
+      <view>
+        正在排队...
+        <!-- 等待排队... -->
+      </view>
+    </view>
+    <view class='line2'>
+      <view>2019-02-28 16:02:01</view>
+      <view>NO.10</view>
+    </view>
+  </view>
+
+
+</view>
+
+<view class='zz_' wx:if='{{showHb}}'></view>
+<view class='getHbBox' wx:if='{{showHb}}'>
+  <view class='icon-close'></view>
+  <view class='HbImage'>
+    <image src='/images/hbbox_03.png'></image>
+    <view class='hbTxt'>
+      <view>现金红包</view>
+      <view>300<text>元</text>
+      </view>
+    </view>
+  </view>
+  <view class='gongxGet'>恭喜你获得
+    <text>300元</text>现金红包</view>
+  <view class='gongTip'>店铺付款可抵扣</view>
+  <view class='sureBtn'>确定</view>
+</view>
+
+
+
+
+<view class='fixedBottom' bindtap='tui_'>
+  退出队列 领取双倍现金红包
+</view>

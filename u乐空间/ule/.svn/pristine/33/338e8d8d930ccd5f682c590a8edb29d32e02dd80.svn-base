@@ -1,0 +1,43 @@
+<navigator url='info?id={{item.refund.id}}' class="bg-white margin-top" wx:for="{{list}}" wx:key >
+  <bar class="solid-bottom">
+    <view class="action text-orange">
+      <!-- success == 退款成功 -->
+      <block wx:if="{{item.refund.examieStatus=='3'}}">
+        退款成功
+      </block>
+      <!-- close == 退款关闭 -->
+      <block wx:if="{{item.refund.examieStatus=='2'}}">
+        退款申请被驳回
+      </block>
+      <!-- revork == 撤销 -->
+      <block wx:if="{{item.refund.examieStatus=='4'}}">
+        申请已撤销
+      </block>
+      <!-- wait == 处理中 -->
+      <block wx:if="{{item.refund.examieStatus=='0'}}">
+        申请已提交，审核中
+      </block>
+      <block wx:if="{{item.refund.examieStatus=='1'}}">
+        申请已通过，商家处理中
+      </block>
+    </view>
+  </bar>
+  <view class="flex bg-white padding align-center {{indexs>0?'solid-top':''}}" wx:for="{{item.orderGoodsList}}" wx:key wx:for-item="items" wx:for-index="indexs">
+    <image src="{{SERVER_URI + items.picUrl}}" mode="aspectFill" style="width: 120rpx;height: 120rpx;" class="margin-right-sm"></image>
+    <view class="flex-sub">
+      <view class="text-lg">
+        {{items.goodsName}}
+      </view>
+      <view class="margin-top-sm flex justify-between">
+        <tag class="bg-brown radius">{{items.spec}}</tag>
+        <view class='text-price text-red'>{{items.price}}</view>
+      </view>
+    </view>
+  </view>
+  <bar class="solid-top justify-end">
+    <view class="action">
+      退款金额：
+      <view class="text-price text-red text-xl">{{item.refund.refundMoney}}</view>
+    </view>
+  </bar>
+</navigator>

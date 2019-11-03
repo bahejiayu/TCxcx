@@ -1,0 +1,23 @@
+<view class='shopBox'>
+  <view class='shopItem' wx:for='{{data_list}}'>
+    <view class='shopItem_top'>
+      <view class='shopItem_topShopInfo'>
+        <view class='shopLogo'>
+          <image src='{{http+item.logo}}'></image>
+        </view>
+        <view class='shopdes'>
+          <view class='dan'>{{item.shop_name}}</view>
+          <view>折扣：
+            <text>{{item.discount}}折</text> 让利：
+            <text>{{item.discount_rl}}%</text> 红包抵扣：
+            <text>{{item.max_deduction}}%</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='shopItem_bottom'>
+        <navigator class='jy' url='../shop_income/shop_income?id={{item.id}}'>经营情况</navigator>
+        <navigator class='bj' url='../modifyZk/modifyZk?id={{item.id}}'>编辑</navigator>
+    </view>
+  </view>
+</view>

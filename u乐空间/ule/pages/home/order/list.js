@@ -1,0 +1,115 @@
+const API = require('../../../utils/api')
+const request = require('../../../utils/request')
+const wxReq = require('../../../utils/wxRequest')
+const commen = require('../../../utils/commen')
+const app = getApp();
+
+Page({
+  data: {
+    HOST_URL: API.getHOSTURI(),
+    userCode: '',
+    list: [],
+    userInfo: null
+  },
+  bindGetUserInfo: function(e) {
+    console.log(123)
+    this.setData({
+      auth: false
+    })
+    wx.showTabBar({
+      aniamtion: true,
+    })
+    this.getUserInfo();
+  },
+  getUserInfo: function() {
+    var that = this;
+
+    wx.getUserInfo({
+      success(res) {
+        wx.showLoading({
+          title: '登录中',
+        })
+        console.log(res)
+        //判断用户是否存在系统，如果没有则新增
+        commen.loginByWeixin(res.userInfo, that.options.redPId).then(res => {
+          commen.updateAndGetUserInfo((userInfo) => {
+            wx.hideLoading();
+            app.globalData.shareMessage.path = '/pages/home/home?redPId=' + userInfo.userId;
+            that.options.redPId = ''
+            that.setData({
+              userInfo: userInfo
+            })
+            that.getList();
+
+          })
+        })
+      }
+    })
+  },
+  onShareAppMessage() {
+    return app.globalData.shareMessage
+  },
+  onLoad: function(options) {
+    console.log(options)
+
+    if (options.userCode) {
+      this.setData({
+        userCode: options.userCode
+      });
+
+    } else {
+      this.setData({
+        userCode: wx.getStorageSync('userInfo').userCode
+      });
+    }
+
+    this.getList();
+    // var that=this;
+    // var getReq = wxReq.get(API.getGetUser(), {})
+    // getReq.then(resp => {
+    //   if (resp.data.errno != 0) {
+    //     wx.getSetting({
+    //       success(res) {
+    //         if (res.authSetting['scope.userInfo'] === undefined || res.authSetting['scope.userInfo'] === "" || !res.authSetting['scope.userInfo'] || wx.getStorageSync('userInfo')) {
+    //           that.setData({
+    //             auth: true
+    //           })
+    //           wx.hideTabBar({
+    //             aniamtion: true,
+    //           })
+    //         } else {
+    //           that.getUserInfo();
+    //         }
+    //       }
+    //     })
+    //     wx.hideLoading()
+    //     console.log('777777777777777');
+
+    //   } else {
+    //     console.log('8888888888888');
+    //     that.setData({
+    //       userInfo: resp.data.data
+    //     });
+    //     that.getList();
+    //   }
+    // });
+  },
+
+  getList: function() {
+    var self = this
+    var url = API.getTimeOrderList();
+    var getReq = wxReq.get(url, {
+      code: self.data.userCode
+    })
+    getReq.then(res => {
+      self.setData({
+        list: res.data.data
+      })
+    })
+  },
+  toTiming: (e) => {
+    wx.navigateTo({
+      url: 'info?id=' + e.currentTarget.dataset.id
+    })
+  }
+})

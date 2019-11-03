@@ -1,0 +1,34 @@
+<view class='tiBox'>
+  <view class='formBox'>
+   <picker bindchange="bindPickerChange"  range="{{array}}">
+    <view class='boxItem'>
+      <view class='boxItemLeft'>
+        退款原因
+      </view>
+      <text class='blk'>{{yy_}}</text>
+      <view class='icon-right'></view>
+    </view>
+    </picker>
+
+
+
+    <view class='boxItem'>
+      <view class='boxItemLeft'>
+        退款金额
+      </view>
+      <text class='redjy'>10.9</text>
+    </view>
+    <view class='boxItem bb0'>
+      <view class='boxItemLeft'>
+        退款说明
+        <text class='redjy'>(必填)</text>
+      </view>
+    </view>
+    <textarea placeholder='请备注退款商品信息'></textarea>
+  </view>
+</view>
+<view class="padding ">
+  <button class="bg-brown block lg" bindtap="review" data-target="QrModal">
+    立即核销
+  </button>
+</view>

@@ -1,0 +1,151 @@
+<view class='setContainer'>
+  <view class='setTitle'>
+    基本信息
+  </view>
+  <view class='fromTable'>
+    <form>
+      <view class='inpItem'>
+        <view class='inpItemTitle'>商家类型</view>
+        <picker bindchange="bindPickerChange1" range="{{array1}}">
+          <view class='itemBox pad20 {{txt1=="---请选择---"?"txtCenter":""}}'>{{txt1}}
+            <view class='icon-triangledownfill icon_'></view>
+          </view>
+        </picker>
+      </view>
+      <view class='inpItem'>
+        <view class='inpItemTitle'>商家分类</view>
+        <picker bindchange="bindPickerChange2" range="{{array2}}">
+          <view class='itemBox pad20 {{txt2=="---请选择---"?"txtCenter":""}}'>{{txt2}}
+            <view class='icon-triangledownfill icon_'></view>
+          </view>
+        </picker>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>邮箱</view>
+        <view class='itemBox'>
+          <input type='text' placeholder='请输入邮箱' placeholder-class='inpclass'></input>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>联系人姓名</view>
+        <view class='itemBox'>
+          <input type='text' placeholder='请输入联系人姓名' placeholder-class='inpclass'></input>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>联系人类型</view>
+        <view class='itemBox'>
+          <input type='text' placeholder='请输入联系人类型' placeholder-class='inpclass'></input>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>联系人电话</view>
+        <view class='itemBox'>
+          <input type='number' placeholder='请输入联系人电话' placeholder-class='inpclass'></input>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>联系人身份证号</view>
+        <view class='itemBox'>
+          <input type='number' placeholder='请输入联系人身份证号' placeholder-class='inpclass'></input>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>商户名称</view>
+        <view class='itemBox'>
+          <input type='number' placeholder='请输入商户名称' placeholder-class='inpclass'></input>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>店铺昵称</view>
+        <view class='itemBox'>
+          <input type='number' placeholder='请输入店铺昵称' placeholder-class='inpclass'></input>
+        </view>
+      </view>
+
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>客服电话</view>
+        <view class='itemBox'>
+          <input type='number' placeholder='请输入客服电话' placeholder-class='inpclass'></input>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>省市区编码</view>
+        <view class='itemBox'>
+          <input type='number' placeholder='请输入省市区编码' placeholder-class='inpclass'></input>
+        </view>
+      </view>
+
+      <view class='inpItem getLoction'>
+        <view class='inpItemTitle'>详细地址</view>
+        <view class='itemBox '>
+          <input type='number' placeholder='点击右侧图标获取' value='{{address_txt}}' placeholder-class='inpclass'></input>
+          <view class='getLoctImg' bindtap='getLoction'>
+            <image src='/images/getLo.png'></image>
+          </view>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>店铺介绍</view>
+        <view class='areaTxt'>
+          <textarea placeholder='请输入客服店铺介绍' placeholder-class='inpclass'></textarea>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>营业时间</view>
+        <view class='itemBox workTime'>
+          <view class='workItem'>
+            <picker bindchange="startTime" range="{{time_list}}">
+              <input type='number' placeholder='' value='{{start}}' disabled='{{true}}' placeholder-class='inpclass'></input>
+            </picker>
+          </view>
+          <view class='workItem'>~</view>
+          <view class='workItem'>
+            <picker range='{{time_list}}' bindchange="endTime" range="{{time_list}}">
+              <input type='number' placeholder='' value='{{end}}' disabled='{{true}}' placeholder-class='inpclass'></input>
+            </picker>
+          </view>
+
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>店铺首页</view>
+        <view class='up_box   {{up1img=="/images/upimg.png"?"noUp":"hasUp"}}' bindtap='bindUp1'>
+          <image src='{{up1img}}'></image>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>营业照</view>
+        <view class='up_box   {{up2img=="/images/upimg.png"?"noUp":"hasUp"}}' bindtap='bindUp2'>
+          <image src='{{up2img}}'></image>
+        </view>
+      </view>
+
+      <view class='inpItem'>
+        <view class='inpItemTitle'>营业证执照</view>
+        <view class='up_box   {{up3img=="/images/upimg.png"?"noUp":"hasUp"}}' bindtap='bindUp3'>
+          <image src='{{up3img}}'></image>
+        </view>
+      </view>
+
+      <view class='TableBtn ' >
+        <button class='btnF' >确定</button>
+      </view>
+
+
+    </form>
+  </view>
+</view>
